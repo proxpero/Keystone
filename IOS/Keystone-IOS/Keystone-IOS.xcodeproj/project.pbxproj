@@ -1,0 +1,292 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52092A821BF2452100B2A1EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092A811BF2452100B2A1EE /* AppDelegate.swift */; };
+		52092A841BF2452100B2A1EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092A831BF2452100B2A1EE /* ViewController.swift */; };
+		52092A871BF2452100B2A1EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52092A851BF2452100B2A1EE /* Main.storyboard */; };
+		52092A891BF2452100B2A1EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52092A881BF2452100B2A1EE /* Assets.xcassets */; };
+		52092A8C1BF2452100B2A1EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52092A8A1BF2452100B2A1EE /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		52092A7E1BF2452100B2A1EE /* Keystone-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keystone-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52092A811BF2452100B2A1EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		52092A831BF2452100B2A1EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52092A861BF2452100B2A1EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52092A881BF2452100B2A1EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52092A8B1BF2452100B2A1EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52092A8D1BF2452100B2A1EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52092A7B1BF2452100B2A1EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52092A751BF2452000B2A1EE = {
+			isa = PBXGroup;
+			children = (
+				52092A801BF2452100B2A1EE /* Keystone-IOS */,
+				52092A7F1BF2452100B2A1EE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52092A7F1BF2452100B2A1EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52092A7E1BF2452100B2A1EE /* Keystone-IOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52092A801BF2452100B2A1EE /* Keystone-IOS */ = {
+			isa = PBXGroup;
+			children = (
+				52092A811BF2452100B2A1EE /* AppDelegate.swift */,
+				52092A831BF2452100B2A1EE /* ViewController.swift */,
+				52092A851BF2452100B2A1EE /* Main.storyboard */,
+				52092A881BF2452100B2A1EE /* Assets.xcassets */,
+				52092A8A1BF2452100B2A1EE /* LaunchScreen.storyboard */,
+				52092A8D1BF2452100B2A1EE /* Info.plist */,
+			);
+			path = "Keystone-IOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52092A7D1BF2452100B2A1EE /* Keystone-IOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52092A901BF2452100B2A1EE /* Build configuration list for PBXNativeTarget "Keystone-IOS" */;
+			buildPhases = (
+				52092A7A1BF2452100B2A1EE /* Sources */,
+				52092A7B1BF2452100B2A1EE /* Frameworks */,
+				52092A7C1BF2452100B2A1EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Keystone-IOS";
+			productName = "Keystone-IOS";
+			productReference = 52092A7E1BF2452100B2A1EE /* Keystone-IOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52092A761BF2452000B2A1EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Todd Olsen";
+				TargetAttributes = {
+					52092A7D1BF2452100B2A1EE = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 52092A791BF2452000B2A1EE /* Build configuration list for PBXProject "Keystone-IOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52092A751BF2452000B2A1EE;
+			productRefGroup = 52092A7F1BF2452100B2A1EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52092A7D1BF2452100B2A1EE /* Keystone-IOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52092A7C1BF2452100B2A1EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52092A8C1BF2452100B2A1EE /* LaunchScreen.storyboard in Resources */,
+				52092A891BF2452100B2A1EE /* Assets.xcassets in Resources */,
+				52092A871BF2452100B2A1EE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52092A7A1BF2452100B2A1EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52092A841BF2452100B2A1EE /* ViewController.swift in Sources */,
+				52092A821BF2452100B2A1EE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		52092A851BF2452100B2A1EE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52092A861BF2452100B2A1EE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		52092A8A1BF2452100B2A1EE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52092A8B1BF2452100B2A1EE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52092A8E1BF2452100B2A1EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52092A8F1BF2452100B2A1EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52092A911BF2452100B2A1EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Keystone-IOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Todd-Olsen.Keystone-IOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		52092A921BF2452100B2A1EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Keystone-IOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Todd-Olsen.Keystone-IOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52092A791BF2452000B2A1EE /* Build configuration list for PBXProject "Keystone-IOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52092A8E1BF2452100B2A1EE /* Debug */,
+				52092A8F1BF2452100B2A1EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52092A901BF2452100B2A1EE /* Build configuration list for PBXNativeTarget "Keystone-IOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52092A911BF2452100B2A1EE /* Debug */,
+				52092A921BF2452100B2A1EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52092A761BF2452000B2A1EE /* Project object */;
+}
