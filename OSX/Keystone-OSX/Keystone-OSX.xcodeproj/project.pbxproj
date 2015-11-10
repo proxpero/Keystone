@@ -14,6 +14,7 @@
 		52092B1B1BF25A0100B2A1EE /* Keystone_OSX_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 52092B1A1BF25A0000B2A1EE /* Keystone_OSX_Model.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52092B1F1BF25A0100B2A1EE /* Keystone_OSX_Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52092B181BF25A0000B2A1EE /* Keystone_OSX_Model.framework */; };
 		52092B201BF25A0100B2A1EE /* Keystone_OSX_Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52092B181BF25A0000B2A1EE /* Keystone_OSX_Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		52092B2B1BF26FD300B2A1EE /* KeystoneDataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 52092B2A1BF26FD300B2A1EE /* KeystoneDataModel.xcdatamodel */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		52092B181BF25A0000B2A1EE /* Keystone_OSX_Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Keystone_OSX_Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52092B1A1BF25A0000B2A1EE /* Keystone_OSX_Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Keystone_OSX_Model.h; sourceTree = "<group>"; };
 		52092B1C1BF25A0100B2A1EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52092B2A1BF26FD300B2A1EE /* KeystoneDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KeystoneDataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +106,20 @@
 		52092B191BF25A0000B2A1EE /* Keystone_OSX_Model */ = {
 			isa = PBXGroup;
 			children = (
+				52092B291BF26FD300B2A1EE /* Shared-Core Data */,
 				52092B1A1BF25A0000B2A1EE /* Keystone_OSX_Model.h */,
 				52092B1C1BF25A0100B2A1EE /* Info.plist */,
 			);
 			path = Keystone_OSX_Model;
+			sourceTree = "<group>";
+		};
+		52092B291BF26FD300B2A1EE /* Shared-Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				52092B2A1BF26FD300B2A1EE /* KeystoneDataModel.xcdatamodel */,
+			);
+			name = "Shared-Core Data";
+			path = "../../../Shared/Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52092B2B1BF26FD300B2A1EE /* KeystoneDataModel.xcdatamodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +433,7 @@
 				52092B121BF259E500B2A1EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52092B211BF25A0100B2A1EE /* Build configuration list for PBXNativeTarget "Keystone_OSX_Model" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +442,7 @@
 				52092B231BF25A0100B2A1EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
