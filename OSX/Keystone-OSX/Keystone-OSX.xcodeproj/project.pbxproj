@@ -47,7 +47,15 @@
 		52092A5A1BF2447700B2A1EE = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+<<<<<<< HEAD
+				52092A931BF24D7A00B2A1EE /* Shared */,
+=======
 				52092AD51BF2555600B2A1EE /* Keystone_OSX_Model.xcodeproj */,
+>>>>>>> master
+=======
+				52092AD51BF2555600B2A1EE /* Keystone_OSX_Model.xcodeproj */,
+>>>>>>> master
 				52092A651BF2447700B2A1EE /* Keystone-OSX */,
 				52092A641BF2447700B2A1EE /* Products */,
 			);
@@ -72,12 +80,35 @@
 			path = "Keystone-OSX";
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+<<<<<<< HEAD
+		52092A931BF24D7A00B2A1EE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				52092A941BF24D7A00B2A1EE /* Core Data */,
+			);
+			name = Shared;
+			path = ../../Shared;
+			sourceTree = "<group>";
+		};
+		52092A941BF24D7A00B2A1EE /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Core Data";
+=======
+=======
+>>>>>>> master
 		52092AD61BF2555600B2A1EE /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				52092ADA1BF2555700B2A1EE /* Keystone_OSX_Model.framework */,
 			);
 			name = Products;
+<<<<<<< HEAD
+>>>>>>> master
+=======
+>>>>>>> master
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
