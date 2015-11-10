@@ -34,6 +34,7 @@
 		52092A5A1BF2447700B2A1EE = {
 			isa = PBXGroup;
 			children = (
+				52092A931BF24D7A00B2A1EE /* Shared */,
 				52092A651BF2447700B2A1EE /* Keystone-OSX */,
 				52092A641BF2447700B2A1EE /* Products */,
 			);
@@ -56,6 +57,22 @@
 				52092A6F1BF2447700B2A1EE /* Info.plist */,
 			);
 			path = "Keystone-OSX";
+			sourceTree = "<group>";
+		};
+		52092A931BF24D7A00B2A1EE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				52092A941BF24D7A00B2A1EE /* Core Data */,
+			);
+			name = Shared;
+			path = ../../Shared;
+			sourceTree = "<group>";
+		};
+		52092A941BF24D7A00B2A1EE /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +285,7 @@
 				52092A741BF2447700B2A1EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
