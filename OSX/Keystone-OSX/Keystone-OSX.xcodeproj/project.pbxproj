@@ -10,7 +10,18 @@
 		52092A671BF2447700B2A1EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092A661BF2447700B2A1EE /* AppDelegate.swift */; };
 		52092A6B1BF2447700B2A1EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52092A6A1BF2447700B2A1EE /* Assets.xcassets */; };
 		52092A6E1BF2447700B2A1EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52092A6C1BF2447700B2A1EE /* Main.storyboard */; };
+		52092ADB1BF2556500B2A1EE /* Keystone_OSX_Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52092ADA1BF2555700B2A1EE /* Keystone_OSX_Model.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52092AD91BF2555700B2A1EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52092AD51BF2555600B2A1EE /* Keystone_OSX_Model.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52092ACA1BF2555600B2A1EE;
+			remoteInfo = Keystone_OSX_Model;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		52092A631BF2447700B2A1EE /* Keystone-OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keystone-OSX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -18,6 +29,7 @@
 		52092A6A1BF2447700B2A1EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52092A6D1BF2447700B2A1EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52092A6F1BF2447700B2A1EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52092AD51BF2555600B2A1EE /* Keystone_OSX_Model.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Keystone_OSX_Model.xcodeproj; path = Keystone_OSX_Model/Keystone_OSX_Model.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52092ADB1BF2556500B2A1EE /* Keystone_OSX_Model.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +47,7 @@
 		52092A5A1BF2447700B2A1EE = {
 			isa = PBXGroup;
 			children = (
+				52092AD51BF2555600B2A1EE /* Keystone_OSX_Model.xcodeproj */,
 				52092A651BF2447700B2A1EE /* Keystone-OSX */,
 				52092A641BF2447700B2A1EE /* Products */,
 			);
@@ -56,6 +70,14 @@
 				52092A6F1BF2447700B2A1EE /* Info.plist */,
 			);
 			path = "Keystone-OSX";
+			sourceTree = "<group>";
+		};
+		52092AD61BF2555600B2A1EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52092ADA1BF2555700B2A1EE /* Keystone_OSX_Model.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,12 +125,28 @@
 			mainGroup = 52092A5A1BF2447700B2A1EE;
 			productRefGroup = 52092A641BF2447700B2A1EE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 52092AD61BF2555600B2A1EE /* Products */;
+					ProjectRef = 52092AD51BF2555600B2A1EE /* Keystone_OSX_Model.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				52092A621BF2447700B2A1EE /* Keystone-OSX */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		52092ADA1BF2555700B2A1EE /* Keystone_OSX_Model.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Keystone_OSX_Model.framework;
+			remoteRef = 52092AD91BF2555700B2A1EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		52092A611BF2447700B2A1EE /* Resources */ = {
@@ -268,6 +306,7 @@
 				52092A741BF2447700B2A1EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
