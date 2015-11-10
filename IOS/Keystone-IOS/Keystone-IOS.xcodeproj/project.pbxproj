@@ -12,7 +12,34 @@
 		52092A871BF2452100B2A1EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52092A851BF2452100B2A1EE /* Main.storyboard */; };
 		52092A891BF2452100B2A1EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52092A881BF2452100B2A1EE /* Assets.xcassets */; };
 		52092A8C1BF2452100B2A1EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52092A8A1BF2452100B2A1EE /* LaunchScreen.storyboard */; };
+		52092AEE1BF257A300B2A1EE /* Keystone_IOS_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 52092AED1BF257A300B2A1EE /* Keystone_IOS_Model.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52092AF21BF257A300B2A1EE /* Keystone_IOS_Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52092AEB1BF257A300B2A1EE /* Keystone_IOS_Model.framework */; };
+		52092AF31BF257A300B2A1EE /* Keystone_IOS_Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52092AEB1BF257A300B2A1EE /* Keystone_IOS_Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52092AF01BF257A300B2A1EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52092A761BF2452000B2A1EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52092AEA1BF257A300B2A1EE;
+			remoteInfo = Keystone_IOS_Model;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		52092AF71BF257A300B2A1EE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				52092AF31BF257A300B2A1EE /* Keystone_IOS_Model.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		52092A7E1BF2452100B2A1EE /* Keystone-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keystone-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +49,21 @@
 		52092A881BF2452100B2A1EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52092A8B1BF2452100B2A1EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52092A8D1BF2452100B2A1EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52092AEB1BF257A300B2A1EE /* Keystone_IOS_Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Keystone_IOS_Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52092AED1BF257A300B2A1EE /* Keystone_IOS_Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Keystone_IOS_Model.h; sourceTree = "<group>"; };
+		52092AEF1BF257A300B2A1EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		52092A7B1BF2452100B2A1EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52092AF21BF257A300B2A1EE /* Keystone_IOS_Model.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52092AE71BF257A300B2A1EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				52092A801BF2452100B2A1EE /* Keystone-IOS */,
+				52092AEC1BF257A300B2A1EE /* Keystone_IOS_Model */,
 				52092A7F1BF2452100B2A1EE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				52092A7E1BF2452100B2A1EE /* Keystone-IOS.app */,
+				52092AEB1BF257A300B2A1EE /* Keystone_IOS_Model.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,7 +104,27 @@
 			path = "Keystone-IOS";
 			sourceTree = "<group>";
 		};
+		52092AEC1BF257A300B2A1EE /* Keystone_IOS_Model */ = {
+			isa = PBXGroup;
+			children = (
+				52092AED1BF257A300B2A1EE /* Keystone_IOS_Model.h */,
+				52092AEF1BF257A300B2A1EE /* Info.plist */,
+			);
+			path = Keystone_IOS_Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		52092AE81BF257A300B2A1EE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52092AEE1BF257A300B2A1EE /* Keystone_IOS_Model.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		52092A7D1BF2452100B2A1EE /* Keystone-IOS */ = {
@@ -74,15 +134,35 @@
 				52092A7A1BF2452100B2A1EE /* Sources */,
 				52092A7B1BF2452100B2A1EE /* Frameworks */,
 				52092A7C1BF2452100B2A1EE /* Resources */,
+				52092AF71BF257A300B2A1EE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				52092AF11BF257A300B2A1EE /* PBXTargetDependency */,
 			);
 			name = "Keystone-IOS";
 			productName = "Keystone-IOS";
 			productReference = 52092A7E1BF2452100B2A1EE /* Keystone-IOS.app */;
 			productType = "com.apple.product-type.application";
+		};
+		52092AEA1BF257A300B2A1EE /* Keystone_IOS_Model */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52092AF61BF257A300B2A1EE /* Build configuration list for PBXNativeTarget "Keystone_IOS_Model" */;
+			buildPhases = (
+				52092AE61BF257A300B2A1EE /* Sources */,
+				52092AE71BF257A300B2A1EE /* Frameworks */,
+				52092AE81BF257A300B2A1EE /* Headers */,
+				52092AE91BF257A300B2A1EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Keystone_IOS_Model;
+			productName = Keystone_IOS_Model;
+			productReference = 52092AEB1BF257A300B2A1EE /* Keystone_IOS_Model.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -94,6 +174,9 @@
 				ORGANIZATIONNAME = "Todd Olsen";
 				TargetAttributes = {
 					52092A7D1BF2452100B2A1EE = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					52092AEA1BF257A300B2A1EE = {
 						CreatedOnToolsVersion = 7.0;
 					};
 				};
@@ -112,6 +195,7 @@
 			projectRoot = "";
 			targets = (
 				52092A7D1BF2452100B2A1EE /* Keystone-IOS */,
+				52092AEA1BF257A300B2A1EE /* Keystone_IOS_Model */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +211,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		52092AE91BF257A300B2A1EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -139,7 +230,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		52092AE61BF257A300B2A1EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52092AF11BF257A300B2A1EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52092AEA1BF257A300B2A1EE /* Keystone_IOS_Model */;
+			targetProxy = 52092AF01BF257A300B2A1EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		52092A851BF2452100B2A1EE /* Main.storyboard */ = {
@@ -266,6 +372,44 @@
 			};
 			name = Release;
 		};
+		52092AF41BF257A300B2A1EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Keystone_IOS_Model/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Todd-Olsen.Keystone-IOS-Model";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		52092AF51BF257A300B2A1EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Keystone_IOS_Model/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Todd-Olsen.Keystone-IOS-Model";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -283,6 +427,15 @@
 			buildConfigurations = (
 				52092A911BF2452100B2A1EE /* Debug */,
 				52092A921BF2452100B2A1EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52092AF61BF257A300B2A1EE /* Build configuration list for PBXNativeTarget "Keystone_IOS_Model" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52092AF41BF257A300B2A1EE /* Debug */,
+				52092AF51BF257A300B2A1EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
