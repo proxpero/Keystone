@@ -51,12 +51,14 @@
 		521F9E0F1C01751B00129859 /* MacUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521F9DF21C0174F500129859 /* MacUtilities.framework */; };
 		521F9E111C01752B00129859 /* AppKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E101C01752B00129859 /* AppKitExtensions.swift */; settings = {ASSET_TAGS = (); }; };
 		521F9E131C01753600129859 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E121C01753600129859 /* Delay.swift */; settings = {ASSET_TAGS = (); }; };
-		521F9E191C0176D200129859 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E151C0176D200129859 /* Student.swift */; settings = {ASSET_TAGS = (); }; };
-		521F9E1A1C0176D200129859 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E161C0176D200129859 /* List.swift */; settings = {ASSET_TAGS = (); }; };
-		521F9E1B1C0176D200129859 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E171C0176D200129859 /* Assignment.swift */; settings = {ASSET_TAGS = (); }; };
-		521F9E1C1C0176D200129859 /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E181C0176D200129859 /* Problem.swift */; settings = {ASSET_TAGS = (); }; };
 		521F9E1E1C01780500129859 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E1D1C01780500129859 /* Person.swift */; settings = {ASSET_TAGS = (); }; };
 		521F9E201C01786200129859 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E1F1C01786200129859 /* Collection+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E251C017A3200129859 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E211C017A3200129859 /* Assignment.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E261C017A3200129859 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E221C017A3200129859 /* List.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E271C017A3200129859 /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E231C017A3200129859 /* Problem.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E281C017A3200129859 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E241C017A3200129859 /* Student.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E2D1C017A9900129859 /* first-names.txt in Resources */ = {isa = PBXBuildFile; fileRef = 521F9E2B1C017A9900129859 /* first-names.txt */; settings = {ASSET_TAGS = (); }; };
+		521F9E2E1C017A9900129859 /* last-names.txt in Resources */ = {isa = PBXBuildFile; fileRef = 521F9E2C1C017A9900129859 /* last-names.txt */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,12 +163,14 @@
 		521F9E041C0174F500129859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		521F9E101C01752B00129859 /* AppKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppKitExtensions.swift; sourceTree = "<group>"; };
 		521F9E121C01753600129859 /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
-		521F9E151C0176D200129859 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
-		521F9E161C0176D200129859 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
-		521F9E171C0176D200129859 /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
-		521F9E181C0176D200129859 /* Problem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
 		521F9E1D1C01780500129859 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		521F9E1F1C01786200129859 /* Collection+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
+		521F9E211C017A3200129859 /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Assignment.swift; path = ../../../Shared/Model/Assignment.swift; sourceTree = "<group>"; };
+		521F9E221C017A3200129859 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = List.swift; path = ../../../Shared/Model/List.swift; sourceTree = "<group>"; };
+		521F9E231C017A3200129859 /* Problem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Problem.swift; path = ../../../Shared/Model/Problem.swift; sourceTree = "<group>"; };
+		521F9E241C017A3200129859 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = ../../../Shared/Model/Student.swift; sourceTree = "<group>"; };
+		521F9E2B1C017A9900129859 /* first-names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "first-names.txt"; sourceTree = "<group>"; };
+		521F9E2C1C017A9900129859 /* last-names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "last-names.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +324,8 @@
 				521F9E101C01752B00129859 /* AppKitExtensions.swift */,
 				521F9E1F1C01786200129859 /* Collection+Extensions.swift */,
 				521F9E1D1C01780500129859 /* Person.swift */,
+				521F9E2B1C017A9900129859 /* first-names.txt */,
+				521F9E2C1C017A9900129859 /* last-names.txt */,
 				521F9E121C01753600129859 /* Delay.swift */,
 				521F9DF41C0174F500129859 /* MacUtilities.h */,
 				521F9DF61C0174F500129859 /* Info.plist */,
@@ -339,10 +345,10 @@
 		521F9E141C0176A200129859 /* Pure Swift Model */ = {
 			isa = PBXGroup;
 			children = (
-				521F9E151C0176D200129859 /* Student.swift */,
-				521F9E161C0176D200129859 /* List.swift */,
-				521F9E171C0176D200129859 /* Assignment.swift */,
-				521F9E181C0176D200129859 /* Problem.swift */,
+				521F9E211C017A3200129859 /* Assignment.swift */,
+				521F9E221C017A3200129859 /* List.swift */,
+				521F9E231C017A3200129859 /* Problem.swift */,
+				521F9E241C017A3200129859 /* Student.swift */,
 			);
 			name = "Pure Swift Model";
 			sourceTree = "<group>";
@@ -564,6 +570,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521F9E2D1C017A9900129859 /* first-names.txt in Resources */,
+				521F9E2E1C017A9900129859 /* last-names.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,26 +598,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521F9E251C017A3200129859 /* Assignment.swift in Sources */,
 				52092B2B1BF26FD300B2A1EE /* Keystone.xcdatamodel in Sources */,
 				52092B791BF2772800B2A1EE /* NSManagedObjectContext+Observers.swift in Sources */,
+				521F9E281C017A3200129859 /* Student.swift in Sources */,
 				52092B841BF2772800B2A1EE /* ManagedObject.swift in Sources */,
 				52092B811BF2772800B2A1EE /* Migration.swift in Sources */,
 				52092B781BF2772800B2A1EE /* ValueTransformer.swift in Sources */,
 				52092B7A1BF2772800B2A1EE /* ModelBuilder.swift in Sources */,
-				521F9E191C0176D200129859 /* Student.swift in Sources */,
 				52092B7E1BF2772800B2A1EE /* ManagedObjectObserver.swift in Sources */,
-				521F9E1B1C0176D200129859 /* Assignment.swift in Sources */,
 				52092B2D1BF2701A00B2A1EE /* ProblemCollection.swift in Sources */,
 				52092B831BF2772800B2A1EE /* NSManagedObject+Extensions.swift in Sources */,
 				52092B7D1BF2772800B2A1EE /* ModelVersionType.swift in Sources */,
 				52092B801BF2772800B2A1EE /* CoreDataErrors.swift in Sources */,
-				521F9E1C1C0176D200129859 /* Problem.swift in Sources */,
 				52092B771BF2772800B2A1EE /* NSFetchRequest+Extensions.swift in Sources */,
 				52092B821BF2772800B2A1EE /* NSPersistentStoreCoordinator+Extensions.swift in Sources */,
+				521F9E271C017A3200129859 /* Problem.swift in Sources */,
 				52092B7F1BF2772800B2A1EE /* NSManagedObjectContext+Extensions.swift in Sources */,
 				52092B7C1BF2772800B2A1EE /* Utilities.swift in Sources */,
 				52092B7B1BF2772800B2A1EE /* Collection+CoreDataExtensions.swift in Sources */,
-				521F9E1A1C0176D200129859 /* List.swift in Sources */,
+				521F9E261C017A3200129859 /* List.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
