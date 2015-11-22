@@ -51,6 +51,10 @@
 		521F9E0F1C01751B00129859 /* MacUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521F9DF21C0174F500129859 /* MacUtilities.framework */; };
 		521F9E111C01752B00129859 /* AppKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E101C01752B00129859 /* AppKitExtensions.swift */; settings = {ASSET_TAGS = (); }; };
 		521F9E131C01753600129859 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E121C01753600129859 /* Delay.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E191C0176D200129859 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E151C0176D200129859 /* Student.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E1A1C0176D200129859 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E161C0176D200129859 /* List.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E1B1C0176D200129859 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E171C0176D200129859 /* Assignment.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E1C1C0176D200129859 /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E181C0176D200129859 /* Problem.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +159,10 @@
 		521F9E041C0174F500129859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		521F9E101C01752B00129859 /* AppKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppKitExtensions.swift; sourceTree = "<group>"; };
 		521F9E121C01753600129859 /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
+		521F9E151C0176D200129859 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		521F9E161C0176D200129859 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		521F9E171C0176D200129859 /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
+		521F9E181C0176D200129859 /* Problem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +253,7 @@
 		52092B191BF25A0000B2A1EE /* Keystone_OSX_Model */ = {
 			isa = PBXGroup;
 			children = (
+				521F9E141C0176A200129859 /* Pure Swift Model */,
 				52092B291BF26FD300B2A1EE /* Shared-Core Data */,
 				52092B1A1BF25A0000B2A1EE /* Keystone_OSX_Model.h */,
 				52092B1C1BF25A0100B2A1EE /* Info.plist */,
@@ -319,6 +328,17 @@
 				521F9E041C0174F500129859 /* Info.plist */,
 			);
 			path = MacUtilitiesTests;
+			sourceTree = "<group>";
+		};
+		521F9E141C0176A200129859 /* Pure Swift Model */ = {
+			isa = PBXGroup;
+			children = (
+				521F9E151C0176D200129859 /* Student.swift */,
+				521F9E161C0176D200129859 /* List.swift */,
+				521F9E171C0176D200129859 /* Assignment.swift */,
+				521F9E181C0176D200129859 /* Problem.swift */,
+			);
+			name = "Pure Swift Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -570,16 +590,20 @@
 				52092B811BF2772800B2A1EE /* Migration.swift in Sources */,
 				52092B781BF2772800B2A1EE /* ValueTransformer.swift in Sources */,
 				52092B7A1BF2772800B2A1EE /* ModelBuilder.swift in Sources */,
+				521F9E191C0176D200129859 /* Student.swift in Sources */,
 				52092B7E1BF2772800B2A1EE /* ManagedObjectObserver.swift in Sources */,
+				521F9E1B1C0176D200129859 /* Assignment.swift in Sources */,
 				52092B2D1BF2701A00B2A1EE /* ProblemCollection.swift in Sources */,
 				52092B831BF2772800B2A1EE /* NSManagedObject+Extensions.swift in Sources */,
 				52092B7D1BF2772800B2A1EE /* ModelVersionType.swift in Sources */,
 				52092B801BF2772800B2A1EE /* CoreDataErrors.swift in Sources */,
+				521F9E1C1C0176D200129859 /* Problem.swift in Sources */,
 				52092B771BF2772800B2A1EE /* NSFetchRequest+Extensions.swift in Sources */,
 				52092B821BF2772800B2A1EE /* NSPersistentStoreCoordinator+Extensions.swift in Sources */,
 				52092B7F1BF2772800B2A1EE /* NSManagedObjectContext+Extensions.swift in Sources */,
 				52092B7C1BF2772800B2A1EE /* Utilities.swift in Sources */,
 				52092B7B1BF2772800B2A1EE /* Collection+CoreDataExtensions.swift in Sources */,
+				521F9E1A1C0176D200129859 /* List.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
