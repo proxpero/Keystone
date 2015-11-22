@@ -9,7 +9,9 @@
 public struct List {
     
     let name: String
-    init(name: String) {
+    let problems: [Problem]
+    init(name: String, problems: [Problem] = []) {
         self.name = name
+        self.problems = problems
     }
 }

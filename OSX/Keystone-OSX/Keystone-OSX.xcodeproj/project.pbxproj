@@ -55,6 +55,8 @@
 		521F9E1A1C0176D200129859 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E161C0176D200129859 /* List.swift */; settings = {ASSET_TAGS = (); }; };
 		521F9E1B1C0176D200129859 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E171C0176D200129859 /* Assignment.swift */; settings = {ASSET_TAGS = (); }; };
 		521F9E1C1C0176D200129859 /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E181C0176D200129859 /* Problem.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E1E1C01780500129859 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E1D1C01780500129859 /* Person.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E201C01786200129859 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E1F1C01786200129859 /* Collection+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +165,8 @@
 		521F9E161C0176D200129859 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		521F9E171C0176D200129859 /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		521F9E181C0176D200129859 /* Problem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
+		521F9E1D1C01780500129859 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		521F9E1F1C01786200129859 /* Collection+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +318,8 @@
 			isa = PBXGroup;
 			children = (
 				521F9E101C01752B00129859 /* AppKitExtensions.swift */,
+				521F9E1F1C01786200129859 /* Collection+Extensions.swift */,
+				521F9E1D1C01780500129859 /* Person.swift */,
 				521F9E121C01753600129859 /* Delay.swift */,
 				521F9DF41C0174F500129859 /* MacUtilities.h */,
 				521F9DF61C0174F500129859 /* Info.plist */,
@@ -626,6 +632,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521F9E1E1C01780500129859 /* Person.swift in Sources */,
+				521F9E201C01786200129859 /* Collection+Extensions.swift in Sources */,
 				521F9E111C01752B00129859 /* AppKitExtensions.swift in Sources */,
 				521F9E131C01753600129859 /* Delay.swift in Sources */,
 			);
