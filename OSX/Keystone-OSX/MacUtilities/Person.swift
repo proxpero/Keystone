@@ -8,18 +8,6 @@
 
 import Foundation
 
-private func stringAtFile(file: String) -> String {
-    
-    let dirs = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .AllDomainsMask, true)
-    
-    do {
-        let str = try String(contentsOfFile: dirs.first!.ns.stringByAppendingPathComponent(file), encoding: NSUTF8StringEncoding)
-        return str
-    } catch {
-        return ""
-    }
-}
-
 private func linesInString(string: String) -> [String] {
     var names = [String]()
     string.enumerateLines({ (line, stop) -> () in
@@ -29,8 +17,8 @@ private func linesInString(string: String) -> [String] {
 }
 
 public class Person {
-    private static let firstNames: [String] = linesInString(stringAtFile("Names/first-names.txt"))
-    private static var lastNames: [String] = linesInString(stringAtFile("Names/last-names.txt"))
+    private static let firstNames: [String] = linesInString(try! String(contentsOfURL: NSBundle(forClass: Person.self).URLForResource("first-names", withExtension: "txt")!))
+    private static let lastNames: [String] = linesInString(try! String(contentsOfURL: NSBundle(forClass: Person.self).URLForResource("last-names", withExtension: "txt")!))
 
     public static func randomFirstName() -> String {
         return Person.firstNames.randomElement()!
