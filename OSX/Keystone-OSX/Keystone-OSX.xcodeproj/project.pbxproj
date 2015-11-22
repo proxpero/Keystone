@@ -14,7 +14,43 @@
 		52092B1B1BF25A0100B2A1EE /* Keystone_OSX_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 52092B1A1BF25A0000B2A1EE /* Keystone_OSX_Model.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52092B1F1BF25A0100B2A1EE /* Keystone_OSX_Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52092B181BF25A0000B2A1EE /* Keystone_OSX_Model.framework */; };
 		52092B201BF25A0100B2A1EE /* Keystone_OSX_Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52092B181BF25A0000B2A1EE /* Keystone_OSX_Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		52092B2B1BF26FD300B2A1EE /* KeystoneDataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 52092B2A1BF26FD300B2A1EE /* KeystoneDataModel.xcdatamodel */; settings = {ASSET_TAGS = (); }; };
+		52092B2B1BF26FD300B2A1EE /* Keystone.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 52092B2A1BF26FD300B2A1EE /* Keystone.xcdatamodel */; settings = {ASSET_TAGS = (); }; };
+		52092B2D1BF2701A00B2A1EE /* ProblemCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092B2C1BF2701A00B2A1EE /* ProblemCollection.swift */; settings = {ASSET_TAGS = (); }; };
+		52092B771BF2772800B2A1EE /* NSFetchRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092B691BF2772800B2A1EE /* NSFetchRequest+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
+		52092B781BF2772800B2A1EE /* ValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092B6A1BF2772800B2A1EE /* ValueTransformer.swift */; settings = {ASSET_TAGS = (); }; };
+		52092B791BF2772800B2A1EE /* NSManagedObjectContext+Observers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092B6B1BF2772800B2A1EE /* NSManagedObjectContext+Observers.swift */; settings = {ASSET_TAGS = (); }; };
+		52092B7A1BF2772800B2A1EE /* ModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092B6C1BF2772800B2A1EE /* ModelBuilder.swift */; settings = {ASSET_TAGS = (); }; };
+		52092B7B1BF2772800B2A1EE /* Collection+CoreDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092B6D1BF2772800B2A1EE /* Collection+CoreDataExtensions.swift */; settings = {ASSET_TAGS = (); }; };
+		52092B7C1BF2772800B2A1EE /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092B6E1BF2772800B2A1EE /* Utilities.swift */; settings = {ASSET_TAGS = (); }; };
+		52092B7D1BF2772800B2A1EE /* ModelVersionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092B6F1BF2772800B2A1EE /* ModelVersionType.swift */; settings = {ASSET_TAGS = (); }; };
+		52092B7E1BF2772800B2A1EE /* ManagedObjectObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092B701BF2772800B2A1EE /* ManagedObjectObserver.swift */; settings = {ASSET_TAGS = (); }; };
+		52092B7F1BF2772800B2A1EE /* NSManagedObjectContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092B711BF2772800B2A1EE /* NSManagedObjectContext+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
+		52092B801BF2772800B2A1EE /* CoreDataErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092B721BF2772800B2A1EE /* CoreDataErrors.swift */; settings = {ASSET_TAGS = (); }; };
+		52092B811BF2772800B2A1EE /* Migration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092B731BF2772800B2A1EE /* Migration.swift */; settings = {ASSET_TAGS = (); }; };
+		52092B821BF2772800B2A1EE /* NSPersistentStoreCoordinator+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092B741BF2772800B2A1EE /* NSPersistentStoreCoordinator+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
+		52092B831BF2772800B2A1EE /* NSManagedObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092B751BF2772800B2A1EE /* NSManagedObject+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
+		52092B841BF2772800B2A1EE /* ManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092B761BF2772800B2A1EE /* ManagedObject.swift */; settings = {ASSET_TAGS = (); }; };
+		52092B881BF277E800B2A1EE /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52092B871BF277E800B2A1EE /* CloudKit.framework */; };
+		52092B8A1BF2780A00B2A1EE /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52092B891BF2780A00B2A1EE /* StoreKit.framework */; };
+		521F9DD41C01737100129859 /* SourceListKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 521F9DD31C01737100129859 /* SourceListKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		521F9DD81C01737100129859 /* SourceListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521F9DD11C01737100129859 /* SourceListKit.framework */; };
+		521F9DD91C01737100129859 /* SourceListKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 521F9DD11C01737100129859 /* SourceListKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		521F9DE41C0173A900129859 /* SourceListConfigurationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9DDD1C0173A900129859 /* SourceListConfigurationProvider.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9DE51C0173A900129859 /* SourceListItemsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9DDE1C0173A900129859 /* SourceListItemsProvider.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9DE61C0173A900129859 /* SourceListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9DDF1C0173A900129859 /* SourceListItem.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9DE71C0173A900129859 /* TableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9DE01C0173A900129859 /* TableCellView.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9DE81C0173A900129859 /* SourceListHeaderCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9DE11C0173A900129859 /* SourceListHeaderCellView.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9DE91C0173A900129859 /* SourceListDetailCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9DE21C0173A900129859 /* SourceListDetailCellView.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9DEA1C0173A900129859 /* TableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9DE31C0173A900129859 /* TableRowView.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9DEC1C01742200129859 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9DEB1C01742200129859 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9DF51C0174F500129859 /* MacUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 521F9DF41C0174F500129859 /* MacUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		521F9DFC1C0174F500129859 /* MacUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521F9DF21C0174F500129859 /* MacUtilities.framework */; settings = {ASSET_TAGS = (); }; };
+		521F9E031C0174F500129859 /* MacUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E021C0174F500129859 /* MacUtilitiesTests.swift */; };
+		521F9E071C0174F500129859 /* MacUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521F9DF21C0174F500129859 /* MacUtilities.framework */; };
+		521F9E081C0174F500129859 /* MacUtilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 521F9DF21C0174F500129859 /* MacUtilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		521F9E0F1C01751B00129859 /* MacUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521F9DF21C0174F500129859 /* MacUtilities.framework */; };
+		521F9E111C01752B00129859 /* AppKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E101C01752B00129859 /* AppKitExtensions.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E131C01753600129859 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E121C01753600129859 /* Delay.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +61,34 @@
 			remoteGlobalIDString = 52092B171BF25A0000B2A1EE;
 			remoteInfo = Keystone_OSX_Model;
 		};
+		521F9DD61C01737100129859 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52092AF91BF259E500B2A1EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 521F9DD01C01737100129859;
+			remoteInfo = SourceListKit;
+		};
+		521F9DFD1C0174F500129859 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52092AF91BF259E500B2A1EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 521F9DF11C0174F500129859;
+			remoteInfo = MacUtilities;
+		};
+		521F9DFF1C0174F500129859 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52092AF91BF259E500B2A1EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52092B001BF259E500B2A1EE;
+			remoteInfo = "Keystone-OSX";
+		};
+		521F9E051C0174F500129859 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52092AF91BF259E500B2A1EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 521F9DF11C0174F500129859;
+			remoteInfo = MacUtilities;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +98,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				521F9E081C0174F500129859 /* MacUtilities.framework in Embed Frameworks */,
+				521F9DD91C01737100129859 /* SourceListKit.framework in Embed Frameworks */,
 				52092B201BF25A0100B2A1EE /* Keystone_OSX_Model.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -51,7 +117,44 @@
 		52092B181BF25A0000B2A1EE /* Keystone_OSX_Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Keystone_OSX_Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52092B1A1BF25A0000B2A1EE /* Keystone_OSX_Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Keystone_OSX_Model.h; sourceTree = "<group>"; };
 		52092B1C1BF25A0100B2A1EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52092B2A1BF26FD300B2A1EE /* KeystoneDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KeystoneDataModel.xcdatamodel; sourceTree = "<group>"; };
+		52092B2A1BF26FD300B2A1EE /* Keystone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Keystone.xcdatamodel; sourceTree = "<group>"; };
+		52092B2C1BF2701A00B2A1EE /* ProblemCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemCollection.swift; sourceTree = "<group>"; };
+		52092B691BF2772800B2A1EE /* NSFetchRequest+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFetchRequest+Extensions.swift"; sourceTree = "<group>"; };
+		52092B6A1BF2772800B2A1EE /* ValueTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueTransformer.swift; sourceTree = "<group>"; };
+		52092B6B1BF2772800B2A1EE /* NSManagedObjectContext+Observers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Observers.swift"; sourceTree = "<group>"; };
+		52092B6C1BF2772800B2A1EE /* ModelBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelBuilder.swift; sourceTree = "<group>"; };
+		52092B6D1BF2772800B2A1EE /* Collection+CoreDataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+CoreDataExtensions.swift"; sourceTree = "<group>"; };
+		52092B6E1BF2772800B2A1EE /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		52092B6F1BF2772800B2A1EE /* ModelVersionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelVersionType.swift; sourceTree = "<group>"; };
+		52092B701BF2772800B2A1EE /* ManagedObjectObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObjectObserver.swift; sourceTree = "<group>"; };
+		52092B711BF2772800B2A1EE /* NSManagedObjectContext+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extensions.swift"; sourceTree = "<group>"; };
+		52092B721BF2772800B2A1EE /* CoreDataErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataErrors.swift; sourceTree = "<group>"; };
+		52092B731BF2772800B2A1EE /* Migration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Migration.swift; sourceTree = "<group>"; };
+		52092B741BF2772800B2A1EE /* NSPersistentStoreCoordinator+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPersistentStoreCoordinator+Extensions.swift"; sourceTree = "<group>"; };
+		52092B751BF2772800B2A1EE /* NSManagedObject+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Extensions.swift"; sourceTree = "<group>"; };
+		52092B761BF2772800B2A1EE /* ManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObject.swift; sourceTree = "<group>"; };
+		52092B861BF277C700B2A1EE /* Keystone-OSX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Keystone-OSX.entitlements"; sourceTree = "<group>"; };
+		52092B871BF277E800B2A1EE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		52092B891BF2780A00B2A1EE /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		521F9DD11C01737100129859 /* SourceListKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SourceListKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		521F9DD31C01737100129859 /* SourceListKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceListKit.h; sourceTree = "<group>"; };
+		521F9DD51C01737100129859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		521F9DDD1C0173A900129859 /* SourceListConfigurationProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceListConfigurationProvider.swift; sourceTree = "<group>"; };
+		521F9DDE1C0173A900129859 /* SourceListItemsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceListItemsProvider.swift; sourceTree = "<group>"; };
+		521F9DDF1C0173A900129859 /* SourceListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceListItem.swift; sourceTree = "<group>"; };
+		521F9DE01C0173A900129859 /* TableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellView.swift; sourceTree = "<group>"; };
+		521F9DE11C0173A900129859 /* SourceListHeaderCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceListHeaderCellView.swift; sourceTree = "<group>"; };
+		521F9DE21C0173A900129859 /* SourceListDetailCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceListDetailCellView.swift; sourceTree = "<group>"; };
+		521F9DE31C0173A900129859 /* TableRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRowView.swift; sourceTree = "<group>"; };
+		521F9DEB1C01742200129859 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		521F9DF21C0174F500129859 /* MacUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MacUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		521F9DF41C0174F500129859 /* MacUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacUtilities.h; sourceTree = "<group>"; };
+		521F9DF61C0174F500129859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		521F9DFB1C0174F500129859 /* MacUtilitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacUtilitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		521F9E021C0174F500129859 /* MacUtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacUtilitiesTests.swift; sourceTree = "<group>"; };
+		521F9E041C0174F500129859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		521F9E101C01752B00129859 /* AppKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppKitExtensions.swift; sourceTree = "<group>"; };
+		521F9E121C01753600129859 /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +162,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521F9DD81C01737100129859 /* SourceListKit.framework in Frameworks */,
+				52092B8A1BF2780A00B2A1EE /* StoreKit.framework in Frameworks */,
+				521F9E071C0174F500129859 /* MacUtilities.framework in Frameworks */,
 				52092B1F1BF25A0100B2A1EE /* Keystone_OSX_Model.framework in Frameworks */,
+				52092B881BF277E800B2A1EE /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,14 +177,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		521F9DCD1C01737100129859 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				521F9E0F1C01751B00129859 /* MacUtilities.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		521F9DEE1C0174F500129859 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		521F9DF81C0174F500129859 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				521F9DFC1C0174F500129859 /* MacUtilities.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		52092AF81BF259E500B2A1EE = {
 			isa = PBXGroup;
 			children = (
+				52092B891BF2780A00B2A1EE /* StoreKit.framework */,
+				52092B871BF277E800B2A1EE /* CloudKit.framework */,
 				52092B031BF259E500B2A1EE /* Keystone-OSX */,
 				52092B191BF25A0000B2A1EE /* Keystone_OSX_Model */,
+				521F9DD21C01737100129859 /* SourceListKit */,
+				521F9DF31C0174F500129859 /* MacUtilities */,
+				521F9E011C0174F500129859 /* MacUtilitiesTests */,
 				52092B021BF259E500B2A1EE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +222,9 @@
 			children = (
 				52092B011BF259E500B2A1EE /* Keystone-OSX.app */,
 				52092B181BF25A0000B2A1EE /* Keystone_OSX_Model.framework */,
+				521F9DD11C01737100129859 /* SourceListKit.framework */,
+				521F9DF21C0174F500129859 /* MacUtilities.framework */,
+				521F9DFB1C0174F500129859 /* MacUtilitiesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +232,7 @@
 		52092B031BF259E500B2A1EE /* Keystone-OSX */ = {
 			isa = PBXGroup;
 			children = (
+				52092B861BF277C700B2A1EE /* Keystone-OSX.entitlements */,
 				52092B041BF259E500B2A1EE /* AppDelegate.swift */,
 				52092B061BF259E500B2A1EE /* ViewController.swift */,
 				52092B081BF259E500B2A1EE /* Assets.xcassets */,
@@ -116,10 +255,70 @@
 		52092B291BF26FD300B2A1EE /* Shared-Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				52092B2A1BF26FD300B2A1EE /* KeystoneDataModel.xcdatamodel */,
+				52092B851BF2773200B2A1EE /* Helpers */,
+				52092B2A1BF26FD300B2A1EE /* Keystone.xcdatamodel */,
+				52092B2C1BF2701A00B2A1EE /* ProblemCollection.swift */,
 			);
 			name = "Shared-Core Data";
 			path = "../../../Shared/Core Data";
+			sourceTree = "<group>";
+		};
+		52092B851BF2773200B2A1EE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				52092B691BF2772800B2A1EE /* NSFetchRequest+Extensions.swift */,
+				52092B6A1BF2772800B2A1EE /* ValueTransformer.swift */,
+				52092B6B1BF2772800B2A1EE /* NSManagedObjectContext+Observers.swift */,
+				52092B6C1BF2772800B2A1EE /* ModelBuilder.swift */,
+				52092B6D1BF2772800B2A1EE /* Collection+CoreDataExtensions.swift */,
+				52092B6E1BF2772800B2A1EE /* Utilities.swift */,
+				52092B6F1BF2772800B2A1EE /* ModelVersionType.swift */,
+				52092B701BF2772800B2A1EE /* ManagedObjectObserver.swift */,
+				52092B711BF2772800B2A1EE /* NSManagedObjectContext+Extensions.swift */,
+				52092B721BF2772800B2A1EE /* CoreDataErrors.swift */,
+				52092B731BF2772800B2A1EE /* Migration.swift */,
+				52092B741BF2772800B2A1EE /* NSPersistentStoreCoordinator+Extensions.swift */,
+				52092B751BF2772800B2A1EE /* NSManagedObject+Extensions.swift */,
+				52092B761BF2772800B2A1EE /* ManagedObject.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		521F9DD21C01737100129859 /* SourceListKit */ = {
+			isa = PBXGroup;
+			children = (
+				521F9DDD1C0173A900129859 /* SourceListConfigurationProvider.swift */,
+				521F9DDE1C0173A900129859 /* SourceListItemsProvider.swift */,
+				521F9DDF1C0173A900129859 /* SourceListItem.swift */,
+				521F9DE01C0173A900129859 /* TableCellView.swift */,
+				521F9DE11C0173A900129859 /* SourceListHeaderCellView.swift */,
+				521F9DE21C0173A900129859 /* SourceListDetailCellView.swift */,
+				521F9DE31C0173A900129859 /* TableRowView.swift */,
+				521F9DEB1C01742200129859 /* Constants.swift */,
+				521F9DD31C01737100129859 /* SourceListKit.h */,
+				521F9DD51C01737100129859 /* Info.plist */,
+			);
+			path = SourceListKit;
+			sourceTree = "<group>";
+		};
+		521F9DF31C0174F500129859 /* MacUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				521F9E101C01752B00129859 /* AppKitExtensions.swift */,
+				521F9E121C01753600129859 /* Delay.swift */,
+				521F9DF41C0174F500129859 /* MacUtilities.h */,
+				521F9DF61C0174F500129859 /* Info.plist */,
+			);
+			path = MacUtilities;
+			sourceTree = "<group>";
+		};
+		521F9E011C0174F500129859 /* MacUtilitiesTests */ = {
+			isa = PBXGroup;
+			children = (
+				521F9E021C0174F500129859 /* MacUtilitiesTests.swift */,
+				521F9E041C0174F500129859 /* Info.plist */,
+			);
+			path = MacUtilitiesTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +329,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				52092B1B1BF25A0100B2A1EE /* Keystone_OSX_Model.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		521F9DCE1C01737100129859 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				521F9DD41C01737100129859 /* SourceListKit.h in Headers */,
+				521F9DF51C0174F500129859 /* MacUtilities.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		521F9DEF1C0174F500129859 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +364,8 @@
 			);
 			dependencies = (
 				52092B1E1BF25A0100B2A1EE /* PBXTargetDependency */,
+				521F9DD71C01737100129859 /* PBXTargetDependency */,
+				521F9E061C0174F500129859 /* PBXTargetDependency */,
 			);
 			name = "Keystone-OSX";
 			productName = "Keystone-OSX";
@@ -173,20 +390,101 @@
 			productReference = 52092B181BF25A0000B2A1EE /* Keystone_OSX_Model.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		521F9DD01C01737100129859 /* SourceListKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 521F9DDC1C01737100129859 /* Build configuration list for PBXNativeTarget "SourceListKit" */;
+			buildPhases = (
+				521F9DCC1C01737100129859 /* Sources */,
+				521F9DCD1C01737100129859 /* Frameworks */,
+				521F9DCE1C01737100129859 /* Headers */,
+				521F9DCF1C01737100129859 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SourceListKit;
+			productName = SourceListKit;
+			productReference = 521F9DD11C01737100129859 /* SourceListKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		521F9DF11C0174F500129859 /* MacUtilities */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 521F9E091C0174F500129859 /* Build configuration list for PBXNativeTarget "MacUtilities" */;
+			buildPhases = (
+				521F9DED1C0174F500129859 /* Sources */,
+				521F9DEE1C0174F500129859 /* Frameworks */,
+				521F9DEF1C0174F500129859 /* Headers */,
+				521F9DF01C0174F500129859 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacUtilities;
+			productName = MacUtilities;
+			productReference = 521F9DF21C0174F500129859 /* MacUtilities.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		521F9DFA1C0174F500129859 /* MacUtilitiesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 521F9E0C1C0174F500129859 /* Build configuration list for PBXNativeTarget "MacUtilitiesTests" */;
+			buildPhases = (
+				521F9DF71C0174F500129859 /* Sources */,
+				521F9DF81C0174F500129859 /* Frameworks */,
+				521F9DF91C0174F500129859 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				521F9DFE1C0174F500129859 /* PBXTargetDependency */,
+				521F9E001C0174F500129859 /* PBXTargetDependency */,
+			);
+			name = MacUtilitiesTests;
+			productName = MacUtilitiesTests;
+			productReference = 521F9DFB1C0174F500129859 /* MacUtilitiesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		52092AF91BF259E500B2A1EE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Todd Olsen";
 				TargetAttributes = {
 					52092B001BF259E500B2A1EE = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 55SVD8WGE3;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					52092B171BF25A0000B2A1EE = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 55SVD8WGE3;
+					};
+					521F9DD01C01737100129859 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 55SVD8WGE3;
+					};
+					521F9DF11C0174F500129859 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 55SVD8WGE3;
+					};
+					521F9DFA1C0174F500129859 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 52092B001BF259E500B2A1EE;
 					};
 				};
 			};
@@ -205,6 +503,9 @@
 			targets = (
 				52092B001BF259E500B2A1EE /* Keystone-OSX */,
 				52092B171BF25A0000B2A1EE /* Keystone_OSX_Model */,
+				521F9DD01C01737100129859 /* SourceListKit */,
+				521F9DF11C0174F500129859 /* MacUtilities */,
+				521F9DFA1C0174F500129859 /* MacUtilitiesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -220,6 +521,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		52092B161BF25A0000B2A1EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		521F9DCF1C01737100129859 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		521F9DF01C0174F500129859 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		521F9DF91C0174F500129859 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -242,7 +564,54 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52092B2B1BF26FD300B2A1EE /* KeystoneDataModel.xcdatamodel in Sources */,
+				52092B2B1BF26FD300B2A1EE /* Keystone.xcdatamodel in Sources */,
+				52092B791BF2772800B2A1EE /* NSManagedObjectContext+Observers.swift in Sources */,
+				52092B841BF2772800B2A1EE /* ManagedObject.swift in Sources */,
+				52092B811BF2772800B2A1EE /* Migration.swift in Sources */,
+				52092B781BF2772800B2A1EE /* ValueTransformer.swift in Sources */,
+				52092B7A1BF2772800B2A1EE /* ModelBuilder.swift in Sources */,
+				52092B7E1BF2772800B2A1EE /* ManagedObjectObserver.swift in Sources */,
+				52092B2D1BF2701A00B2A1EE /* ProblemCollection.swift in Sources */,
+				52092B831BF2772800B2A1EE /* NSManagedObject+Extensions.swift in Sources */,
+				52092B7D1BF2772800B2A1EE /* ModelVersionType.swift in Sources */,
+				52092B801BF2772800B2A1EE /* CoreDataErrors.swift in Sources */,
+				52092B771BF2772800B2A1EE /* NSFetchRequest+Extensions.swift in Sources */,
+				52092B821BF2772800B2A1EE /* NSPersistentStoreCoordinator+Extensions.swift in Sources */,
+				52092B7F1BF2772800B2A1EE /* NSManagedObjectContext+Extensions.swift in Sources */,
+				52092B7C1BF2772800B2A1EE /* Utilities.swift in Sources */,
+				52092B7B1BF2772800B2A1EE /* Collection+CoreDataExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		521F9DCC1C01737100129859 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				521F9DE91C0173A900129859 /* SourceListDetailCellView.swift in Sources */,
+				521F9DE51C0173A900129859 /* SourceListItemsProvider.swift in Sources */,
+				521F9DE71C0173A900129859 /* TableCellView.swift in Sources */,
+				521F9DE61C0173A900129859 /* SourceListItem.swift in Sources */,
+				521F9DE81C0173A900129859 /* SourceListHeaderCellView.swift in Sources */,
+				521F9DE41C0173A900129859 /* SourceListConfigurationProvider.swift in Sources */,
+				521F9DEA1C0173A900129859 /* TableRowView.swift in Sources */,
+				521F9DEC1C01742200129859 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		521F9DED1C0174F500129859 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				521F9E111C01752B00129859 /* AppKitExtensions.swift in Sources */,
+				521F9E131C01753600129859 /* Delay.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		521F9DF71C0174F500129859 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				521F9E031C0174F500129859 /* MacUtilitiesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +622,26 @@
 			isa = PBXTargetDependency;
 			target = 52092B171BF25A0000B2A1EE /* Keystone_OSX_Model */;
 			targetProxy = 52092B1D1BF25A0100B2A1EE /* PBXContainerItemProxy */;
+		};
+		521F9DD71C01737100129859 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 521F9DD01C01737100129859 /* SourceListKit */;
+			targetProxy = 521F9DD61C01737100129859 /* PBXContainerItemProxy */;
+		};
+		521F9DFE1C0174F500129859 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 521F9DF11C0174F500129859 /* MacUtilities */;
+			targetProxy = 521F9DFD1C0174F500129859 /* PBXContainerItemProxy */;
+		};
+		521F9E001C0174F500129859 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52092B001BF259E500B2A1EE /* Keystone-OSX */;
+			targetProxy = 521F9DFF1C0174F500129859 /* PBXContainerItemProxy */;
+		};
+		521F9E061C0174F500129859 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 521F9DF11C0174F500129859 /* MacUtilities */;
+			targetProxy = 521F9E051C0174F500129859 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -352,11 +741,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Keystone-OSX/Keystone-OSX.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Keystone-OSX/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Todd-Olsen.Keystone-OSX";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -364,17 +758,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Keystone-OSX/Keystone-OSX.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Keystone-OSX/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Todd-Olsen.Keystone-OSX";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
 		52092B221BF25A0100B2A1EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -396,6 +796,7 @@
 		52092B231BF25A0100B2A1EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -411,6 +812,128 @@
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		521F9DDA1C01737100129859 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = SourceListKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Todd-Olsen.SourceListKit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		521F9DDB1C01737100129859 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = SourceListKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Todd-Olsen.SourceListKit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		521F9E0A1C0174F500129859 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = MacUtilities/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Todd-Olsen.MacUtilities";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		521F9E0B1C0174F500129859 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = MacUtilities/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Todd-Olsen.MacUtilities";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		521F9E0D1C0174F500129859 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MacUtilitiesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Todd-Olsen.MacUtilitiesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Keystone-OSX.app/Contents/MacOS/Keystone-OSX";
+			};
+			name = Debug;
+		};
+		521F9E0E1C0174F500129859 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MacUtilitiesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Todd-Olsen.MacUtilitiesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Keystone-OSX.app/Contents/MacOS/Keystone-OSX";
 			};
 			name = Release;
 		};
@@ -443,6 +966,30 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		521F9DDC1C01737100129859 /* Build configuration list for PBXNativeTarget "SourceListKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				521F9DDA1C01737100129859 /* Debug */,
+				521F9DDB1C01737100129859 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		521F9E091C0174F500129859 /* Build configuration list for PBXNativeTarget "MacUtilities" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				521F9E0A1C0174F500129859 /* Debug */,
+				521F9E0B1C0174F500129859 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		521F9E0C1C0174F500129859 /* Build configuration list for PBXNativeTarget "MacUtilitiesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				521F9E0D1C0174F500129859 /* Debug */,
+				521F9E0E1C0174F500129859 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
