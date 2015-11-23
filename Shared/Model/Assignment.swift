@@ -14,14 +14,14 @@ public struct Assignment {
     let note: String
     let assignedOnDate: NSDate
     let dueDate: NSDate
-    var assignmentProblems: [ProblemAssignment]
+    var assignmentProblems: [AssignmentProblem]
     
     public init(
         student: Student,
         note: String,
         dueDate: NSDate,
         assignedOnDate: NSDate = NSDate(),
-        assignmentProblems: [ProblemAssignment] = [])
+        assignmentProblems: [AssignmentProblem] = [])
     {
         self.student            = student
         self.note               = note

@@ -13,13 +13,13 @@ public struct Problem {
     let question: String
     var manualDifficulty: Double?
     let history: ProblemHistory
-    var problemAssignments: Set<ProblemAssignment>
+    var problemAssignments: Set<AssignmentProblem>
     
     init(
         question: String,
         manualDifficulty: Double?,
         history: ProblemHistory                     = ProblemHistory(),
-        problemAssignments: Set<ProblemAssignment>  = [])
+        problemAssignments: Set<AssignmentProblem>  = [])
     {
         self.question                               = question
         self.manualDifficulty                       = manualDifficulty
@@ -28,7 +28,14 @@ public struct Problem {
     }
 }
 
-public struct ProblemAssignment {
+public enum AssignmentProblemResult: Int {
+    case correct
+    case incorrect
+    case omit
+}
+
+public struct AssignmentProblem {
+    let result: AssignmentProblemResult
     let problem: Problem
     let assignment: Assignment
 }
@@ -37,7 +44,7 @@ public func ==(lhs: Problem, rhs: Problem) -> Bool {
     return lhs.question == rhs.question
 }
 
-public func ==(lhs: ProblemAssignment, rhs: ProblemAssignment) -> Bool {
+public func ==(lhs: AssignmentProblem, rhs: AssignmentProblem) -> Bool {
     return lhs.problem == rhs.problem
 }
 
@@ -45,7 +52,7 @@ extension Problem: Hashable {
     public var hashValue: Int { return question.hashValue }
 }
 
-extension ProblemAssignment: Hashable {
+extension AssignmentProblem: Hashable {
     public var hashValue: Int { return problem.question.hashValue }
 }
 

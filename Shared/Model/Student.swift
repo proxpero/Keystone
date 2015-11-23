@@ -10,14 +10,14 @@ import Foundation
 
 public struct Student {
     
-    let name: String
-    let graduationDate: NSDate
-    let assignments: Set<Assignment>
+    var name: String
+    var graduationDate: NSDate
+    var assignments: Set<Assignment>
     
     public init(
         name: String,
         graduationDate: NSDate,
-        assignments: Set<Assignment>)
+        assignments: Set<Assignment> = Set<Assignment>())
     {
         self.name           = name
         self.graduationDate = graduationDate

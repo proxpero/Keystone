@@ -15,31 +15,18 @@ extension Student: RandomModelObject {
         
         let name = Person.randomFirstName() + " " + Person.randomLastName()
         let graduationDate = NSDate(timeIntervalSinceNow: NSTimeInterval(60*60*24*365*Double(arc4random_uniform(15))))
-        func assignments() -> Set<Assignment> {
-            
-            var startDate = graduationDate
-            
-            var assignments = Set<Assignment>()
-            for n in Double(-9*4).stride(through: 0, by: (1 - (drand48()/15))) {
-                
-                startDate = startDate.dateByAddingTimeInterval(n)
-                let dates = randomDatesBeforeAndAfterDate(startDate, weeksApart: Double(arc4random_uniform(3)))
-                
-                assignments.insert(Assignment(
-                    note: randomNote(),
-                    dueDate: dates.after,
-                    assignedOnDate: dates.before,
-                    problemAssignments: randomProblemAssignments()))
-                
-            }
-            
-            return assignments
-        }
         
-        return Student(
+        var student = Student(
             name: name,
-            graduationDate: graduationDate,
-            assignments: assignments())
+            graduationDate: graduationDate)
+
+        var assignments: Set<Assignment> = []
+        for _ in (0...40 + arc4random_uniform(20)) {
+            
+        }
+        student.assignments = assignments
+        
+        return student
     }
 }
 
@@ -63,8 +50,4 @@ func randomDatesBeforeAndAfterDate(referenceDate: NSDate, weeksApart weeks: Doub
     let before = NSDate(timeInterval: -1.0 * interval, sinceDate: referenceDate)
     let after = NSDate(timeInterval: 1.0 * interval, sinceDate: referenceDate)
     return (before, after)
-}
-
-func randomProblemAssignments() -> [ProblemAssignment] {
-    return []
 }

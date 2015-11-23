@@ -1,15 +1,15 @@
 //
-//  MacUtilitiesTests.swift
-//  MacUtilitiesTests
+//  UtilityKit_OSXTests.swift
+//  UtilityKit_OSXTests
 //
-//  Created by Todd Olsen on 11/21/15.
+//  Created by Todd Olsen on 11/23/15.
 //  Copyright © 2015 Todd Olsen. All rights reserved.
 //
 
 import XCTest
-@testable import MacUtilities
+@testable import UtilityKit_OSX
 
-class MacUtilitiesTests: XCTestCase {
+class UtilityKit_OSXTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
