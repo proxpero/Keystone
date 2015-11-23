@@ -9,10 +9,25 @@
 import Foundation
 
 public struct Student {
+    
     let name: String
-    let assignments: Set<ProblemAssignment>
-    init(name: String, assignments: Set<ProblemAssignment>) {
-        self.name = name
-        self.assignments = assignments
+    let graduationDate: NSDate
+    let assignments: Set<Assignment>
+    
+    public init(
+        name: String,
+        graduationDate: NSDate,
+        assignments: Set<Assignment>)
+    {
+        self.name           = name
+        self.graduationDate = graduationDate
+        self.assignments    = assignments
+    }
+}
+
+extension Student: CustomStringConvertible {
+    
+    public var description: String {
+        return "\(name), graduation date \(graduationDate), assingments: \(assignments)"
     }
 }

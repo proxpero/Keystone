@@ -59,6 +59,11 @@
 		521F9E281C017A3200129859 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E241C017A3200129859 /* Student.swift */; settings = {ASSET_TAGS = (); }; };
 		521F9E2D1C017A9900129859 /* first-names.txt in Resources */ = {isa = PBXBuildFile; fileRef = 521F9E2B1C017A9900129859 /* first-names.txt */; settings = {ASSET_TAGS = (); }; };
 		521F9E2E1C017A9900129859 /* last-names.txt in Resources */ = {isa = PBXBuildFile; fileRef = 521F9E2C1C017A9900129859 /* last-names.txt */; settings = {ASSET_TAGS = (); }; };
+		521F9E331C017D2200129859 /* RandomModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E321C017D2200129859 /* RandomModelProtocol.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E371C017DC900129859 /* Assignment+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E361C017DC900129859 /* Assignment+Random.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E391C0184FD00129859 /* MacUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521F9DF21C0174F500129859 /* MacUtilities.framework */; };
+		521F9E3C1C019A7600129859 /* Problem+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E3B1C019A7600129859 /* Problem+Random.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E401C02B7D200129859 /* Student+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E3F1C02B7D200129859 /* Student+Random.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +176,10 @@
 		521F9E241C017A3200129859 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = ../../../Shared/Model/Student.swift; sourceTree = "<group>"; };
 		521F9E2B1C017A9900129859 /* first-names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "first-names.txt"; sourceTree = "<group>"; };
 		521F9E2C1C017A9900129859 /* last-names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "last-names.txt"; sourceTree = "<group>"; };
+		521F9E321C017D2200129859 /* RandomModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RandomModelProtocol.swift; path = ../../../Shared/Model/Random/RandomModelProtocol.swift; sourceTree = "<group>"; };
+		521F9E361C017DC900129859 /* Assignment+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Assignment+Random.swift"; path = "../../../Shared/Model/Random/Assignment+Random.swift"; sourceTree = "<group>"; };
+		521F9E3B1C019A7600129859 /* Problem+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Problem+Random.swift"; path = "../../../Shared/Model/Random/Problem+Random.swift"; sourceTree = "<group>"; };
+		521F9E3F1C02B7D200129859 /* Student+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Student+Random.swift"; path = "../../../Shared/Model/Random/Student+Random.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +199,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521F9E391C0184FD00129859 /* MacUtilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,12 +355,24 @@
 		521F9E141C0176A200129859 /* Pure Swift Model */ = {
 			isa = PBXGroup;
 			children = (
-				521F9E211C017A3200129859 /* Assignment.swift */,
-				521F9E221C017A3200129859 /* List.swift */,
-				521F9E231C017A3200129859 /* Problem.swift */,
 				521F9E241C017A3200129859 /* Student.swift */,
+				521F9E211C017A3200129859 /* Assignment.swift */,
+				521F9E231C017A3200129859 /* Problem.swift */,
+				521F9E221C017A3200129859 /* List.swift */,
+				521F9E311C017CDA00129859 /* Random Model Object */,
 			);
 			name = "Pure Swift Model";
+			sourceTree = "<group>";
+		};
+		521F9E311C017CDA00129859 /* Random Model Object */ = {
+			isa = PBXGroup;
+			children = (
+				521F9E321C017D2200129859 /* RandomModelProtocol.swift */,
+				521F9E3F1C02B7D200129859 /* Student+Random.swift */,
+				521F9E361C017DC900129859 /* Assignment+Random.swift */,
+				521F9E3B1C019A7600129859 /* Problem+Random.swift */,
+			);
+			name = "Random Model Object";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -600,6 +622,7 @@
 			files = (
 				521F9E251C017A3200129859 /* Assignment.swift in Sources */,
 				52092B2B1BF26FD300B2A1EE /* Keystone.xcdatamodel in Sources */,
+				521F9E401C02B7D200129859 /* Student+Random.swift in Sources */,
 				52092B791BF2772800B2A1EE /* NSManagedObjectContext+Observers.swift in Sources */,
 				521F9E281C017A3200129859 /* Student.swift in Sources */,
 				52092B841BF2772800B2A1EE /* ManagedObject.swift in Sources */,
@@ -608,13 +631,16 @@
 				52092B7A1BF2772800B2A1EE /* ModelBuilder.swift in Sources */,
 				52092B7E1BF2772800B2A1EE /* ManagedObjectObserver.swift in Sources */,
 				52092B2D1BF2701A00B2A1EE /* ProblemCollection.swift in Sources */,
+				521F9E371C017DC900129859 /* Assignment+Random.swift in Sources */,
 				52092B831BF2772800B2A1EE /* NSManagedObject+Extensions.swift in Sources */,
 				52092B7D1BF2772800B2A1EE /* ModelVersionType.swift in Sources */,
 				52092B801BF2772800B2A1EE /* CoreDataErrors.swift in Sources */,
 				52092B771BF2772800B2A1EE /* NSFetchRequest+Extensions.swift in Sources */,
 				52092B821BF2772800B2A1EE /* NSPersistentStoreCoordinator+Extensions.swift in Sources */,
+				521F9E331C017D2200129859 /* RandomModelProtocol.swift in Sources */,
 				521F9E271C017A3200129859 /* Problem.swift in Sources */,
 				52092B7F1BF2772800B2A1EE /* NSManagedObjectContext+Extensions.swift in Sources */,
+				521F9E3C1C019A7600129859 /* Problem+Random.swift in Sources */,
 				52092B7C1BF2772800B2A1EE /* Utilities.swift in Sources */,
 				52092B7B1BF2772800B2A1EE /* Collection+CoreDataExtensions.swift in Sources */,
 				521F9E261C017A3200129859 /* List.swift in Sources */,
