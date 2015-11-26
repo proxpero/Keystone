@@ -12,7 +12,7 @@
 		52092B1B1BF25A0100B2A1EE /* Keystone_OSX_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 52092B1A1BF25A0000B2A1EE /* Keystone_OSX_Model.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52092B1F1BF25A0100B2A1EE /* Keystone_OSX_Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52092B181BF25A0000B2A1EE /* Keystone_OSX_Model.framework */; };
 		52092B201BF25A0100B2A1EE /* Keystone_OSX_Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52092B181BF25A0000B2A1EE /* Keystone_OSX_Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		52092B2B1BF26FD300B2A1EE /* Keystone.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 52092B2A1BF26FD300B2A1EE /* Keystone.xcdatamodel */; settings = {ASSET_TAGS = (); }; };
+		52092B2B1BF26FD300B2A1EE /* Keystone_v1.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 52092B2A1BF26FD300B2A1EE /* Keystone_v1.xcdatamodel */; settings = {ASSET_TAGS = (); }; };
 		52092B2D1BF2701A00B2A1EE /* ProblemCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092B2C1BF2701A00B2A1EE /* ProblemCollection.swift */; settings = {ASSET_TAGS = (); }; };
 		52092B771BF2772800B2A1EE /* NSFetchRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092B691BF2772800B2A1EE /* NSFetchRequest+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
 		52092B781BF2772800B2A1EE /* ValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092B6A1BF2772800B2A1EE /* ValueTransformer.swift */; settings = {ASSET_TAGS = (); }; };
@@ -28,8 +28,6 @@
 		52092B821BF2772800B2A1EE /* NSPersistentStoreCoordinator+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092B741BF2772800B2A1EE /* NSPersistentStoreCoordinator+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
 		52092B831BF2772800B2A1EE /* NSManagedObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092B751BF2772800B2A1EE /* NSManagedObject+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
 		52092B841BF2772800B2A1EE /* ManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52092B761BF2772800B2A1EE /* ManagedObject.swift */; settings = {ASSET_TAGS = (); }; };
-		52092B881BF277E800B2A1EE /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52092B871BF277E800B2A1EE /* CloudKit.framework */; };
-		52092B8A1BF2780A00B2A1EE /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52092B891BF2780A00B2A1EE /* StoreKit.framework */; };
 		521F9DD41C01737100129859 /* SourceListKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 521F9DD31C01737100129859 /* SourceListKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		521F9DD81C01737100129859 /* SourceListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521F9DD11C01737100129859 /* SourceListKit.framework */; };
 		521F9DD91C01737100129859 /* SourceListKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 521F9DD11C01737100129859 /* SourceListKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -41,14 +39,14 @@
 		521F9DE91C0173A900129859 /* SourceListDetailCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9DE21C0173A900129859 /* SourceListDetailCellView.swift */; settings = {ASSET_TAGS = (); }; };
 		521F9DEA1C0173A900129859 /* TableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9DE31C0173A900129859 /* TableRowView.swift */; settings = {ASSET_TAGS = (); }; };
 		521F9DEC1C01742200129859 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9DEB1C01742200129859 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
-		521F9E251C017A3200129859 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E211C017A3200129859 /* Assignment.swift */; settings = {ASSET_TAGS = (); }; };
-		521F9E261C017A3200129859 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E221C017A3200129859 /* List.swift */; settings = {ASSET_TAGS = (); }; };
-		521F9E271C017A3200129859 /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E231C017A3200129859 /* Problem.swift */; settings = {ASSET_TAGS = (); }; };
-		521F9E281C017A3200129859 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E241C017A3200129859 /* Student.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E251C017A3200129859 /* Assignment_.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E211C017A3200129859 /* Assignment_.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E261C017A3200129859 /* List_.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E221C017A3200129859 /* List_.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E271C017A3200129859 /* Problem_.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E231C017A3200129859 /* Problem_.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E281C017A3200129859 /* Student_.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E241C017A3200129859 /* Student_.swift */; settings = {ASSET_TAGS = (); }; };
 		521F9E331C017D2200129859 /* RandomModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E321C017D2200129859 /* RandomModelProtocol.swift */; settings = {ASSET_TAGS = (); }; };
-		521F9E371C017DC900129859 /* Assignment+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E361C017DC900129859 /* Assignment+Random.swift */; settings = {ASSET_TAGS = (); }; };
-		521F9E3C1C019A7600129859 /* Problem+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E3B1C019A7600129859 /* Problem+Random.swift */; settings = {ASSET_TAGS = (); }; };
-		521F9E401C02B7D200129859 /* Student+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E3F1C02B7D200129859 /* Student+Random.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E371C017DC900129859 /* Assignment_+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E361C017DC900129859 /* Assignment_+Random.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E3C1C019A7600129859 /* Problem_+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E3B1C019A7600129859 /* Problem_+Random.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E401C02B7D200129859 /* Student_+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E3F1C02B7D200129859 /* Student_+Random.swift */; settings = {ASSET_TAGS = (); }; };
 		521F9E4A1C0366ED00129859 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E451C0366ED00129859 /* WindowController.swift */; settings = {ASSET_TAGS = (); }; };
 		521F9E4B1C0366ED00129859 /* MainSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E461C0366ED00129859 /* MainSplitViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		521F9E4C1C0366ED00129859 /* SourceListTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E471C0366ED00129859 /* SourceListTabViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -66,6 +64,18 @@
 		521F9E7C1C0377B000129859 /* first-names.txt in Resources */ = {isa = PBXBuildFile; fileRef = 521F9E761C0377B000129859 /* first-names.txt */; settings = {ASSET_TAGS = (); }; };
 		521F9E7D1C0377B000129859 /* last-names.txt in Resources */ = {isa = PBXBuildFile; fileRef = 521F9E771C0377B000129859 /* last-names.txt */; settings = {ASSET_TAGS = (); }; };
 		521F9E7E1C0377B000129859 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E781C0377B000129859 /* Person.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E851C03806200129859 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E831C03806200129859 /* Assignment.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E861C03806200129859 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E841C03806200129859 /* Student.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E881C0381DF00129859 /* KeystoneStack-OSX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E871C0381DF00129859 /* KeystoneStack-OSX.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E8A1C03829B00129859 /* KeystoneModelVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E891C03829B00129859 /* KeystoneModelVersion.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E8C1C03831B00129859 /* KeystoneMergePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E8B1C03831B00129859 /* KeystoneMergePolicy.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E8E1C03840700129859 /* UpdateTimestampable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E8D1C03840700129859 /* UpdateTimestampable.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E8F1C0385CC00129859 /* UtilityKit_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521F9E561C03768C00129859 /* UtilityKit_OSX.framework */; };
+		521F9E921C03889800129859 /* Student+SourceListKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E911C03889800129859 /* Student+SourceListKit.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E941C039E9700129859 /* StudentContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E931C039E9700129859 /* StudentContentViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E981C03C07A00129859 /* Student+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E971C03C07A00129859 /* Student+Random.swift */; settings = {ASSET_TAGS = (); }; };
+		521F9E9A1C03C1A000129859 /* Foundation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E991C03C1A000129859 /* Foundation+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44ECA1C0495AE00162BE2 /* Keystone_OSX_Model_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44EC91C0495AE00162BE2 /* Keystone_OSX_Model_Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +114,13 @@
 			remoteGlobalIDString = 521F9E551C03768C00129859;
 			remoteInfo = UtilityKit_OSX;
 		};
+		52A44ECC1C0495AE00162BE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52092AF91BF259E500B2A1EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52092B001BF259E500B2A1EE;
+			remoteInfo = "Keystone-OSX";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -130,7 +147,7 @@
 		52092B181BF25A0000B2A1EE /* Keystone_OSX_Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Keystone_OSX_Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52092B1A1BF25A0000B2A1EE /* Keystone_OSX_Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Keystone_OSX_Model.h; sourceTree = "<group>"; };
 		52092B1C1BF25A0100B2A1EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52092B2A1BF26FD300B2A1EE /* Keystone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Keystone.xcdatamodel; sourceTree = "<group>"; };
+		52092B2A1BF26FD300B2A1EE /* Keystone_v1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Keystone_v1.xcdatamodel; sourceTree = "<group>"; };
 		52092B2C1BF2701A00B2A1EE /* ProblemCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemCollection.swift; sourceTree = "<group>"; };
 		52092B691BF2772800B2A1EE /* NSFetchRequest+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFetchRequest+Extensions.swift"; sourceTree = "<group>"; };
 		52092B6A1BF2772800B2A1EE /* ValueTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueTransformer.swift; sourceTree = "<group>"; };
@@ -147,8 +164,6 @@
 		52092B751BF2772800B2A1EE /* NSManagedObject+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Extensions.swift"; sourceTree = "<group>"; };
 		52092B761BF2772800B2A1EE /* ManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObject.swift; sourceTree = "<group>"; };
 		52092B861BF277C700B2A1EE /* Keystone-OSX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Keystone-OSX.entitlements"; sourceTree = "<group>"; };
-		52092B871BF277E800B2A1EE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		52092B891BF2780A00B2A1EE /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		521F9DD11C01737100129859 /* SourceListKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SourceListKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		521F9DD31C01737100129859 /* SourceListKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceListKit.h; sourceTree = "<group>"; };
 		521F9DD51C01737100129859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -160,14 +175,14 @@
 		521F9DE21C0173A900129859 /* SourceListDetailCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceListDetailCellView.swift; sourceTree = "<group>"; };
 		521F9DE31C0173A900129859 /* TableRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRowView.swift; sourceTree = "<group>"; };
 		521F9DEB1C01742200129859 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		521F9E211C017A3200129859 /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Assignment.swift; path = ../../../Shared/Model/Assignment.swift; sourceTree = "<group>"; };
-		521F9E221C017A3200129859 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = List.swift; path = ../../../Shared/Model/List.swift; sourceTree = "<group>"; };
-		521F9E231C017A3200129859 /* Problem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Problem.swift; path = ../../../Shared/Model/Problem.swift; sourceTree = "<group>"; };
-		521F9E241C017A3200129859 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = ../../../Shared/Model/Student.swift; sourceTree = "<group>"; };
+		521F9E211C017A3200129859 /* Assignment_.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Assignment_.swift; path = ../../../Shared/Model/Assignment_.swift; sourceTree = "<group>"; };
+		521F9E221C017A3200129859 /* List_.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = List_.swift; path = ../../../Shared/Model/List_.swift; sourceTree = "<group>"; };
+		521F9E231C017A3200129859 /* Problem_.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Problem_.swift; path = ../../../Shared/Model/Problem_.swift; sourceTree = "<group>"; };
+		521F9E241C017A3200129859 /* Student_.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student_.swift; path = ../../../Shared/Model/Student_.swift; sourceTree = "<group>"; };
 		521F9E321C017D2200129859 /* RandomModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RandomModelProtocol.swift; path = ../../../Shared/Model/Random/RandomModelProtocol.swift; sourceTree = "<group>"; };
-		521F9E361C017DC900129859 /* Assignment+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Assignment+Random.swift"; path = "../../../Shared/Model/Random/Assignment+Random.swift"; sourceTree = "<group>"; };
-		521F9E3B1C019A7600129859 /* Problem+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Problem+Random.swift"; path = "../../../Shared/Model/Random/Problem+Random.swift"; sourceTree = "<group>"; };
-		521F9E3F1C02B7D200129859 /* Student+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Student+Random.swift"; path = "../../../Shared/Model/Random/Student+Random.swift"; sourceTree = "<group>"; };
+		521F9E361C017DC900129859 /* Assignment_+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Assignment_+Random.swift"; path = "../../../Shared/Model/Random/Assignment_+Random.swift"; sourceTree = "<group>"; };
+		521F9E3B1C019A7600129859 /* Problem_+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Problem_+Random.swift"; path = "../../../Shared/Model/Random/Problem_+Random.swift"; sourceTree = "<group>"; };
+		521F9E3F1C02B7D200129859 /* Student_+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Student_+Random.swift"; path = "../../../Shared/Model/Random/Student_+Random.swift"; sourceTree = "<group>"; };
 		521F9E451C0366ED00129859 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		521F9E461C0366ED00129859 /* MainSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSplitViewController.swift; sourceTree = "<group>"; };
 		521F9E471C0366ED00129859 /* SourceListTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceListTabViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +201,19 @@
 		521F9E761C0377B000129859 /* first-names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "first-names.txt"; path = "../../../Shared/Utilities/Shared/first-names.txt"; sourceTree = "<group>"; };
 		521F9E771C0377B000129859 /* last-names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "last-names.txt"; path = "../../../Shared/Utilities/Shared/last-names.txt"; sourceTree = "<group>"; };
 		521F9E781C0377B000129859 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Person.swift; path = ../../../Shared/Utilities/Shared/Person.swift; sourceTree = "<group>"; };
+		521F9E831C03806200129859 /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Assignment.swift; path = ../Model/Assignment.swift; sourceTree = "<group>"; };
+		521F9E841C03806200129859 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = ../Model/Student.swift; sourceTree = "<group>"; };
+		521F9E871C0381DF00129859 /* KeystoneStack-OSX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KeystoneStack-OSX.swift"; sourceTree = "<group>"; };
+		521F9E891C03829B00129859 /* KeystoneModelVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeystoneModelVersion.swift; sourceTree = "<group>"; };
+		521F9E8B1C03831B00129859 /* KeystoneMergePolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeystoneMergePolicy.swift; sourceTree = "<group>"; };
+		521F9E8D1C03840700129859 /* UpdateTimestampable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTimestampable.swift; sourceTree = "<group>"; };
+		521F9E911C03889800129859 /* Student+SourceListKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Student+SourceListKit.swift"; sourceTree = "<group>"; };
+		521F9E931C039E9700129859 /* StudentContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentContentViewController.swift; sourceTree = "<group>"; };
+		521F9E971C03C07A00129859 /* Student+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Student+Random.swift"; sourceTree = "<group>"; };
+		521F9E991C03C1A000129859 /* Foundation+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Foundation+Extensions.swift"; path = "../../../Shared/Utilities/Shared/Foundation+Extensions.swift"; sourceTree = "<group>"; };
+		52A44EC71C0495AE00162BE2 /* Keystone-OSX-Model-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Keystone-OSX-Model-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52A44EC91C0495AE00162BE2 /* Keystone_OSX_Model_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keystone_OSX_Model_Tests.swift; sourceTree = "<group>"; };
+		52A44ECB1C0495AE00162BE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,10 +222,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				521F9DD81C01737100129859 /* SourceListKit.framework in Frameworks */,
-				52092B8A1BF2780A00B2A1EE /* StoreKit.framework in Frameworks */,
 				52092B1F1BF25A0100B2A1EE /* Keystone_OSX_Model.framework in Frameworks */,
 				521F9E6B1C03768C00129859 /* UtilityKit_OSX.framework in Frameworks */,
-				52092B881BF277E800B2A1EE /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +238,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521F9E8F1C0385CC00129859 /* UtilityKit_OSX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,16 +257,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		52A44EC41C0495AE00162BE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		52092AF81BF259E500B2A1EE = {
 			isa = PBXGroup;
 			children = (
-				52092B891BF2780A00B2A1EE /* StoreKit.framework */,
-				52092B871BF277E800B2A1EE /* CloudKit.framework */,
 				52092B031BF259E500B2A1EE /* Keystone-OSX */,
 				52092B191BF25A0000B2A1EE /* Keystone_OSX_Model */,
+				52A44EC81C0495AE00162BE2 /* Keystone-OSX-Model-Tests */,
 				521F9DD21C01737100129859 /* SourceListKit */,
 				521F9E571C03768C00129859 /* UtilityKit_OSX */,
 				521F9E651C03768C00129859 /* UtilityKit_OSXTests */,
@@ -255,6 +288,7 @@
 				521F9DD11C01737100129859 /* SourceListKit.framework */,
 				521F9E561C03768C00129859 /* UtilityKit_OSX.framework */,
 				521F9E5F1C03768C00129859 /* UtilityKit_OSXTests.xctest */,
+				52A44EC71C0495AE00162BE2 /* Keystone-OSX-Model-Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -262,6 +296,7 @@
 		52092B031BF259E500B2A1EE /* Keystone-OSX */ = {
 			isa = PBXGroup;
 			children = (
+				521F9E901C03887200129859 /* Model+SourceListKit */,
 				52092B861BF277C700B2A1EE /* Keystone-OSX.entitlements */,
 				52092B041BF259E500B2A1EE /* AppDelegate.swift */,
 				521F9E451C0366ED00129859 /* WindowController.swift */,
@@ -283,6 +318,9 @@
 				52092B291BF26FD300B2A1EE /* Shared-Core Data */,
 				52092B1A1BF25A0000B2A1EE /* Keystone_OSX_Model.h */,
 				52092B1C1BF25A0100B2A1EE /* Info.plist */,
+				521F9E871C0381DF00129859 /* KeystoneStack-OSX.swift */,
+				521F9E891C03829B00129859 /* KeystoneModelVersion.swift */,
+				521F9E8B1C03831B00129859 /* KeystoneMergePolicy.swift */,
 			);
 			path = Keystone_OSX_Model;
 			sourceTree = "<group>";
@@ -291,8 +329,12 @@
 			isa = PBXGroup;
 			children = (
 				52092B851BF2773200B2A1EE /* Helpers */,
-				52092B2A1BF26FD300B2A1EE /* Keystone.xcdatamodel */,
+				52092B2A1BF26FD300B2A1EE /* Keystone_v1.xcdatamodel */,
+				521F9E841C03806200129859 /* Student.swift */,
+				521F9E971C03C07A00129859 /* Student+Random.swift */,
+				521F9E831C03806200129859 /* Assignment.swift */,
 				52092B2C1BF2701A00B2A1EE /* ProblemCollection.swift */,
+				521F9E8D1C03840700129859 /* UpdateTimestampable.swift */,
 			);
 			name = "Shared-Core Data";
 			path = "../../../Shared/Core Data";
@@ -339,10 +381,10 @@
 		521F9E141C0176A200129859 /* Pure Swift Model */ = {
 			isa = PBXGroup;
 			children = (
-				521F9E241C017A3200129859 /* Student.swift */,
-				521F9E211C017A3200129859 /* Assignment.swift */,
-				521F9E231C017A3200129859 /* Problem.swift */,
-				521F9E221C017A3200129859 /* List.swift */,
+				521F9E241C017A3200129859 /* Student_.swift */,
+				521F9E211C017A3200129859 /* Assignment_.swift */,
+				521F9E231C017A3200129859 /* Problem_.swift */,
+				521F9E221C017A3200129859 /* List_.swift */,
 				521F9E311C017CDA00129859 /* Random Model Object */,
 			);
 			name = "Pure Swift Model";
@@ -352,9 +394,9 @@
 			isa = PBXGroup;
 			children = (
 				521F9E321C017D2200129859 /* RandomModelProtocol.swift */,
-				521F9E3F1C02B7D200129859 /* Student+Random.swift */,
-				521F9E361C017DC900129859 /* Assignment+Random.swift */,
-				521F9E3B1C019A7600129859 /* Problem+Random.swift */,
+				521F9E3F1C02B7D200129859 /* Student_+Random.swift */,
+				521F9E361C017DC900129859 /* Assignment_+Random.swift */,
+				521F9E3B1C019A7600129859 /* Problem_+Random.swift */,
 			);
 			name = "Random Model Object";
 			sourceTree = "<group>";
@@ -370,6 +412,7 @@
 				521F9E781C0377B000129859 /* Person.swift */,
 				521F9E581C03768C00129859 /* UtilityKit_OSX.h */,
 				521F9E5A1C03768C00129859 /* Info.plist */,
+				521F9E991C03C1A000129859 /* Foundation+Extensions.swift */,
 			);
 			path = UtilityKit_OSX;
 			sourceTree = "<group>";
@@ -381,6 +424,24 @@
 				521F9E681C03768C00129859 /* Info.plist */,
 			);
 			path = UtilityKit_OSXTests;
+			sourceTree = "<group>";
+		};
+		521F9E901C03887200129859 /* Model+SourceListKit */ = {
+			isa = PBXGroup;
+			children = (
+				521F9E911C03889800129859 /* Student+SourceListKit.swift */,
+				521F9E931C039E9700129859 /* StudentContentViewController.swift */,
+			);
+			name = "Model+SourceListKit";
+			sourceTree = "<group>";
+		};
+		52A44EC81C0495AE00162BE2 /* Keystone-OSX-Model-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				52A44EC91C0495AE00162BE2 /* Keystone_OSX_Model_Tests.swift */,
+				52A44ECB1C0495AE00162BE2 /* Info.plist */,
+			);
+			path = "Keystone-OSX-Model-Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -507,6 +568,24 @@
 			productReference = 521F9E5F1C03768C00129859 /* UtilityKit_OSXTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		52A44EC61C0495AE00162BE2 /* Keystone-OSX-Model-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52A44ECE1C0495AE00162BE2 /* Build configuration list for PBXNativeTarget "Keystone-OSX-Model-Tests" */;
+			buildPhases = (
+				52A44EC31C0495AE00162BE2 /* Sources */,
+				52A44EC41C0495AE00162BE2 /* Frameworks */,
+				52A44EC51C0495AE00162BE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52A44ECD1C0495AE00162BE2 /* PBXTargetDependency */,
+			);
+			name = "Keystone-OSX-Model-Tests";
+			productName = "Keystone-OSX-Model-Tests";
+			productReference = 52A44EC71C0495AE00162BE2 /* Keystone-OSX-Model-Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -522,13 +601,13 @@
 						DevelopmentTeam = 55SVD8WGE3;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Sandbox = {
 								enabled = 1;
 							};
 							com.apple.iCloud = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -545,6 +624,10 @@
 						DevelopmentTeam = 55SVD8WGE3;
 					};
 					521F9E5E1C03768C00129859 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 52092B001BF259E500B2A1EE;
+					};
+					52A44EC61C0495AE00162BE2 = {
 						CreatedOnToolsVersion = 7.0;
 						TestTargetID = 52092B001BF259E500B2A1EE;
 					};
@@ -568,6 +651,7 @@
 				521F9DD01C01737100129859 /* SourceListKit */,
 				521F9E551C03768C00129859 /* UtilityKit_OSX */,
 				521F9E5E1C03768C00129859 /* UtilityKit_OSXTests */,
+				52A44EC61C0495AE00162BE2 /* Keystone-OSX-Model-Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -612,6 +696,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		52A44EC51C0495AE00162BE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -624,6 +715,8 @@
 				521F9E4B1C0366ED00129859 /* MainSplitViewController.swift in Sources */,
 				521F9E4A1C0366ED00129859 /* WindowController.swift in Sources */,
 				521F9E4E1C0366ED00129859 /* SourceListViewController.swift in Sources */,
+				521F9E921C03889800129859 /* Student+SourceListKit.swift in Sources */,
+				521F9E941C039E9700129859 /* StudentContentViewController.swift in Sources */,
 				52092B051BF259E500B2A1EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -632,30 +725,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				521F9E251C017A3200129859 /* Assignment.swift in Sources */,
-				52092B2B1BF26FD300B2A1EE /* Keystone.xcdatamodel in Sources */,
-				521F9E401C02B7D200129859 /* Student+Random.swift in Sources */,
+				521F9E251C017A3200129859 /* Assignment_.swift in Sources */,
+				52092B2B1BF26FD300B2A1EE /* Keystone_v1.xcdatamodel in Sources */,
+				521F9E401C02B7D200129859 /* Student_+Random.swift in Sources */,
+				521F9E881C0381DF00129859 /* KeystoneStack-OSX.swift in Sources */,
 				52092B791BF2772800B2A1EE /* NSManagedObjectContext+Observers.swift in Sources */,
-				521F9E281C017A3200129859 /* Student.swift in Sources */,
+				521F9E281C017A3200129859 /* Student_.swift in Sources */,
 				52092B841BF2772800B2A1EE /* ManagedObject.swift in Sources */,
 				52092B811BF2772800B2A1EE /* Migration.swift in Sources */,
+				521F9E8C1C03831B00129859 /* KeystoneMergePolicy.swift in Sources */,
+				521F9E861C03806200129859 /* Student.swift in Sources */,
 				52092B781BF2772800B2A1EE /* ValueTransformer.swift in Sources */,
+				521F9E8A1C03829B00129859 /* KeystoneModelVersion.swift in Sources */,
 				52092B7A1BF2772800B2A1EE /* ModelBuilder.swift in Sources */,
 				52092B7E1BF2772800B2A1EE /* ManagedObjectObserver.swift in Sources */,
 				52092B2D1BF2701A00B2A1EE /* ProblemCollection.swift in Sources */,
-				521F9E371C017DC900129859 /* Assignment+Random.swift in Sources */,
+				521F9E371C017DC900129859 /* Assignment_+Random.swift in Sources */,
 				52092B831BF2772800B2A1EE /* NSManagedObject+Extensions.swift in Sources */,
+				521F9E981C03C07A00129859 /* Student+Random.swift in Sources */,
 				52092B7D1BF2772800B2A1EE /* ModelVersionType.swift in Sources */,
 				52092B801BF2772800B2A1EE /* CoreDataErrors.swift in Sources */,
 				52092B771BF2772800B2A1EE /* NSFetchRequest+Extensions.swift in Sources */,
 				52092B821BF2772800B2A1EE /* NSPersistentStoreCoordinator+Extensions.swift in Sources */,
 				521F9E331C017D2200129859 /* RandomModelProtocol.swift in Sources */,
-				521F9E271C017A3200129859 /* Problem.swift in Sources */,
+				521F9E271C017A3200129859 /* Problem_.swift in Sources */,
 				52092B7F1BF2772800B2A1EE /* NSManagedObjectContext+Extensions.swift in Sources */,
-				521F9E3C1C019A7600129859 /* Problem+Random.swift in Sources */,
+				521F9E3C1C019A7600129859 /* Problem_+Random.swift in Sources */,
 				52092B7C1BF2772800B2A1EE /* Utilities.swift in Sources */,
 				52092B7B1BF2772800B2A1EE /* Collection+CoreDataExtensions.swift in Sources */,
-				521F9E261C017A3200129859 /* List.swift in Sources */,
+				521F9E8E1C03840700129859 /* UpdateTimestampable.swift in Sources */,
+				521F9E851C03806200129859 /* Assignment.swift in Sources */,
+				521F9E261C017A3200129859 /* List_.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,6 +781,7 @@
 				521F9E7B1C0377B000129859 /* Delay.swift in Sources */,
 				521F9E791C0377B000129859 /* AppKitExtensions.swift in Sources */,
 				521F9E7E1C0377B000129859 /* Person.swift in Sources */,
+				521F9E9A1C03C1A000129859 /* Foundation+Extensions.swift in Sources */,
 				521F9E7A1C0377B000129859 /* Collection+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -690,6 +791,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				521F9E671C03768C00129859 /* UtilityKit_OSXTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52A44EC31C0495AE00162BE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52A44ECA1C0495AE00162BE2 /* Keystone_OSX_Model_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,6 +829,11 @@
 			isa = PBXTargetDependency;
 			target = 521F9E551C03768C00129859 /* UtilityKit_OSX */;
 			targetProxy = 521F9E691C03768C00129859 /* PBXContainerItemProxy */;
+		};
+		52A44ECD1C0495AE00162BE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52092B001BF259E500B2A1EE /* Keystone-OSX */;
+			targetProxy = 52A44ECC1C0495AE00162BE2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1004,6 +1118,32 @@
 			};
 			name = Release;
 		};
+		52A44ECF1C0495AE00162BE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Keystone-OSX-Model-Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Todd-Olsen.Keystone-OSX-Model-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Keystone-OSX.app/Contents/MacOS/Keystone-OSX";
+			};
+			name = Debug;
+		};
+		52A44ED01C0495AE00162BE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Keystone-OSX-Model-Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Todd-Olsen.Keystone-OSX-Model-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Keystone-OSX.app/Contents/MacOS/Keystone-OSX";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1050,12 +1190,22 @@
 				521F9E6F1C03768C00129859 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		521F9E701C03768C00129859 /* Build configuration list for PBXNativeTarget "UtilityKit_OSXTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				521F9E711C03768C00129859 /* Debug */,
 				521F9E721C03768C00129859 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52A44ECE1C0495AE00162BE2 /* Build configuration list for PBXNativeTarget "Keystone-OSX-Model-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52A44ECF1C0495AE00162BE2 /* Debug */,
+				52A44ED01C0495AE00162BE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

@@ -9,6 +9,7 @@
 import Cocoa
 
 public class ContentTabViewController: NSTabViewController {
+    public var managedObjectContext: NSManagedObjectContext!
     
     func newContentViewController(viewController: NSViewController) {
         

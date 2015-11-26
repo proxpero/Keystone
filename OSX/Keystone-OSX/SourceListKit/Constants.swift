@@ -7,18 +7,18 @@
 //
 
 import Foundation
-import MacUtilities
+import UtilityKit_OSX
 
-internal struct k {
+public struct SourceListKitConstants {
     
-    internal struct Color {
+    public struct Color {
         static let Highlight                = NSColor(rgba: "#589FF5")
         static let OffWhite                 = NSColor(rgba: "#F5F5F5")
     }
     
-    internal struct SourceListCellIdentifier {
-        internal static let Header = "SourceListHeaderCellView"
-        internal static let Detail = "SourceListDetailCellView"
+    public struct CellIdentifier {
+        public static let Header = "SourceListHeaderCellView"
+        public static let Detail = "SourceListDetailCellView"
     }
 }
 

@@ -36,12 +36,8 @@ extension NSManagedObjectContext {
         metaData = md
     }
     
-    public func insertObject<A: ManagedObject where A: ManagedObjectType>
-        () -> A
-    {
-        guard let obj = NSEntityDescription.insertNewObjectForEntityForName(
-            A.entityName, inManagedObjectContext: self) as? A
-        else { fatalError("Wrong object type") }
+    public func insertObject<A: ManagedObject where A: ManagedObjectType>() -> A {
+        guard let obj = NSEntityDescription.insertNewObjectForEntityForName(A.entityName, inManagedObjectContext: self) as? A else { fatalError("Wrong object type") }
         return obj
     }
     

@@ -1,33 +1,64 @@
 //
 //  Student.swift
-//  Example
+//  Keystone-OSX
 //
-//  Created by Todd Olsen on 11/18/15.
+//  Created by Todd Olsen on 11/23/15.
 //  Copyright © 2015 Todd Olsen. All rights reserved.
 //
 
 import Foundation
+import CoreData
 
-public struct Student {
+public final class Student: ManagedObject {
     
-    var name: String
-    var graduationDate: NSDate
-    var assignments: Set<Assignment>
+    @NSManaged public private(set) var firstName: String
+    @NSManaged public private(set) var lastName: String
+    @NSManaged public private(set) var graduationDate: NSDate
+    @NSManaged public private(set) var assignments: Set<Assignment>
+
+    public func addAssignment(newAssignment: Assignment) {
+        assignments.insert(newAssignment)
+    }
     
-    public init(
-        name: String,
-        graduationDate: NSDate,
-        assignments: Set<Assignment> = Set<Assignment>())
-    {
-        self.name           = name
-        self.graduationDate = graduationDate
-        self.assignments    = assignments
+    public func addAssignments(newAssignments: [Assignment]) {
+        assignments.unionInPlace(newAssignments)
     }
 }
 
-extension Student: CustomStringConvertible {
+extension Student {
+    public var fullName: String { return "\(firstName) \(lastName)" }
+}
+
+extension Student: ManagedObjectType {
     
-    public var description: String {
-        return "\(name), graduation date \(graduationDate), assingments: \(assignments)"
+    public static var entityName: String { return "Student" }
+    public static var defaultSortDescriptors: [NSSortDescriptor] {
+        return [
+            NSSortDescriptor(key: "graduationDate", ascending: true),
+            NSSortDescriptor(key: "firstName", ascending: true),
+            NSSortDescriptor(key: "lastName", ascending: true)
+        ]
+    }
+    public static var defaultPredicate: NSPredicate { return NSPredicate() }
+}
+
+extension Student { // Core Data
+    
+    public static func insertIntoContext(moc: NSManagedObjectContext) -> Student {
+        let student: Student    = moc.insertObject()
+        student.firstName       = "First"
+        student.lastName        = "Last"
+        student.graduationDate  = NSDate()
+        return student
+    }
+
+    public static func insertIntoContext(moc: NSManagedObjectContext, firstName: String, lastName: String, graduationDate: NSDate) -> Student {
+        let student: Student    = moc.insertObject()
+        student.firstName       = firstName
+        student.lastName        = lastName
+        student.graduationDate  = graduationDate
+        return student
     }
 }
+
+

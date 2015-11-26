@@ -15,5 +15,3 @@ FOUNDATION_EXPORT double SourceListKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char SourceListKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <SourceListKit/PublicHeader.h>
-
-#import <MacUtilities/MacUtilities.h>

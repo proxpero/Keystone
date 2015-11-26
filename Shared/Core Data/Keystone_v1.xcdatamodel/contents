@@ -4,6 +4,7 @@
         <attribute name="assignmentDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="dueDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="assignmentProblems" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="AssignmentProblem" inverseName="assignment" inverseEntity="AssignmentProblem" syncable="YES"/>
         <relationship name="students" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" inverseName="assignments" inverseEntity="Student" syncable="YES"/>
     </entity>
@@ -82,6 +83,7 @@
         <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="graduationDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="assignments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Assignment" inverseName="students" inverseEntity="Assignment" syncable="YES"/>
     </entity>
     <entity name="Tag" syncable="YES">
@@ -90,7 +92,7 @@
         <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ProblemItem" inverseName="tags" inverseEntity="ProblemItem" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Assignment" positionX="-668" positionY="-1066" width="128" height="118"/>
+        <element name="Assignment" positionX="-668" positionY="-1066" width="128" height="133"/>
         <element name="AssignmentProblem" positionX="-666" positionY="-900" width="128" height="88"/>
         <element name="ComponentType" positionX="-279" positionY="-666" width="180" height="103"/>
         <element name="List" positionX="-497" positionY="-1063" width="128" height="133"/>
@@ -100,8 +102,8 @@
         <element name="ProblemSet" positionX="-486" positionY="-882" width="128" height="118"/>
         <element name="ProblemSetComponent" positionX="-477" positionY="-702" width="153" height="103"/>
         <element name="ProblemSetTemplate" positionX="-306" positionY="-882" width="153" height="163"/>
-        <element name="Student" positionX="-855" positionY="-909" width="128" height="103"/>
-        <element name="Tag" positionX="-855" positionY="-747" width="128" height="88"/>
         <element name="Standard" positionX="-875" positionY="-612" width="128" height="118"/>
+        <element name="Student" positionX="-855" positionY="-909" width="128" height="118"/>
+        <element name="Tag" positionX="-855" positionY="-747" width="128" height="88"/>
     </elements>
 </model>

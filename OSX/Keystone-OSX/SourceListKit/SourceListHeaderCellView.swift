@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import MacUtilities
+import UtilityKit_OSX
 
 public class SourceListHeaderCellView: TableCellView {
     
@@ -30,7 +30,7 @@ public class SourceListHeaderCellView: TableCellView {
     
     private func addHighlight() {
         
-        let highlightColor = k.Color.Highlight
+        let highlightColor = SourceListKitConstants.Color.Highlight
         self.button.image = self.button.image?.imageWithTint(highlightColor)
         self.textField?.textColor = highlightColor
         self.horizontalLine.borderColor = highlightColor

@@ -11,7 +11,4 @@ import SourceListKit
 
 public class SourceListViewController: NSViewController {
     @IBOutlet weak var sourceList: NSTableView!
-    
-    
 }
-

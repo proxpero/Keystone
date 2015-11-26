@@ -1,57 +1,25 @@
 //
 //  Assignment.swift
-//  Example
+//  Keystone-OSX
 //
-//  Created by Todd Olsen on 11/21/15.
+//  Created by Todd Olsen on 11/23/15.
 //  Copyright © 2015 Todd Olsen. All rights reserved.
 //
 
 import Foundation
+import CoreData
 
-public struct Assignment {
+public final class Assignment: ManagedObject {
     
-    let student: Student
-    let note: String
-    let assignedOnDate: NSDate
-    let dueDate: NSDate
-    var assignmentProblems: [AssignmentProblem]
+    @NSManaged public private(set) var assignmentDate: NSDate
+    @NSManaged public private(set) var dueDate: NSDate
+    @NSManaged public private(set) var note: String?
+    @NSManaged public private(set) var student: Student
+    @NSManaged public private(set) var assignmentProblems: NSOrderedSet
     
-    public init(
-        student: Student,
-        note: String,
-        dueDate: NSDate,
-        assignedOnDate: NSDate = NSDate(),
-        assignmentProblems: [AssignmentProblem] = [])
-    {
-        self.student            = student
-        self.note               = note
-        self.dueDate            = dueDate
-        self.assignedOnDate     = assignedOnDate
-        self.assignmentProblems = assignmentProblems
+    public func addAssignmentProblem(assignmentProblem: AssignmentProblem) {
+        let prbs = mutableOrderedSetValueForKey("assignmentProblems")
+        prbs.addObject(assignmentProblem)
     }
 }
 
-extension Assignment: Equatable { }
-public func ==(lhs: Assignment, rhs: Assignment) -> Bool {
-    
-    if lhs.dueDate                  != rhs.dueDate                  { return false }
-    if lhs.assignedOnDate           != rhs.assignedOnDate           { return false }
-    if lhs.assignmentProblems.count != rhs.assignmentProblems.count { return false }
-    if lhs.assignmentProblems       != rhs.assignmentProblems       { return false }
-    
-    return true
-}
-
-extension Assignment: Hashable {
-    public var hashValue: Int { return dueDate.hashValue * assignedOnDate.hashValue }
-}
-
-extension Assignment: CustomStringConvertible {
-    static let formatter: NSDateFormatter = {
-        let df = NSDateFormatter()
-        df.dateStyle = NSDateFormatterStyle.ShortStyle
-        df.timeStyle = NSDateFormatterStyle.NoStyle
-        return df
-    }()
-    public var description: String { return "\(assignmentProblems.count) assignments, due on \(Assignment.formatter.stringFromDate(dueDate))" }
-}

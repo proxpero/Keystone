@@ -8,9 +8,11 @@
 
 import Cocoa
 import SourceListKit
+import Keystone_OSX_Model
 
 public class SourceListTabViewController: NSTabViewController {
     
+    public var managedObjectContext: NSManagedObjectContext!
     public var pushContentViewControllerHandler: (NSViewController) -> () = { _ in }
     
     private var backButton: NSButton!
@@ -23,9 +25,10 @@ public class SourceListTabViewController: NSTabViewController {
         let root: SourceListItemType = {
            
             func rootSourceListConfigurator() -> [SourceListItem] {
+                
                 var items: [SourceListItem] = []
                 items.appendContentsOf(Student.sourceListItems)
-                items.appendContentsOf(List.sourceListItems)
+                
                 return items
             }
             

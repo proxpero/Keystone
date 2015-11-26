@@ -21,7 +21,7 @@ public class TableDataRowView: NSTableRowView {
             NSDivideRect(dirtyRect, &back, &rem, 14, NSRectEdge.MaxX)
             NSDivideRect(rem, &highlight, &rem, 7, NSRectEdge.MaxX)
             
-            k.Color.Highlight.set()
+            SourceListKitConstants.Color.Highlight.set()
             NSRectFill(highlight)
             
             NSColor.secondarySelectedControlColor().set()
