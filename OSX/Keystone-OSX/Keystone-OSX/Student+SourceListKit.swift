@@ -11,8 +11,8 @@ import SourceListKit
 import Keystone_Model_OSX
 
 extension Student: SourceListItemsProvider {
- 
-    public static var sourceListItems: [SourceListItem] {
+    
+    public static func sourceListItemsInContext(context: NSManagedObjectContext) -> [SourceListItem] {
         
         var items: [SourceListItem] = []
         
@@ -34,7 +34,7 @@ extension Student: SourceListItemsProvider {
         
         items.append(header)
         
-        let students: [Student] = []
+        let students: [Student] = Student.fetchInContext(context)
         
         items.appendContentsOf(students.map { SourceListItem(
             itemType: .DynamicChild(
@@ -45,7 +45,6 @@ extension Student: SourceListItemsProvider {
             cellSelectionCallback: Student.cellSelectionCallback($0)) })
         
         return items
-        
     }
 }
 
@@ -122,7 +121,7 @@ extension Student {
         
         func configureAssignmentsHeaderCell(tableView: NSTableView) -> NSTableCellView {
             guard let headerCell = tableView.makeViewWithIdentifier(SourceListKitConstants.CellIdentifier.Header, owner: tableView) as? SourceListHeaderCellView else { fatalError() }
-            headerCell.textField?.stringValue = "Assignments"
+            headerCell.textField?.stringValue = "\(student.assignments.count) Assignment" + (student.assignments.count > 1 ? "s" : "")
             headerCell.showHiddenViews = true
             return headerCell
         }
@@ -131,7 +130,16 @@ extension Student {
             itemType: .Header,
             cellViewConfigurator: configureAssignmentsHeaderCell))
         
+        let assignments = student.assignments.sort(Assignment.sortByDueDate)
+        items.appendContentsOf(assignments.map { SourceListItem(
+            itemType: .StaticChild(2),
+            cellViewConfigurator: Assignment.cellViewConfigurator($0),
+            cellSelectionCallback: Assignment.cellSelectionCallback($0)) })
         
+        func assignmentsCellViewConfigurator(tableView: NSTableView) -> NSTableCellView {
+            guard let dynamicCell = tableView.makeViewWithIdentifier(SourceListKitConstants.CellIdentifier.Detail, owner: tableView) as? SourceListDetailCellView else { fatalError() }
+            return dynamicCell
+        }
         
         return items
     }

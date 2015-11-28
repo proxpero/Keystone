@@ -74,6 +74,12 @@
 		52C6C8EA1C09553F00476490 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6C8DF1C09553F00476490 /* List.swift */; settings = {ASSET_TAGS = (); }; };
 		52C6C8EE1C09557900476490 /* Keystone_v1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52C6C8EC1C09557900476490 /* Keystone_v1.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
 		52D9E5941C0A2BFC00F0086B /* UtilityKit_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521F9E561C03768C00129859 /* UtilityKit_OSX.framework */; };
+		52D9E5971C0A323400F0086B /* Student+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9E5961C0A323400F0086B /* Student+Random.swift */; settings = {ASSET_TAGS = (); }; };
+		52D9E5991C0A354D00F0086B /* ManagedObjectContextSettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9E5981C0A354D00F0086B /* ManagedObjectContextSettable.swift */; settings = {ASSET_TAGS = (); }; };
+		52D9E59B1C0A3C8300F0086B /* StudentContentView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D9E59A1C0A3C8300F0086B /* StudentContentView.storyboard */; settings = {ASSET_TAGS = (); }; };
+		52D9E59D1C0A4DEB00F0086B /* Assignment+SourceListKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9E59C1C0A4DEB00F0086B /* Assignment+SourceListKit.swift */; settings = {ASSET_TAGS = (); }; };
+		52D9E59F1C0A511D00F0086B /* AssignmentContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9E59E1C0A511D00F0086B /* AssignmentContentViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		52D9E5A11C0A51BA00F0086B /* AssignmentContentView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D9E5A01C0A51BA00F0086B /* AssignmentContentView.storyboard */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -200,6 +206,12 @@
 		52C6C8DE1C09553F00476490 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tag.swift; path = ../../../Model/KeystoneModel/Tag.swift; sourceTree = "<group>"; };
 		52C6C8DF1C09553F00476490 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = List.swift; path = ../../../Model/KeystoneModel/List.swift; sourceTree = "<group>"; };
 		52C6C8ED1C09557900476490 /* Keystone_v1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Keystone_v1.xcdatamodel; sourceTree = "<group>"; };
+		52D9E5961C0A323400F0086B /* Student+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Student+Random.swift"; path = "../../../Model/KeystoneModel/Student+Random.swift"; sourceTree = "<group>"; };
+		52D9E5981C0A354D00F0086B /* ManagedObjectContextSettable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManagedObjectContextSettable.swift; path = "../../../../../../Downloads/core-data-master/Moody/Moody/ManagedObjectContextSettable.swift"; sourceTree = "<group>"; };
+		52D9E59A1C0A3C8300F0086B /* StudentContentView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StudentContentView.storyboard; path = ../../../../../../Desktop/GenericTableViewKit/Example/Example/StudentContentView.storyboard; sourceTree = "<group>"; };
+		52D9E59C1C0A4DEB00F0086B /* Assignment+SourceListKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assignment+SourceListKit.swift"; sourceTree = "<group>"; };
+		52D9E59E1C0A511D00F0086B /* AssignmentContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentContentViewController.swift; sourceTree = "<group>"; };
+		52D9E5A01C0A51BA00F0086B /* AssignmentContentView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AssignmentContentView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,7 +347,11 @@
 			isa = PBXGroup;
 			children = (
 				521F9E911C03889800129859 /* Student+SourceListKit.swift */,
+				52D9E59C1C0A4DEB00F0086B /* Assignment+SourceListKit.swift */,
 				521F9E931C039E9700129859 /* StudentContentViewController.swift */,
+				52D9E59A1C0A3C8300F0086B /* StudentContentView.storyboard */,
+				52D9E59E1C0A511D00F0086B /* AssignmentContentViewController.swift */,
+				52D9E5A01C0A51BA00F0086B /* AssignmentContentView.storyboard */,
 			);
 			name = "Model+SourceListKit";
 			sourceTree = "<group>";
@@ -343,6 +359,7 @@
 		52C6C8961C09546B00476490 /* Keystone-Model-OSX */ = {
 			isa = PBXGroup;
 			children = (
+				52D9E5951C0A2F3A00F0086B /* Random */,
 				52C6C8AF1C0954BE00476490 /* Model */,
 				52C6C8B01C0954C700476490 /* Core Data */,
 				52C6C8B11C0954D600476490 /* Helpers */,
@@ -385,6 +402,7 @@
 			isa = PBXGroup;
 			children = (
 				52C6C8B21C09550800476490 /* NSFetchRequest+Extensions.swift */,
+				52D9E5981C0A354D00F0086B /* ManagedObjectContextSettable.swift */,
 				52C6C8B31C09550800476490 /* ValueTransformer.swift */,
 				52C6C8B41C09550800476490 /* NSManagedObjectContext+Observers.swift */,
 				52C6C8B51C09550800476490 /* ModelBuilder.swift */,
@@ -400,6 +418,14 @@
 				52C6C8BF1C09550800476490 /* ManagedObject.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		52D9E5951C0A2F3A00F0086B /* Random */ = {
+			isa = PBXGroup;
+			children = (
+				52D9E5961C0A323400F0086B /* Student+Random.swift */,
+			);
+			name = Random;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -596,7 +622,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52D9E5A11C0A51BA00F0086B /* AssignmentContentView.storyboard in Resources */,
 				52092B091BF259E500B2A1EE /* Assets.xcassets in Resources */,
+				52D9E59B1C0A3C8300F0086B /* StudentContentView.storyboard in Resources */,
 				521F9E501C03671000129859 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -639,9 +667,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				521F9E4D1C0366ED00129859 /* ContentTabViewController.swift in Sources */,
+				52D9E59D1C0A4DEB00F0086B /* Assignment+SourceListKit.swift in Sources */,
 				521F9E4C1C0366ED00129859 /* SourceListTabViewController.swift in Sources */,
 				521F9E4B1C0366ED00129859 /* MainSplitViewController.swift in Sources */,
 				521F9E4A1C0366ED00129859 /* WindowController.swift in Sources */,
+				52D9E59F1C0A511D00F0086B /* AssignmentContentViewController.swift in Sources */,
 				521F9E4E1C0366ED00129859 /* SourceListViewController.swift in Sources */,
 				521F9E921C03889800129859 /* Student+SourceListKit.swift in Sources */,
 				521F9E941C039E9700129859 /* StudentContentViewController.swift in Sources */,
@@ -690,6 +720,7 @@
 			files = (
 				52C6C8D41C09552B00476490 /* KeystoneMergePolicy.swift in Sources */,
 				52C6C8CD1C09550800476490 /* ManagedObject.swift in Sources */,
+				52D9E5971C0A323400F0086B /* Student+Random.swift in Sources */,
 				52C6C8C61C09550800476490 /* ModelVersionType.swift in Sources */,
 				52C6C8C91C09550800476490 /* CoreDataErrors.swift in Sources */,
 				52C6C8E61C09553F00476490 /* ProblemItem.swift in Sources */,
@@ -714,6 +745,7 @@
 				52C6C8E11C09553F00476490 /* Student.swift in Sources */,
 				52C6C8E71C09553F00476490 /* Constituent.swift in Sources */,
 				52C6C8E91C09553F00476490 /* Tag.swift in Sources */,
+				52D9E5991C0A354D00F0086B /* ManagedObjectContextSettable.swift in Sources */,
 				52C6C8C11C09550800476490 /* ValueTransformer.swift in Sources */,
 				52C6C8EE1C09557900476490 /* Keystone_v1.xcdatamodeld in Sources */,
 				52C6C8E31C09553F00476490 /* AssignmentProblem.swift in Sources */,

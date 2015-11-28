@@ -106,3 +106,10 @@ extension Assignment {
         return assignment
     }
 }
+
+extension Assignment {
+    
+    public static func sortByDueDate(lhs: Assignment, rhs: Assignment) -> Bool {
+        return lhs.dueDate < rhs.dueDate
+    }
+}

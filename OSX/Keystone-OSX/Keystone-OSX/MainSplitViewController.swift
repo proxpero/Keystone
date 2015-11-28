@@ -16,11 +16,11 @@ class MainSplitViewController: NSSplitViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let context = createKeystoneMainContext() else { fatalError() }
-        managedObjectContext = context
-        
         guard let mainSidebarViewController = splitViewItems.first?.viewController as? SourceListTabViewController else { fatalError("No Sidebar View") }
         guard let mainContentViewController = splitViewItems.last?.viewController as? ContentTabViewController else { fatalError("No Content View") }
+        guard let context = createKeystoneMainContext() else { fatalError() }
+        
+        managedObjectContext = context
         
         mainSidebarViewController.managedObjectContext = managedObjectContext
         mainContentViewController.managedObjectContext = managedObjectContext
@@ -30,6 +30,11 @@ class MainSplitViewController: NSSplitViewController {
         }
         
         configureSplitView()
+        
+        for _ in (0..<10) {
+            Student.randomInContext(managedObjectContext)
+        }
+        mainSidebarViewController.instantiateRoot()
     }
     
     private func configureSplitView() {

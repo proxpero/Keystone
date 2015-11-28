@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import CoreData
+import UtilityKit_OSX
 
 extension Student {
     
@@ -45,8 +47,6 @@ extension Student {
             
             student.addAssignment(assignment)
         }
-        
-        
         
         return student
     }

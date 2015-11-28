@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol SourceListItemsProvider {
-    static var sourceListItems: [SourceListItem] { get }
+    static func sourceListItemsInContext(context: NSManagedObjectContext) -> [SourceListItem]
 }

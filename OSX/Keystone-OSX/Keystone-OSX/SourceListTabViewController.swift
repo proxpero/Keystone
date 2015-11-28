@@ -21,13 +21,17 @@ public class SourceListTabViewController: NSTabViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+
+    }
+    
+    public func instantiateRoot() {
         
         let root: SourceListItemType = {
-           
+            
             func rootSourceListConfigurator() -> [SourceListItem] {
-                
+
                 var items: [SourceListItem] = []
-                items.appendContentsOf(Student.sourceListItems)
+                items.appendContentsOf(Student.sourceListItemsInContext(managedObjectContext))
                 
                 return items
             }
@@ -44,8 +48,9 @@ public class SourceListTabViewController: NSTabViewController {
             }
             
             return SourceListItemType.DynamicChild(sourceListConfigurator: rootSourceListConfigurator, contentViewConfigurator: rootContentViewConfigurator, toolbarConfigurator: rootToolbarConfigurator)
-        }()
+            }()
         updateWithItemType(root)
+        
     }
     
     public override func viewDidAppear() {

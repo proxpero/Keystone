@@ -8,6 +8,7 @@
 
 import Cocoa
 import SourceListKit
+import Keystone_Model_OSX
 
 public class SourceListViewController: NSViewController {
     @IBOutlet weak var sourceList: NSTableView!

@@ -68,12 +68,12 @@
         <element name="Assignment" positionX="-938" positionY="-1062" width="146" height="118"/>
         <element name="AssignmentProblemItem" positionX="-936" positionY="-763" width="153" height="88"/>
         <element name="AssignmentProblemSet" positionX="-945" positionY="-898" width="155" height="88"/>
+        <element name="ConstituentStyle" positionX="-524" positionY="-801" width="128" height="133"/>
         <element name="List" positionX="-738" positionY="-1063" width="128" height="103"/>
         <element name="ProblemItem" positionX="-720" positionY="-748" width="153" height="133"/>
         <element name="ProblemSet" positionX="-729" positionY="-909" width="128" height="118"/>
         <element name="ProblemSetTemplate" positionX="-551" positionY="-963" width="128" height="118"/>
         <element name="Student" positionX="-1118" positionY="-1012" width="128" height="103"/>
         <element name="Tag" positionX="-918" positionY="-655" width="128" height="88"/>
-        <element name="ConstituentStyle" positionX="-524" positionY="-801" width="128" height="133"/>
     </elements>
 </model>

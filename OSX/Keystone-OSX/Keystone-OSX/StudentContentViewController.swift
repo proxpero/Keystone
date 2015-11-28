@@ -16,6 +16,7 @@ public enum StudentViewControllerItems: Int {
 }
 
 public class StudentContentViewController: NSTabViewController {
+    
     public var student: Student! {
         didSet { title = student.fullName }
     }
