@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52A44EDF1C0497EA00162BE2 /* KeystoneModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 52A44EDE1C0497EA00162BE2 /* KeystoneModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52A44EE61C0497EA00162BE2 /* KeystoneModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A44EDB1C0497EA00162BE2 /* KeystoneModel.framework */; settings = {ASSET_TAGS = (); }; };
+		52A44EEB1C0497EA00162BE2 /* CreationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44EEA1C0497EA00162BE2 /* CreationTests.swift */; };
+		52A44F011C04981200162BE2 /* UpdateTimestampable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44EF91C04981200162BE2 /* UpdateTimestampable.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F021C04981200162BE2 /* KeystoneStack-OSX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44EFA1C04981200162BE2 /* KeystoneStack-OSX.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F031C04981200162BE2 /* KeystoneModelVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44EFB1C04981200162BE2 /* KeystoneModelVersion.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F041C04981200162BE2 /* KeystoneMergePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44EFC1C04981200162BE2 /* KeystoneMergePolicy.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F131C04982A00162BE2 /* NSFetchRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F051C04982A00162BE2 /* NSFetchRequest+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F141C04982A00162BE2 /* ValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F061C04982A00162BE2 /* ValueTransformer.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F151C04982A00162BE2 /* NSManagedObjectContext+Observers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F071C04982A00162BE2 /* NSManagedObjectContext+Observers.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F161C04982A00162BE2 /* ModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F081C04982A00162BE2 /* ModelBuilder.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F171C04982A00162BE2 /* Collection+CoreDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F091C04982A00162BE2 /* Collection+CoreDataExtensions.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F181C04982A00162BE2 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F0A1C04982A00162BE2 /* Utilities.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F191C04982A00162BE2 /* ModelVersionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F0B1C04982A00162BE2 /* ModelVersionType.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F1A1C04982A00162BE2 /* ManagedObjectObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F0C1C04982A00162BE2 /* ManagedObjectObserver.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F1B1C04982A00162BE2 /* NSManagedObjectContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F0D1C04982A00162BE2 /* NSManagedObjectContext+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F1C1C04982A00162BE2 /* CoreDataErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F0E1C04982A00162BE2 /* CoreDataErrors.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F1D1C04982A00162BE2 /* Migration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F0F1C04982A00162BE2 /* Migration.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F1E1C04982A00162BE2 /* NSPersistentStoreCoordinator+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F101C04982A00162BE2 /* NSPersistentStoreCoordinator+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F1F1C04982A00162BE2 /* NSManagedObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F111C04982A00162BE2 /* NSManagedObject+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F201C04982A00162BE2 /* ManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F121C04982A00162BE2 /* ManagedObject.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F571C049F0C00162BE2 /* AssignmentProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F491C049F0C00162BE2 /* AssignmentProblem.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F591C049F0C00162BE2 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F4B1C049F0C00162BE2 /* List.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F5B1C049F0C00162BE2 /* ProblemItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F4D1C049F0C00162BE2 /* ProblemItem.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F5D1C049F0C00162BE2 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F4F1C049F0C00162BE2 /* Tag.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F5F1C049F0C00162BE2 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F511C049F0C00162BE2 /* Assignment.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F611C049F0C00162BE2 /* ProblemSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F531C049F0C00162BE2 /* ProblemSet.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F631C049F0C00162BE2 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F551C049F0C00162BE2 /* Student.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F651C04A14B00162BE2 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F641C04A14B00162BE2 /* TestHelpers.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F681C04A53D00162BE2 /* Keystone_v1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F661C04A53D00162BE2 /* Keystone_v1.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		52A44F6B1C04A9B600162BE2 /* Student+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F6A1C04A9B600162BE2 /* Student+Random.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F6E1C04B2AA00162BE2 /* RelationshipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F6D1C04B2AA00162BE2 /* RelationshipTests.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F721C04BF8300162BE2 /* RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F711C04BF8300162BE2 /* RandomTests.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F761C05F67000162BE2 /* KeystoneModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F751C05F67000162BE2 /* KeystoneModelTest.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F821C06047000162BE2 /* ProblemSetTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F811C06047000162BE2 /* ProblemSetTemplate.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F841C06112600162BE2 /* Constituent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F831C06112600162BE2 /* Constituent.swift */; settings = {ASSET_TAGS = (); }; };
+		52A44F8A1C067D8500162BE2 /* ComponentTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44F891C067D8500162BE2 /* ComponentTransformerTests.swift */; settings = {ASSET_TAGS = (); }; };
+		52C6C88F1C0950ED00476490 /* ConstituentStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6C88E1C0950ED00476490 /* ConstituentStyle.swift */; settings = {ASSET_TAGS = (); }; };
+		52C6C8A81C09549E00476490 /* AppKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6C8A11C09549E00476490 /* AppKitExtensions.swift */; settings = {ASSET_TAGS = (); }; };
+		52C6C8A91C09549E00476490 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6C8A21C09549E00476490 /* Collection+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
+		52C6C8AA1C09549E00476490 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6C8A31C09549E00476490 /* Delay.swift */; settings = {ASSET_TAGS = (); }; };
+		52C6C8AB1C09549E00476490 /* first-names.txt in Resources */ = {isa = PBXBuildFile; fileRef = 52C6C8A41C09549E00476490 /* first-names.txt */; settings = {ASSET_TAGS = (); }; };
+		52C6C8AC1C09549E00476490 /* last-names.txt in Resources */ = {isa = PBXBuildFile; fileRef = 52C6C8A51C09549E00476490 /* last-names.txt */; settings = {ASSET_TAGS = (); }; };
+		52C6C8AD1C09549E00476490 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6C8A61C09549E00476490 /* Person.swift */; settings = {ASSET_TAGS = (); }; };
+		52C6C8AE1C09549E00476490 /* Foundation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6C8A71C09549E00476490 /* Foundation+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52A44EE71C0497EA00162BE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52A44ED21C0497EA00162BE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52A44EDA1C0497EA00162BE2;
+			remoteInfo = KeystoneModel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		52A44EDB1C0497EA00162BE2 /* KeystoneModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeystoneModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52A44EDE1C0497EA00162BE2 /* KeystoneModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeystoneModel.h; sourceTree = "<group>"; };
+		52A44EE01C0497EA00162BE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52A44EE51C0497EA00162BE2 /* KeystoneModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeystoneModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52A44EEA1C0497EA00162BE2 /* CreationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationTests.swift; sourceTree = "<group>"; };
+		52A44EEC1C0497EA00162BE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52A44EF91C04981200162BE2 /* UpdateTimestampable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTimestampable.swift; sourceTree = "<group>"; };
+		52A44EFA1C04981200162BE2 /* KeystoneStack-OSX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KeystoneStack-OSX.swift"; sourceTree = "<group>"; };
+		52A44EFB1C04981200162BE2 /* KeystoneModelVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeystoneModelVersion.swift; sourceTree = "<group>"; };
+		52A44EFC1C04981200162BE2 /* KeystoneMergePolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeystoneMergePolicy.swift; sourceTree = "<group>"; };
+		52A44F051C04982A00162BE2 /* NSFetchRequest+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFetchRequest+Extensions.swift"; sourceTree = "<group>"; };
+		52A44F061C04982A00162BE2 /* ValueTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueTransformer.swift; sourceTree = "<group>"; };
+		52A44F071C04982A00162BE2 /* NSManagedObjectContext+Observers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Observers.swift"; sourceTree = "<group>"; };
+		52A44F081C04982A00162BE2 /* ModelBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelBuilder.swift; sourceTree = "<group>"; };
+		52A44F091C04982A00162BE2 /* Collection+CoreDataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+CoreDataExtensions.swift"; sourceTree = "<group>"; };
+		52A44F0A1C04982A00162BE2 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		52A44F0B1C04982A00162BE2 /* ModelVersionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelVersionType.swift; sourceTree = "<group>"; };
+		52A44F0C1C04982A00162BE2 /* ManagedObjectObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObjectObserver.swift; sourceTree = "<group>"; };
+		52A44F0D1C04982A00162BE2 /* NSManagedObjectContext+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extensions.swift"; sourceTree = "<group>"; };
+		52A44F0E1C04982A00162BE2 /* CoreDataErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataErrors.swift; sourceTree = "<group>"; };
+		52A44F0F1C04982A00162BE2 /* Migration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Migration.swift; sourceTree = "<group>"; };
+		52A44F101C04982A00162BE2 /* NSPersistentStoreCoordinator+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPersistentStoreCoordinator+Extensions.swift"; sourceTree = "<group>"; };
+		52A44F111C04982A00162BE2 /* NSManagedObject+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Extensions.swift"; sourceTree = "<group>"; };
+		52A44F121C04982A00162BE2 /* ManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObject.swift; sourceTree = "<group>"; };
+		52A44F491C049F0C00162BE2 /* AssignmentProblem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentProblem.swift; sourceTree = "<group>"; };
+		52A44F4B1C049F0C00162BE2 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		52A44F4D1C049F0C00162BE2 /* ProblemItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemItem.swift; sourceTree = "<group>"; };
+		52A44F4F1C049F0C00162BE2 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		52A44F511C049F0C00162BE2 /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
+		52A44F531C049F0C00162BE2 /* ProblemSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemSet.swift; sourceTree = "<group>"; };
+		52A44F551C049F0C00162BE2 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		52A44F641C04A14B00162BE2 /* TestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		52A44F671C04A53D00162BE2 /* Keystone_v1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Keystone_v1.xcdatamodel; sourceTree = "<group>"; };
+		52A44F6A1C04A9B600162BE2 /* Student+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Student+Random.swift"; sourceTree = "<group>"; };
+		52A44F6D1C04B2AA00162BE2 /* RelationshipTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationshipTests.swift; sourceTree = "<group>"; };
+		52A44F711C04BF8300162BE2 /* RandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomTests.swift; sourceTree = "<group>"; };
+		52A44F751C05F67000162BE2 /* KeystoneModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeystoneModelTest.swift; sourceTree = "<group>"; };
+		52A44F811C06047000162BE2 /* ProblemSetTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemSetTemplate.swift; sourceTree = "<group>"; };
+		52A44F831C06112600162BE2 /* Constituent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constituent.swift; sourceTree = "<group>"; };
+		52A44F891C067D8500162BE2 /* ComponentTransformerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentTransformerTests.swift; sourceTree = "<group>"; };
+		52C6C88E1C0950ED00476490 /* ConstituentStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstituentStyle.swift; sourceTree = "<group>"; };
+		52C6C8A11C09549E00476490 /* AppKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppKitExtensions.swift; path = ../../Shared/Utilities/OSX/AppKitExtensions.swift; sourceTree = "<group>"; };
+		52C6C8A21C09549E00476490 /* Collection+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Collection+Extensions.swift"; path = "../../Shared/Utilities/Shared/Collection+Extensions.swift"; sourceTree = "<group>"; };
+		52C6C8A31C09549E00476490 /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Delay.swift; path = ../../Shared/Utilities/Shared/Delay.swift; sourceTree = "<group>"; };
+		52C6C8A41C09549E00476490 /* first-names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "first-names.txt"; path = "../../Shared/Utilities/Shared/first-names.txt"; sourceTree = "<group>"; };
+		52C6C8A51C09549E00476490 /* last-names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "last-names.txt"; path = "../../Shared/Utilities/Shared/last-names.txt"; sourceTree = "<group>"; };
+		52C6C8A61C09549E00476490 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Person.swift; path = ../../Shared/Utilities/Shared/Person.swift; sourceTree = "<group>"; };
+		52C6C8A71C09549E00476490 /* Foundation+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Foundation+Extensions.swift"; path = "../../Shared/Utilities/Shared/Foundation+Extensions.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52A44ED71C0497EA00162BE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52A44EE21C0497EA00162BE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52A44EE61C0497EA00162BE2 /* KeystoneModel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52A44ED11C0497EA00162BE2 = {
+			isa = PBXGroup;
+			children = (
+				52A44EDD1C0497EA00162BE2 /* KeystoneModel */,
+				52A44EE91C0497EA00162BE2 /* KeystoneModelTests */,
+				52A44EDC1C0497EA00162BE2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52A44EDC1C0497EA00162BE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52A44EDB1C0497EA00162BE2 /* KeystoneModel.framework */,
+				52A44EE51C0497EA00162BE2 /* KeystoneModelTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52A44EDD1C0497EA00162BE2 /* KeystoneModel */ = {
+			isa = PBXGroup;
+			children = (
+				52A44F6C1C04A9BF00162BE2 /* Random */,
+				52A44F551C049F0C00162BE2 /* Student.swift */,
+				52A44F511C049F0C00162BE2 /* Assignment.swift */,
+				52A44F491C049F0C00162BE2 /* AssignmentProblem.swift */,
+				52A44F531C049F0C00162BE2 /* ProblemSet.swift */,
+				52A44F811C06047000162BE2 /* ProblemSetTemplate.swift */,
+				52A44F4D1C049F0C00162BE2 /* ProblemItem.swift */,
+				52A44F831C06112600162BE2 /* Constituent.swift */,
+				52C6C88E1C0950ED00476490 /* ConstituentStyle.swift */,
+				52A44F4F1C049F0C00162BE2 /* Tag.swift */,
+				52A44F4B1C049F0C00162BE2 /* List.swift */,
+				52A44F661C04A53D00162BE2 /* Keystone_v1.xcdatamodeld */,
+				52A44F371C049AC900162BE2 /* Core Data */,
+				52A44F211C04983000162BE2 /* Helpers */,
+				52A44EDE1C0497EA00162BE2 /* KeystoneModel.h */,
+				52A44EE01C0497EA00162BE2 /* Info.plist */,
+				52A44F361C049A7E00162BE2 /* Utilities */,
+			);
+			path = KeystoneModel;
+			sourceTree = "<group>";
+		};
+		52A44EE91C0497EA00162BE2 /* KeystoneModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				52A44F751C05F67000162BE2 /* KeystoneModelTest.swift */,
+				52A44EEA1C0497EA00162BE2 /* CreationTests.swift */,
+				52A44F6D1C04B2AA00162BE2 /* RelationshipTests.swift */,
+				52A44F711C04BF8300162BE2 /* RandomTests.swift */,
+				52A44F891C067D8500162BE2 /* ComponentTransformerTests.swift */,
+				52A44F641C04A14B00162BE2 /* TestHelpers.swift */,
+				52A44EEC1C0497EA00162BE2 /* Info.plist */,
+			);
+			path = KeystoneModelTests;
+			sourceTree = "<group>";
+		};
+		52A44F211C04983000162BE2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				52A44F051C04982A00162BE2 /* NSFetchRequest+Extensions.swift */,
+				52A44F061C04982A00162BE2 /* ValueTransformer.swift */,
+				52A44F071C04982A00162BE2 /* NSManagedObjectContext+Observers.swift */,
+				52A44F081C04982A00162BE2 /* ModelBuilder.swift */,
+				52A44F091C04982A00162BE2 /* Collection+CoreDataExtensions.swift */,
+				52A44F0A1C04982A00162BE2 /* Utilities.swift */,
+				52A44F0B1C04982A00162BE2 /* ModelVersionType.swift */,
+				52A44F0C1C04982A00162BE2 /* ManagedObjectObserver.swift */,
+				52A44F0D1C04982A00162BE2 /* NSManagedObjectContext+Extensions.swift */,
+				52A44F0E1C04982A00162BE2 /* CoreDataErrors.swift */,
+				52A44F0F1C04982A00162BE2 /* Migration.swift */,
+				52A44F101C04982A00162BE2 /* NSPersistentStoreCoordinator+Extensions.swift */,
+				52A44F111C04982A00162BE2 /* NSManagedObject+Extensions.swift */,
+				52A44F121C04982A00162BE2 /* ManagedObject.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		52A44F361C049A7E00162BE2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				52C6C8A11C09549E00476490 /* AppKitExtensions.swift */,
+				52C6C8A21C09549E00476490 /* Collection+Extensions.swift */,
+				52C6C8A31C09549E00476490 /* Delay.swift */,
+				52C6C8A41C09549E00476490 /* first-names.txt */,
+				52C6C8A51C09549E00476490 /* last-names.txt */,
+				52C6C8A61C09549E00476490 /* Person.swift */,
+				52C6C8A71C09549E00476490 /* Foundation+Extensions.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		52A44F371C049AC900162BE2 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				52A44EFA1C04981200162BE2 /* KeystoneStack-OSX.swift */,
+				52A44EFB1C04981200162BE2 /* KeystoneModelVersion.swift */,
+				52A44EFC1C04981200162BE2 /* KeystoneMergePolicy.swift */,
+				52A44EF91C04981200162BE2 /* UpdateTimestampable.swift */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		52A44F6C1C04A9BF00162BE2 /* Random */ = {
+			isa = PBXGroup;
+			children = (
+				52A44F6A1C04A9B600162BE2 /* Student+Random.swift */,
+			);
+			name = Random;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		52A44ED81C0497EA00162BE2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52A44EDF1C0497EA00162BE2 /* KeystoneModel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		52A44EDA1C0497EA00162BE2 /* KeystoneModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52A44EEF1C0497EA00162BE2 /* Build configuration list for PBXNativeTarget "KeystoneModel" */;
+			buildPhases = (
+				52A44ED61C0497EA00162BE2 /* Sources */,
+				52A44ED71C0497EA00162BE2 /* Frameworks */,
+				52A44ED81C0497EA00162BE2 /* Headers */,
+				52A44ED91C0497EA00162BE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeystoneModel;
+			productName = KeystoneModel;
+			productReference = 52A44EDB1C0497EA00162BE2 /* KeystoneModel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		52A44EE41C0497EA00162BE2 /* KeystoneModelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52A44EF21C0497EA00162BE2 /* Build configuration list for PBXNativeTarget "KeystoneModelTests" */;
+			buildPhases = (
+				52A44EE11C0497EA00162BE2 /* Sources */,
+				52A44EE21C0497EA00162BE2 /* Frameworks */,
+				52A44EE31C0497EA00162BE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52A44EE81C0497EA00162BE2 /* PBXTargetDependency */,
+			);
+			name = KeystoneModelTests;
+			productName = KeystoneModelTests;
+			productReference = 52A44EE51C0497EA00162BE2 /* KeystoneModelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52A44ED21C0497EA00162BE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Todd Olsen";
+				TargetAttributes = {
+					52A44EDA1C0497EA00162BE2 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					52A44EE41C0497EA00162BE2 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 52A44ED51C0497EA00162BE2 /* Build configuration list for PBXProject "KeystoneModel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 52A44ED11C0497EA00162BE2;
+			productRefGroup = 52A44EDC1C0497EA00162BE2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52A44EDA1C0497EA00162BE2 /* KeystoneModel */,
+				52A44EE41C0497EA00162BE2 /* KeystoneModelTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52A44ED91C0497EA00162BE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52C6C8AB1C09549E00476490 /* first-names.txt in Resources */,
+				52C6C8AC1C09549E00476490 /* last-names.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52A44EE31C0497EA00162BE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52A44ED61C0497EA00162BE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52A44F5F1C049F0C00162BE2 /* Assignment.swift in Sources */,
+				52A44F841C06112600162BE2 /* Constituent.swift in Sources */,
+				52C6C8A91C09549E00476490 /* Collection+Extensions.swift in Sources */,
+				52C6C8A81C09549E00476490 /* AppKitExtensions.swift in Sources */,
+				52A44F5D1C049F0C00162BE2 /* Tag.swift in Sources */,
+				52A44F6B1C04A9B600162BE2 /* Student+Random.swift in Sources */,
+				52A44F611C049F0C00162BE2 /* ProblemSet.swift in Sources */,
+				52C6C8AA1C09549E00476490 /* Delay.swift in Sources */,
+				52C6C8AE1C09549E00476490 /* Foundation+Extensions.swift in Sources */,
+				52A44F201C04982A00162BE2 /* ManagedObject.swift in Sources */,
+				52A44F1E1C04982A00162BE2 /* NSPersistentStoreCoordinator+Extensions.swift in Sources */,
+				52A44F1A1C04982A00162BE2 /* ManagedObjectObserver.swift in Sources */,
+				52A44F681C04A53D00162BE2 /* Keystone_v1.xcdatamodeld in Sources */,
+				52A44F1D1C04982A00162BE2 /* Migration.swift in Sources */,
+				52A44F181C04982A00162BE2 /* Utilities.swift in Sources */,
+				52A44F011C04981200162BE2 /* UpdateTimestampable.swift in Sources */,
+				52A44F031C04981200162BE2 /* KeystoneModelVersion.swift in Sources */,
+				52A44F591C049F0C00162BE2 /* List.swift in Sources */,
+				52A44F631C049F0C00162BE2 /* Student.swift in Sources */,
+				52A44F571C049F0C00162BE2 /* AssignmentProblem.swift in Sources */,
+				52C6C88F1C0950ED00476490 /* ConstituentStyle.swift in Sources */,
+				52A44F5B1C049F0C00162BE2 /* ProblemItem.swift in Sources */,
+				52A44F021C04981200162BE2 /* KeystoneStack-OSX.swift in Sources */,
+				52A44F141C04982A00162BE2 /* ValueTransformer.swift in Sources */,
+				52A44F131C04982A00162BE2 /* NSFetchRequest+Extensions.swift in Sources */,
+				52A44F191C04982A00162BE2 /* ModelVersionType.swift in Sources */,
+				52A44F1F1C04982A00162BE2 /* NSManagedObject+Extensions.swift in Sources */,
+				52A44F821C06047000162BE2 /* ProblemSetTemplate.swift in Sources */,
+				52A44F041C04981200162BE2 /* KeystoneMergePolicy.swift in Sources */,
+				52A44F161C04982A00162BE2 /* ModelBuilder.swift in Sources */,
+				52A44F1C1C04982A00162BE2 /* CoreDataErrors.swift in Sources */,
+				52A44F151C04982A00162BE2 /* NSManagedObjectContext+Observers.swift in Sources */,
+				52A44F1B1C04982A00162BE2 /* NSManagedObjectContext+Extensions.swift in Sources */,
+				52C6C8AD1C09549E00476490 /* Person.swift in Sources */,
+				52A44F171C04982A00162BE2 /* Collection+CoreDataExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52A44EE11C0497EA00162BE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52A44F721C04BF8300162BE2 /* RandomTests.swift in Sources */,
+				52A44F761C05F67000162BE2 /* KeystoneModelTest.swift in Sources */,
+				52A44F6E1C04B2AA00162BE2 /* RelationshipTests.swift in Sources */,
+				52A44F8A1C067D8500162BE2 /* ComponentTransformerTests.swift in Sources */,
+				52A44EEB1C0497EA00162BE2 /* CreationTests.swift in Sources */,
+				52A44F651C04A14B00162BE2 /* TestHelpers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52A44EE81C0497EA00162BE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52A44EDA1C0497EA00162BE2 /* KeystoneModel */;
+			targetProxy = 52A44EE71C0497EA00162BE2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		52A44EED1C0497EA00162BE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		52A44EEE1C0497EA00162BE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		52A44EF01C0497EA00162BE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = KeystoneModel/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Todd-Olsen.KeystoneModel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52A44EF11C0497EA00162BE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = KeystoneModel/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Todd-Olsen.KeystoneModel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		52A44EF31C0497EA00162BE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = KeystoneModelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Todd-Olsen.KeystoneModelTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		52A44EF41C0497EA00162BE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = KeystoneModelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Todd-Olsen.KeystoneModelTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52A44ED51C0497EA00162BE2 /* Build configuration list for PBXProject "KeystoneModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52A44EED1C0497EA00162BE2 /* Debug */,
+				52A44EEE1C0497EA00162BE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52A44EEF1C0497EA00162BE2 /* Build configuration list for PBXNativeTarget "KeystoneModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52A44EF01C0497EA00162BE2 /* Debug */,
+				52A44EF11C0497EA00162BE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52A44EF21C0497EA00162BE2 /* Build configuration list for PBXNativeTarget "KeystoneModelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52A44EF31C0497EA00162BE2 /* Debug */,
+				52A44EF41C0497EA00162BE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		52A44F661C04A53D00162BE2 /* Keystone_v1.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				52A44F671C04A53D00162BE2 /* Keystone_v1.xcdatamodel */,
+			);
+			currentVersion = 52A44F671C04A53D00162BE2 /* Keystone_v1.xcdatamodel */;
+			path = Keystone_v1.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 52A44ED21C0497EA00162BE2 /* Project object */;
+}
