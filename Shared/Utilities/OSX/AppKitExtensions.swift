@@ -8,7 +8,7 @@
 
 import Cocoa
 
-struct RGBAComponents {
+struct RGBAConstituents {
     let red: CGFloat
     let green: CGFloat
     let blue: CGFloat

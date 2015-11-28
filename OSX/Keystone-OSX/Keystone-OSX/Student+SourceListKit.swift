@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Keystone_OSX_Model
 import SourceListKit
 
 extension Student: SourceListItemsProvider {

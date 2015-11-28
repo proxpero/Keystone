@@ -8,7 +8,6 @@
 
 import Cocoa
 import SourceListKit
-import Keystone_OSX_Model
 
 public class SourceListTabViewController: NSTabViewController {
     
