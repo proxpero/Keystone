@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Keystone_Model_OSX
 
 public enum StudentViewControllerItems: Int {
     case Personal

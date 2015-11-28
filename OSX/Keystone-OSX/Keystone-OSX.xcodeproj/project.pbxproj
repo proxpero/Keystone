@@ -73,6 +73,7 @@
 		52C6C8E91C09553F00476490 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6C8DE1C09553F00476490 /* Tag.swift */; settings = {ASSET_TAGS = (); }; };
 		52C6C8EA1C09553F00476490 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6C8DF1C09553F00476490 /* List.swift */; settings = {ASSET_TAGS = (); }; };
 		52C6C8EE1C09557900476490 /* Keystone_v1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52C6C8EC1C09557900476490 /* Keystone_v1.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		52D9E5941C0A2BFC00F0086B /* UtilityKit_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521F9E561C03768C00129859 /* UtilityKit_OSX.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -239,6 +240,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52D9E5941C0A2BFC00F0086B /* UtilityKit_OSX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1090,6 +1092,7 @@
 				52C6C8A01C09546B00476490 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

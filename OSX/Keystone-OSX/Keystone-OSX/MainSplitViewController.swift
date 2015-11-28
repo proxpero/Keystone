@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Keystone_Model_OSX
 
 class MainSplitViewController: NSSplitViewController {
     
