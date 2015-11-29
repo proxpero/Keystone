@@ -18,5 +18,7 @@ extension List {
     @NSManaged public private(set) var header: [Constituent]
     @NSManaged public private(set) var footer: [Constituent]
     @NSManaged public private(set) var problemSets: NSOrderedSet?
-    
+    @NSManaged public private(set) var parent: List?
+    @NSManaged public private(set) var children: NSOrderedSet?
+
 }

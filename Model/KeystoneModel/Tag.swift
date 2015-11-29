@@ -15,6 +15,8 @@ extension Tag {
     
     @NSManaged public private(set) var name: String?
     @NSManaged public private(set) var note: String?
-    @NSManaged public private(set) var items: NSSet?
+    @NSManaged public private(set) var items: Set<ProblemItem>?
+    @NSManaged public private(set) var parent: Tag?
+    @NSManaged public private(set) var children: NSOrderedSet?
     
 }

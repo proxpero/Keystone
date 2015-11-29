@@ -29,6 +29,8 @@
         <attribute name="footer" optional="YES" attributeType="Transformable" valueTransformerName="" syncable="YES"/>
         <attribute name="header" optional="YES" attributeType="Transformable" valueTransformerName="" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="children" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="List" inverseName="parent" inverseEntity="List" syncable="YES"/>
+        <relationship name="parent" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="List" inverseName="children" inverseEntity="List" syncable="YES"/>
         <relationship name="problemSets" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ProblemSet" inverseName="lists" inverseEntity="ProblemSet" syncable="YES"/>
     </entity>
     <entity name="ProblemItem" representedClassName=".ProblemItem" syncable="YES">
@@ -62,18 +64,20 @@
     <entity name="Tag" representedClassName=".Tag" syncable="YES">
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="children" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Tag" inverseName="parent" inverseEntity="Tag" syncable="YES"/>
         <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ProblemItem" inverseName="tags" inverseEntity="ProblemItem" syncable="YES"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tag" inverseName="children" inverseEntity="Tag" syncable="YES"/>
     </entity>
     <elements>
         <element name="Assignment" positionX="-938" positionY="-1062" width="146" height="118"/>
         <element name="AssignmentProblemItem" positionX="-936" positionY="-763" width="153" height="88"/>
         <element name="AssignmentProblemSet" positionX="-945" positionY="-898" width="155" height="88"/>
         <element name="ConstituentStyle" positionX="-524" positionY="-801" width="128" height="133"/>
-        <element name="List" positionX="-738" positionY="-1063" width="128" height="103"/>
+        <element name="List" positionX="-738" positionY="-1090" width="128" height="133"/>
         <element name="ProblemItem" positionX="-720" positionY="-748" width="153" height="133"/>
         <element name="ProblemSet" positionX="-729" positionY="-909" width="128" height="118"/>
         <element name="ProblemSetTemplate" positionX="-551" positionY="-963" width="128" height="118"/>
         <element name="Student" positionX="-1118" positionY="-1012" width="128" height="103"/>
-        <element name="Tag" positionX="-918" positionY="-655" width="128" height="88"/>
+        <element name="Tag" positionX="-927" positionY="-655" width="128" height="118"/>
     </elements>
 </model>
