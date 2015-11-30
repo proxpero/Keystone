@@ -117,28 +117,92 @@ extension Student {
             cellSelectionCallback: historyCellSelectionCallback)
         )
         
-        // Assignments: [Assignments]
+        // Overdue Assignments
         
-        func configureAssignmentsHeaderCell(tableView: NSTableView) -> NSTableCellView {
-            guard let headerCell = tableView.makeViewWithIdentifier(SourceListKitConstants.CellIdentifier.Header, owner: tableView) as? SourceListHeaderCellView else { fatalError() }
-            headerCell.textField?.stringValue = "\(student.assignments.count) Assignment" + (student.assignments.count > 1 ? "s" : "")
-            headerCell.showHiddenViews = true
-            return headerCell
+        let overdueAssignments = student.assignments.filter { !$0.completed && $0.dueDate.compare(NSDate(timeIntervalSinceNow: 0)) == .OrderedAscending }.sort { $0.dueDate.compare($1.dueDate) == .OrderedAscending }
+        if !overdueAssignments.isEmpty {
+            
+            func configureOverdueAssignmentsHeaderCell(tableView: NSTableView) -> NSTableCellView {
+                guard let headerCell = tableView.makeViewWithIdentifier(SourceListKitConstants.CellIdentifier.Header, owner: tableView) as? SourceListHeaderCellView else { fatalError() }
+
+                let stringValue = "\(overdueAssignments.count) OVERDUE Assignment" + (overdueAssignments.count == 1 ? "" : "s")
+                
+                let mutableAttributedString = NSMutableAttributedString(
+                    string: stringValue,
+                    attributes: headerCell.textField?.attributedStringValue.attributesAtIndex(0, effectiveRange: nil))
+                mutableAttributedString.addAttribute(NSForegroundColorAttributeName,
+                    value: SourceListKitConstants.Color.OverdueAssignment,
+                    range: (stringValue as NSString).rangeOfString("OVERDUE"))
+
+                headerCell.textField?.attributedStringValue = mutableAttributedString
+                headerCell.showHiddenViews = true
+                return headerCell
+            }
+            
+            items.append(SourceListItem(
+                itemType: .Header,
+                cellViewConfigurator: configureOverdueAssignmentsHeaderCell))
+            
+            items.appendContentsOf(overdueAssignments.map { SourceListItem(
+                itemType: .StaticChild(2),
+                cellViewConfigurator: Assignment.cellViewConfigurator($0),
+                cellSelectionCallback: Assignment.cellSelectionCallback($0)) })
+
         }
+
+        // Active Assignments
         
-        items.append(SourceListItem(
-            itemType: .Header,
-            cellViewConfigurator: configureAssignmentsHeaderCell))
+        let activeAssignments = student.assignments.filter { !overdueAssignments.contains($0) && !$0.completed }.sort { $0.dueDate.compare($1.dueDate) == .OrderedAscending }
+        if !activeAssignments.isEmpty {
+            
+            func configureActiveAssignmentsHeaderCell(tableView: NSTableView) -> NSTableCellView {
+                guard let headerCell = tableView.makeViewWithIdentifier(SourceListKitConstants.CellIdentifier.Header, owner: tableView) as? SourceListHeaderCellView else { fatalError() }
+                
+                let mutableAttributedString = NSMutableAttributedString(
+                    string: "\(activeAssignments.count) ACTIVE Assignment" + (activeAssignments.count == 1 ? "" : "s"),
+                    attributes: headerCell.textField?.attributedStringValue.attributesAtIndex(0, effectiveRange: nil))
+                mutableAttributedString.addAttribute(
+                    NSForegroundColorAttributeName,
+                    value: SourceListKitConstants.Color.ActiveAssignment,
+                    range: (mutableAttributedString.string as NSString).rangeOfString("ACTIVE"))
+                
+                headerCell.textField?.attributedStringValue = mutableAttributedString
+                headerCell.showHiddenViews = true
+                return headerCell
+            }
+            
+            items.append(SourceListItem(
+                itemType: .Header,
+                cellViewConfigurator: configureActiveAssignmentsHeaderCell))
+            
+            items.appendContentsOf(activeAssignments.map { SourceListItem(
+                itemType: .StaticChild(2),
+                cellViewConfigurator: Assignment.cellViewConfigurator($0),
+                cellSelectionCallback: Assignment.cellSelectionCallback($0)) })
+
+        }
+
+        // Completed Assignments
         
-        let assignments = student.assignments.sort(Assignment.sortByDueDate)
-        items.appendContentsOf(assignments.map { SourceListItem(
-            itemType: .StaticChild(2),
-            cellViewConfigurator: Assignment.cellViewConfigurator($0),
-            cellSelectionCallback: Assignment.cellSelectionCallback($0)) })
-        
-        func assignmentsCellViewConfigurator(tableView: NSTableView) -> NSTableCellView {
-            guard let dynamicCell = tableView.makeViewWithIdentifier(SourceListKitConstants.CellIdentifier.Detail, owner: tableView) as? SourceListDetailCellView else { fatalError() }
-            return dynamicCell
+        let completedAssignments = student.assignments.filter { !overdueAssignments.contains($0) && !activeAssignments.contains($0) }.sort { $0.dueDate.compare($1.dueDate) == .OrderedDescending }
+        if !completedAssignments.isEmpty {
+            
+            func configureCompletedAssignmentsHeaderCell(tableView: NSTableView) -> NSTableCellView {
+                guard let headerCell = tableView.makeViewWithIdentifier(SourceListKitConstants.CellIdentifier.Header, owner: tableView) as? SourceListHeaderCellView else { fatalError() }
+                headerCell.textField?.stringValue = "\(completedAssignments.count) Completed Assignment" + (completedAssignments.count == 1 ? "" : "s")
+                headerCell.showHiddenViews = true
+                return headerCell
+            }
+            
+            items.append(SourceListItem(
+                itemType: .Header,
+                cellViewConfigurator: configureCompletedAssignmentsHeaderCell))
+            
+            items.appendContentsOf(completedAssignments.map { SourceListItem(
+                itemType: .StaticChild(2),
+                cellViewConfigurator: Assignment.cellViewConfigurator($0),
+                cellSelectionCallback: Assignment.cellSelectionCallback($0)) })
+            
         }
         
         return items
