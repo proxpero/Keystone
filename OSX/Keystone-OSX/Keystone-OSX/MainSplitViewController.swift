@@ -9,11 +9,20 @@
 import Cocoa
 import Keystone_Model_OSX
 
-class MainSplitViewController: NSSplitViewController {
+public class MainSplitViewController: NSSplitViewController {
     
     var managedObjectContext: NSManagedObjectContext!
     
-    override func viewDidLoad() {
+    public func save(sender: AnyObject?) {
+        do {
+            try managedObjectContext.save()
+            print("Success")
+        } catch {
+            print("ERROR!")
+        }
+    }
+    
+    override public func viewDidLoad() {
         super.viewDidLoad()
         
         guard let mainSidebarViewController = splitViewItems.first?.viewController as? SourceListTabViewController else { fatalError("No Sidebar View") }
@@ -31,8 +40,11 @@ class MainSplitViewController: NSSplitViewController {
         
         configureSplitView()
         
-        for _ in (0..<10) {
-            Student.randomInContext(managedObjectContext)
+        let populate = true
+        if populate {
+            for _ in (0..<2000) {
+                Student.randomInContext(managedObjectContext)
+            }
         }
         mainSidebarViewController.instantiateRoot()
     }

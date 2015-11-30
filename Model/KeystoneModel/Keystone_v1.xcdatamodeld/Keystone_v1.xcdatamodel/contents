@@ -47,7 +47,7 @@
         <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="items" inverseEntity="Tag" syncable="YES"/>
     </entity>
     <entity name="ProblemSet" representedClassName=".ProblemSet" syncable="YES">
-        <attribute name="constituents" attributeType="Transformable" valueTransformerName="" syncable="YES"/>
+        <attribute name="constituents" optional="YES" attributeType="Transformable" valueTransformerName="" syncable="YES"/>
         <relationship name="assignmentProblemSets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AssignmentProblemSet" inverseName="problemSet" inverseEntity="AssignmentProblemSet" syncable="YES"/>
         <relationship name="lists" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="List" inverseName="problemSets" inverseEntity="List" syncable="YES"/>
         <relationship name="problemItems" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" ordered="YES" destinationEntity="ProblemItem" inverseName="problemSet" inverseEntity="ProblemItem" syncable="YES"/>

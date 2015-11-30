@@ -17,7 +17,7 @@ extension NSManagedObjectContext {
         return store
     }
 
-    public var metaData: [String: AnyObject] {
+    public var metadata: [String: AnyObject] {
         get {
             guard let psc = persistentStoreCoordinator else { fatalError("must have PSC") }
             return psc.metadataForPersistentStore(store)
@@ -30,10 +30,10 @@ extension NSManagedObjectContext {
         }
     }
     
-    public func setMetaData(object: AnyObject?, forKey key: String) {
-        var md = metaData
+    public func setMetadata(object: AnyObject?, forKey key: String) {
+        var md = metadata
         md[key] = object
-        metaData = md
+        metadata = md
     }
     
     public func insertObject<A: ManagedObject where A: ManagedObjectType>() -> A {
