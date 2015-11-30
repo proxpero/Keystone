@@ -116,6 +116,15 @@ extension NSImage {
 
         return highlightImage
     }
+    
+    public func pngRepresentation() -> NSData? {
+        
+        self.lockFocus()
+        let bitmapRep = NSBitmapImageRep(focusedViewRect: NSMakeRect(0, 0, self.size.width, self.size.height))
+        self.unlockFocus()
+        
+        return bitmapRep?.representationUsingType(.NSPNGFileType, properties: [:])
+    }
 }
 
 extension NSToolbar {

@@ -10,10 +10,7 @@ import Foundation
 import CoreData
 
 public final class AssignmentProblemSet: ManagedObject { }
-
-
 public final class AssignmentProblemItem: ManagedObject { }
-
 
 extension AssignmentProblemSet {
     
@@ -21,14 +18,21 @@ extension AssignmentProblemSet {
     @NSManaged public private(set) var problemSet: ProblemSet
     @NSManaged public private(set) var assignmentProblemItems: NSOrderedSet
     
+    public var completed: Bool {
+        guard let items = assignmentProblemItems.array as? [AssignmentProblemItem] else { return false }
+        for api in items {
+            if api.result == AssignmentProblemResult.None { return false }
+        }
+        return true
+    }
 }
 
 extension AssignmentProblemSet: ManagedObjectType {
-    
+
     public static var entityName: String { return "AssignmentProblemSet" }
     public static var defualtSortDescriptors: [NSSortDescriptor] { return [] }
     public static var defaultPredicate: NSPredicate { return NSPredicate() }
-    
+
 }
 
 extension AssignmentProblemSet {
@@ -40,10 +44,14 @@ extension AssignmentProblemSet {
             let assignmentProblemSet: AssignmentProblemSet = moc.insertObject()
             assignmentProblemSet.assignment = assignment
             assignmentProblemSet.problemSet = problemSet
+            for pi in problemSet.problemItems {                
+                let api: AssignmentProblemItem = moc.insertObject()
+                api.problemItem = pi as! ProblemItem
+                api.assignmentProblemSet = assignmentProblemSet
+            }
             return assignmentProblemSet
     }
 }
-
 
 
 public enum AssignmentProblemResult: Int {

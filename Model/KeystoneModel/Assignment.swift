@@ -9,10 +9,7 @@
 import Foundation
 import CoreData
 
-public final class Assignment: ManagedObject {
-
-
-}
+public final class Assignment: ManagedObject { }
 
 extension Assignment {
     
@@ -21,7 +18,14 @@ extension Assignment {
     @NSManaged public private(set) var note: String
     @NSManaged public private(set) var assignmentProblemSets: NSOrderedSet
     @NSManaged public private(set) var students: Set<Student>
-    
+ 
+    public var completed: Bool {
+        guard let sets = assignmentProblemSets.array as? [AssignmentProblemSet] else { return false }
+        for set in sets {
+            if !set.completed { return false }
+        }
+        return true
+    }
 }
 
 extension Assignment {
@@ -107,9 +111,30 @@ extension Assignment {
     }
 }
 
+private let assignmentDateFormatter: NSDateFormatter = {
+    
+    let dateFormatter = NSDateFormatter()
+    dateFormatter.dateStyle = .ShortStyle
+    dateFormatter.timeStyle = .NoStyle
+    
+    return dateFormatter
+}()
+
 extension Assignment {
     
-    public static func sortByDueDate(lhs: Assignment, rhs: Assignment) -> Bool {
-        return lhs.dueDate < rhs.dueDate
+    public static func stringFromAssignmentDate(date: NSDate) -> String {
+        return assignmentDateFormatter.stringFromDate(date)
     }
+    
+    public func dueDateString() -> String {
+        return assignmentDateFormatter.stringFromDate(dueDate)
+    }
+    
+    public func assignedOnDateString() -> String {
+        return assignmentDateFormatter.stringFromDate(assignedOn)
+    }
+    
+//    public static func sortByDueDate(lhs: Assignment, rhs: Assignment) -> Bool {
+//        return lhs.dueDate > rhs.dueDate
+//    }
 }

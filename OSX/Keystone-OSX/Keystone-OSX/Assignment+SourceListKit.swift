@@ -52,7 +52,7 @@ extension Assignment {
     
     static func cellViewConfigurator(assignment: Assignment)(tableView: NSTableView) -> NSTableCellView {
         guard let view = tableView.makeViewWithIdentifier(SourceListKitConstants.CellIdentifier.Detail, owner: tableView) as? SourceListDetailCellView else { fatalError() }
-        view.textField?.stringValue = String(assignment.dueDate)
+        view.textField?.stringValue = assignment.dueDateString()
         return view
     }
     
@@ -73,6 +73,6 @@ extension Assignment {
     }
     
     static func cellSelectionCallback(assignment: Assignment)() {
-        print("Oh dear, an Assignment due on \(String(assignment))")
+        print("Oh dear, an Assignment due on \(assignment.dueDateString()))")
     }
 }

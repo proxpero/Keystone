@@ -29,7 +29,7 @@ public enum SourceListItemType {
     
     var rowHeight: CGFloat {
         switch self {
-        case .Header:   return 44.0
+        case .Header:   return 40.0
         default:        return 22.0
         }
     }
