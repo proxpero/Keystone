@@ -42,7 +42,7 @@ public class MainSplitViewController: NSSplitViewController {
         
         let populate = true
         if populate {
-            for _ in (0..<2000) {
+            for _ in (0..<5) {
                 Student.randomInContext(managedObjectContext)
             }
         }

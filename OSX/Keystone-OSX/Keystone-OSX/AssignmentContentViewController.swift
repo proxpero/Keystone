@@ -9,9 +9,21 @@
 import Cocoa
 import Keystone_Model_OSX
 
-public class AssignmentContentViewController: NSTabViewController {
+public final class AssignmentContentViewController: ContentTabViewController {
     
     public var assignment: Assignment! {
         didSet { title = String(assignment.dueDate) }
+    }
+    
+}
+
+public final class AssignmentViewController: NSViewController {
+    
+    @IBOutlet weak var label: NSTextField!
+    public var assignment: Assignment!
+    public override func viewDidLoad() {
+        if let assignment = assignment {
+            label.stringValue = assignment.dueDate.since()
+        }
     }
 }

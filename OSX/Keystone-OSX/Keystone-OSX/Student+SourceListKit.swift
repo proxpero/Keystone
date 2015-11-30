@@ -49,6 +49,7 @@ extension Student: SourceListItemsProvider {
 }
 
 extension Student {
+    
     static func cellViewConfigurator(student: Student)(tableView: NSTableView) -> NSTableCellView {
         guard let view = tableView.makeViewWithIdentifier(SourceListKitConstants.CellIdentifier.Detail, owner: tableView) as? SourceListDetailCellView else { fatalError() }
         view.textField?.stringValue = student.fullName
@@ -93,7 +94,7 @@ extension Student {
         }
         
         items.append(SourceListItem(
-            itemType: .StaticChild(0),
+            itemType: .StaticChild(identifier: StudentViewControllerItem.Personal.rawValue),
             cellViewConfigurator: personalCellViewConfigurator,
             cellSelectionCallback: personalCellSelectionCallback)
         )
@@ -112,7 +113,7 @@ extension Student {
         }
         
         items.append(SourceListItem(
-            itemType: .StaticChild(1),
+            itemType: .StaticChild(identifier: StudentViewControllerItem.History.rawValue),
             cellViewConfigurator: historyCellViewConfigurator,
             cellSelectionCallback: historyCellSelectionCallback)
         )
@@ -143,8 +144,14 @@ extension Student {
                 itemType: .Header,
                 cellViewConfigurator: configureOverdueAssignmentsHeaderCell))
             
+            func assignmentViewControllerConfigurator(assignment: Assignment)() -> NSViewController {
+                guard let vc = NSStoryboard(name: "StudentContentView", bundle: NSBundle(forClass: AssignmentViewController.self)).instantiateControllerWithIdentifier("AssignmentViewController") as? AssignmentViewController else { fatalError() }
+                vc.assignment = assignment
+                return vc
+            }
+            
             items.appendContentsOf(overdueAssignments.map { SourceListItem(
-                itemType: .StaticChild(2),
+                itemType: .StaticChildViewController(identifier: StudentViewControllerItem.Assignments.rawValue, viewControllerConfigurator: assignmentViewControllerConfigurator($0)),
                 cellViewConfigurator: Assignment.cellViewConfigurator($0),
                 cellSelectionCallback: Assignment.cellSelectionCallback($0)) })
 
@@ -175,8 +182,14 @@ extension Student {
                 itemType: .Header,
                 cellViewConfigurator: configureActiveAssignmentsHeaderCell))
             
+            func assignmentViewControllerConfigurator(assignment: Assignment)() -> NSViewController {
+                guard let vc = NSStoryboard(name: "StudentContentView", bundle: NSBundle(forClass: AssignmentViewController.self)).instantiateControllerWithIdentifier("AssignmentViewController") as? AssignmentViewController else { fatalError() }
+                vc.assignment = assignment
+                return vc
+            }
+            
             items.appendContentsOf(activeAssignments.map { SourceListItem(
-                itemType: .StaticChild(2),
+                itemType: .StaticChildViewController(identifier: StudentViewControllerItem.Assignments.rawValue, viewControllerConfigurator: assignmentViewControllerConfigurator($0)),
                 cellViewConfigurator: Assignment.cellViewConfigurator($0),
                 cellSelectionCallback: Assignment.cellSelectionCallback($0)) })
 
@@ -198,8 +211,14 @@ extension Student {
                 itemType: .Header,
                 cellViewConfigurator: configureCompletedAssignmentsHeaderCell))
             
+            func assignmentViewControllerConfigurator(assignment: Assignment)() -> NSViewController {
+                guard let vc = NSStoryboard(name: "StudentContentView", bundle: NSBundle(forClass: AssignmentViewController.self)).instantiateControllerWithIdentifier("AssignmentViewController") as? AssignmentViewController else { fatalError() }
+                vc.assignment = assignment
+                return vc
+            }
+            
             items.appendContentsOf(completedAssignments.map { SourceListItem(
-                itemType: .StaticChild(2),
+                itemType: .StaticChildViewController(identifier: StudentViewControllerItem.Assignments.rawValue, viewControllerConfigurator: assignmentViewControllerConfigurator($0)),
                 cellViewConfigurator: Assignment.cellViewConfigurator($0),
                 cellSelectionCallback: Assignment.cellSelectionCallback($0)) })
             

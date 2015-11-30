@@ -52,7 +52,7 @@ extension Assignment {
     
     static func cellViewConfigurator(assignment: Assignment)(tableView: NSTableView) -> NSTableCellView {
         guard let view = tableView.makeViewWithIdentifier(SourceListKitConstants.CellIdentifier.Detail, owner: tableView) as? SourceListDetailCellView else { fatalError() }
-        view.textField?.stringValue = assignment.dueDateString()
+        view.textField?.stringValue = "\(assignment.dueDateString()) : \(assignment.assignmentProblemSets.count)"
         return view
     }
     

@@ -23,7 +23,7 @@ extension Student {
             lastName:       lastName,
             graduationDate: graduationDate)
         
-        for w in (0...Int(arc4random_uniform(45) + 5)) {
+        for w in (0...Int(arc4random_uniform(35) + 5)) {
             
             let assignedOn  = graduationDate.randomDate(weeks: -w, rangeInDays: 4)
             let dueDate     = assignedOn.randomDate(weeks: 2, rangeInDays: 2)
@@ -33,11 +33,11 @@ extension Student {
             
             let template = ProblemSetTemplate.insertIntoContext(moc)
             
-            for _ in (0...Int(arc4random_uniform(300_000) + 7)) {
+            for _ in (0...Int(arc4random_uniform(30) + 7)) {
                 
                 let problemSet = ProblemSet.insertIntoContext(moc, withTemplate: template)
                 
-                for _ in (0...10) {
+                for _ in (0...4) {
                     problemSet.addNewProblemItem()
                 }
                 

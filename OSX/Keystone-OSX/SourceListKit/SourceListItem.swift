@@ -18,7 +18,8 @@ public typealias ButtonConfigurationHandler                 = (NSButton) -> ()
 public enum SourceListItemType {
     case Header
     case DynamicChild(sourceListConfigurator: SourceListConfigurationHandler, contentViewConfigurator: ContentViewControllerConfigurationHandler, toolbarConfigurator: ToolbarConfigurationHandler)
-    case StaticChild(Int)
+    case StaticChild(identifier: String)
+    case StaticChildViewController(identifier: String, viewControllerConfigurator: ContentViewControllerConfigurationHandler)
     
     var shouldSelect: Bool {
         switch self {

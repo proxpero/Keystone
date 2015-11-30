@@ -9,17 +9,17 @@
 import Cocoa
 import Keystone_Model_OSX
 
-public enum StudentViewControllerItems: Int {
-    case Personal       = 0
-    case History        = 1
-    case Assignments    = 2
+public enum StudentViewControllerItem: String {
+    case Personal       = "Personal"
+    case History        = "History"
+    case Assignments    = "Assignments"
 }
 
 private protocol StudentSettable {
     var student: Student! { get set }
 }
 
-public class StudentContentViewController: NSTabViewController {
+public class StudentContentViewController: NSTabViewController, TabItemIdentifying {
 
     public var student: Student! {
         didSet {
@@ -27,6 +27,17 @@ public class StudentContentViewController: NSTabViewController {
         }
     }
 
+    public func selectTabItemWithIdentifier(identifier: String) -> NSTabViewItem? {
+        if let
+            tvi = (tabViewItems.filter { $0.identifier as? String == identifier }).first,
+            index = tabViewItems.indexOf(tvi)
+        {
+            selectedTabViewItemIndex = index
+            return tvi
+        }
+        return nil
+    }
+    
     public override func tabView(tabView: NSTabView, didSelectTabViewItem tabViewItem: NSTabViewItem?) {
         super.tabView(tabView, didSelectTabViewItem: tabViewItem)
         guard var vc = tabViewItem?.viewController as? StudentSettable else { return }

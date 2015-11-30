@@ -17,7 +17,7 @@ public class SourceListTabViewController: NSTabViewController {
     
     private var backButton: NSButton!
     private var history: [(SourceListConfigurationHandler, ContentViewControllerConfigurationHandler, ToolbarConfigurationHandler)] = []
-    private var currentTabViewController: NSTabViewController!
+    private var currentMainContentTabViewController: NSTabViewController!
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -103,7 +103,7 @@ public class SourceListTabViewController: NSTabViewController {
     
     func pushContentViewController(vc: NSViewController) {
         if let tabVC = vc as? NSTabViewController {
-            currentTabViewController = tabVC
+            currentMainContentTabViewController = tabVC
             tabVC.transitionOptions = TabTransitionType.Push.options
         }
         pushContentViewControllerHandler(vc)
@@ -111,7 +111,7 @@ public class SourceListTabViewController: NSTabViewController {
     
     func popContentViewController(vc: NSViewController) {
         if let tabVC = vc as? NSTabViewController {
-            currentTabViewController = tabVC
+            currentMainContentTabViewController = tabVC
             tabVC.transitionOptions = TabTransitionType.Pop.options
         }
         pushContentViewControllerHandler(vc)
@@ -128,9 +128,18 @@ public class SourceListTabViewController: NSTabViewController {
             pushContentViewController(contentViewConfigurator())
             if let toolbar = view.window?.toolbar { toolbarConfigurator(toolbar) }
 
-        case .StaticChild(let index):
-            guard index < currentTabViewController.tabViewItems.count else { fatalError() }
-            currentTabViewController.selectedTabViewItemIndex = index
+        case .StaticChild(let identifier):
+            
+            guard let vc = currentMainContentTabViewController as? TabItemIdentifying else { break }
+            vc.selectTabItemWithIdentifier(identifier)
+            
+            
+        case .StaticChildViewController(let identifier, let contentViewConfigurator):
+            guard let vc = currentMainContentTabViewController as? TabItemIdentifying else { break }
+            let tvi = vc.selectTabItemWithIdentifier(identifier)
+            if let tabVC = tvi?.viewController as? ContentTabViewController {
+                tabVC.newContentViewController(contentViewConfigurator())
+            }
             
         default:break
             

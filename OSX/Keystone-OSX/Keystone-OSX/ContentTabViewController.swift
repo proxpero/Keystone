@@ -8,6 +8,10 @@
 
 import Cocoa
 
+public protocol TabItemIdentifying  {
+    func selectTabItemWithIdentifier(identifier: String) -> NSTabViewItem?
+}
+
 public class ContentTabViewController: NSTabViewController {
     public var managedObjectContext: NSManagedObjectContext!
     
