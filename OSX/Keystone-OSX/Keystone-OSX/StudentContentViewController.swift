@@ -10,7 +10,8 @@ import Cocoa
 import Keystone_Model_OSX
 
 public enum StudentViewControllerItem: String {
-    case Personal       = "Personal"
+    // these names must correspond to contentTabViewController's tabViewItem identifiers as set in the storyboard
+    case Profile        = "Profile"
     case History        = "History"
     case Assignments    = "Assignments"
 }
@@ -19,7 +20,7 @@ private protocol StudentSettable {
     var student: Student! { get set }
 }
 
-public class StudentContentViewController: NSTabViewController, TabItemIdentifying {
+public class StudentContentViewController: ContentTabViewController {
 
     public var student: Student! {
         didSet {
@@ -27,17 +28,6 @@ public class StudentContentViewController: NSTabViewController, TabItemIdentifyi
         }
     }
 
-    public func selectTabItemWithIdentifier(identifier: String) -> NSTabViewItem? {
-        if let
-            tvi = (tabViewItems.filter { $0.identifier as? String == identifier }).first,
-            index = tabViewItems.indexOf(tvi)
-        {
-            selectedTabViewItemIndex = index
-            return tvi
-        }
-        return nil
-    }
-    
     public override func tabView(tabView: NSTabView, didSelectTabViewItem tabViewItem: NSTabViewItem?) {
         super.tabView(tabView, didSelectTabViewItem: tabViewItem)
         guard var vc = tabViewItem?.viewController as? StudentSettable else { return }

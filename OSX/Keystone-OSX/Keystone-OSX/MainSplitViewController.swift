@@ -42,6 +42,20 @@ public class MainSplitViewController: NSSplitViewController {
         
         let populate = true
         if populate {
+            
+            
+            
+            for _ in (1...20) {
+                ProblemSetTemplate.randomInContext(managedObjectContext)
+            }
+            
+            for _ in (1...2) {
+                let template = ListTemplate.randomInContext(managedObjectContext)
+                for _ in (1...5) {
+                    _ = List.randomInContext(managedObjectContext, template: template)
+                }
+            }
+            
             for _ in (0..<5) {
                 Student.randomInContext(managedObjectContext)
             }
@@ -54,8 +68,8 @@ public class MainSplitViewController: NSSplitViewController {
         guard let sourceListSplitViewItem = splitViewItems.first else { fatalError() }
         sourceListSplitViewItem.preferredThicknessFraction  = 0.18
         sourceListSplitViewItem.canCollapse                 = false
-        sourceListSplitViewItem.maximumThickness            = 300
-        sourceListSplitViewItem.minimumThickness            = 200
+        sourceListSplitViewItem.maximumThickness            = 340
+        sourceListSplitViewItem.minimumThickness            = 240
         sourceListSplitViewItem.holdingPriority             = NSLayoutPriorityDefaultLow + 10.0
         sourceListSplitViewItem.springLoaded                = true
     }

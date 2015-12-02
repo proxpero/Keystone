@@ -10,6 +10,52 @@ import Foundation
 import SourceListKit
 import Keystone_Model_OSX
 
+extension AssignmentType {
+    
+    public var highlightColor: NSColor? {
+        
+        switch self {
+        case .Overdue:      return SourceListKitConstants.Color.OverdueAssignment
+        case .Active:       return SourceListKitConstants.Color.ActiveAssignment
+        case .Completed:    return nil
+        }
+        
+    }
+    
+    public var label: String {
+        
+        switch self {
+        case .Overdue:      return "Overdue"
+        case .Active:       return "Active"
+        case .Completed:    return "Completed"
+        }
+        
+    }
+    
+    public func headerCellWithAssignmentsCount(count: Int)(identifier: String)(tableView: NSTableView) -> SourceListHeaderCellView {
+        
+        guard let headerCell = tableView.makeViewWithIdentifier(identifier, owner: tableView) as? SourceListHeaderCellView else { fatalError() }
+        
+        let stringValue = "\(count) \(self.label) Assignment" + (count == 1 ? "" : "s")
+        if let color = self.highlightColor {
+            
+            let mutableAttributedString = NSMutableAttributedString(
+                string: stringValue,
+                attributes: headerCell.textField?.attributedStringValue.attributesAtIndex(0, effectiveRange: nil))
+            mutableAttributedString.addAttribute(NSForegroundColorAttributeName,
+                value: color,
+                range: (stringValue as NSString).rangeOfString(self.label))
+            
+            headerCell.textField?.attributedStringValue = mutableAttributedString
+            
+        } else {
+            headerCell.textField?.stringValue = stringValue
+        }
+    
+        return headerCell
+    }
+}
+
 extension Assignment: SourceListItemsProvider {
     
     public static func sourceListItemsInContext(context: NSManagedObjectContext) -> [SourceListItem] {
@@ -34,25 +80,52 @@ extension Assignment: SourceListItemsProvider {
         
         items.append(header)
         
-//        let assignments: [Assignment] = Assignment.fetchInContext(context)
-        
-//        items.appendContentsOf(assignments.map { SourceListItem(
-//            itemType: .DynamicChild(
-//                sourceListConfigurator: <#T##SourceListConfigurationHandler##SourceListConfigurationHandler##() -> [SourceListItem]#>,
-//                contentViewConfigurator: <#T##ContentViewControllerConfigurationHandler##ContentViewControllerConfigurationHandler##() -> NSViewController#>,
-//                toolbarConfigurator: <#T##ToolbarConfigurationHandler##ToolbarConfigurationHandler##(NSToolbar) -> ()#>),
-//            cellViewConfigurator: <#T##CellViewConfigurationHandler##CellViewConfigurationHandler##(NSTableView) -> NSTableCellView#>,
-//            cellSelectionCallback: <#T##CellSelectionHandler?##CellSelectionHandler?##() -> ()#>)
-        
         return items
+    }
+}
+
+extension Assignment: StaticChildViewControllerProvider {
+    
+    public func staticChildViewControllerSourceListItem() -> SourceListItem {
+        return SourceListItem(
+            itemType: staticChildViewControllerItemType(),
+            cellViewConfigurator: cellViewConfigurator,
+            cellSelectionCallback: cellSelectionCallback)
+    }
+}
+
+extension Assignment {
+    
+    func staticChildViewControllerItemType() -> SourceListItemType {
+        return .StaticChildViewController(
+            identifier: StudentViewControllerItem.Assignments.rawValue,
+            viewControllerConfigurator: contentViewControllerConfigurator)
+    }
+
+    func contentViewControllerConfigurator() -> NSViewController {
+        guard let vc = NSStoryboard(name: "StudentContentView", bundle: NSBundle(forClass: AssignmentViewController.self)).instantiateControllerWithIdentifier("AssignmentViewController") as? AssignmentViewController else { fatalError() }
+        vc.assignment = self
+        return vc
+    }
+    
+    func cellViewConfigurator(tableView: NSTableView) -> NSTableCellView {
+        guard let view = tableView.makeViewWithIdentifier("SourceListAssignmentCellView", owner: tableView) as? SourceListAssignmentCellView else { fatalError() }
+        view.textField?.stringValue = "\(name)"
+        view.accessoryTextLabel.stringValue = "\(dueDateString().uppercaseString)"
+        return view
+    }
+    
+    func cellSelectionCallback() {
+        print("Oh dear, an Assignment due on \(dueDateString()))")
     }
 }
 
 extension Assignment {
     
     static func cellViewConfigurator(assignment: Assignment)(tableView: NSTableView) -> NSTableCellView {
-        guard let view = tableView.makeViewWithIdentifier(SourceListKitConstants.CellIdentifier.Detail, owner: tableView) as? SourceListDetailCellView else { fatalError() }
-        view.textField?.stringValue = "\(assignment.dueDateString()) : \(assignment.assignmentProblemSets.count)"
+        guard let view = tableView.makeViewWithIdentifier("SourceListAssignmentCellView", owner: tableView) as? SourceListAssignmentCellView else { fatalError() }
+        view.textField?.stringValue = "\(assignment.name)"
+        view.accessoryTextLabel.stringValue = "\(assignment.dueDateString().uppercaseString)"
         return view
     }
     
@@ -75,4 +148,12 @@ extension Assignment {
     static func cellSelectionCallback(assignment: Assignment)() {
         print("Oh dear, an Assignment due on \(assignment.dueDateString()))")
     }
+}
+
+
+public final class SourceListAssignmentCellView: SourceListDetailCellView {
+    
+    @IBOutlet weak var accessoryTextLabel: NSTextField!
+    
+    
 }

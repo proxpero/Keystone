@@ -31,7 +31,9 @@ public class SourceListTabViewController: NSTabViewController {
             func rootSourceListConfigurator() -> [SourceListItem] {
 
                 var items: [SourceListItem] = []
+                
                 items.appendContentsOf(Student.sourceListItemsInContext(managedObjectContext))
+                items.appendContentsOf(ListTemplate.sourceListItemsInContext(managedObjectContext))
                 
                 return items
             }
@@ -121,7 +123,10 @@ public class SourceListTabViewController: NSTabViewController {
 
         switch itemType {
 
-        case .DynamicChild(let sourceListConfigurator, let contentViewConfigurator, let toolbarConfigurator):
+        case .DynamicChild(
+            let sourceListConfigurator,
+            let contentViewConfigurator,
+            let toolbarConfigurator):
             
             history.append((sourceListConfigurator, contentViewConfigurator, toolbarConfigurator))
             pushSourceListWithItems(sourceListConfigurator())
@@ -130,12 +135,15 @@ public class SourceListTabViewController: NSTabViewController {
 
         case .StaticChild(let identifier):
             
-            guard let vc = currentMainContentTabViewController as? TabItemIdentifying else { break }
+            guard let vc = currentMainContentTabViewController as? ContentTabViewController else { break }
             vc.selectTabItemWithIdentifier(identifier)
             
             
-        case .StaticChildViewController(let identifier, let contentViewConfigurator):
-            guard let vc = currentMainContentTabViewController as? TabItemIdentifying else { break }
+        case .StaticChildViewController(
+            let identifier,
+            let contentViewConfigurator):
+            
+            guard let vc = currentMainContentTabViewController as? ContentTabViewController else { break }
             let tvi = vc.selectTabItemWithIdentifier(identifier)
             if let tabVC = tvi?.viewController as? ContentTabViewController {
                 tabVC.newContentViewController(contentViewConfigurator())

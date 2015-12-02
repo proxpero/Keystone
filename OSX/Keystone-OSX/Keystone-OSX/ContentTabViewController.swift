@@ -8,10 +8,10 @@
 
 import Cocoa
 
-public protocol TabItemIdentifying  {
-    func selectTabItemWithIdentifier(identifier: String) -> NSTabViewItem?
-}
-
+//public protocol TabItemIdentifying  {
+//    func selectTabItemWithIdentifier(identifier: String) -> NSTabViewItem?
+//}
+//
 public class ContentTabViewController: NSTabViewController {
     public var managedObjectContext: NSManagedObjectContext!
     
@@ -21,5 +21,16 @@ public class ContentTabViewController: NSTabViewController {
         insertTabViewItem(tabViewItem, atIndex: 0)
         selectedTabViewItemIndex = 0
 
+    }
+    
+    func selectTabItemWithIdentifier(identifier: String) -> NSTabViewItem? {
+        if let
+            tvi = (tabViewItems.filter { $0.identifier as? String == identifier }).first,
+            index = tabViewItems.indexOf(tvi)
+        {
+            selectedTabViewItemIndex = index
+            return tvi
+        }
+        return nil
     }
 }

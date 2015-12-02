@@ -9,16 +9,30 @@
 import Foundation
 import CoreData
 
+public enum AssignmentType {
+    case Overdue, Active, Completed
+}
+
 public final class Assignment: ManagedObject { }
 
 extension Assignment {
     
+    @NSManaged public private(set) var name: String
     @NSManaged public private(set) var assignedOn: NSDate
     @NSManaged public private(set) var dueDate: NSDate
     @NSManaged public private(set) var note: String
     @NSManaged public private(set) var assignmentProblemSets: NSOrderedSet
     @NSManaged public private(set) var students: Set<Student>
  
+    public var overdue: Bool {
+        if completed { return false }
+        return dueDate.compare(NSDate()) == .OrderedAscending
+    }
+    
+    public var active: Bool {
+        return !overdue && !completed
+    }
+    
     public var completed: Bool {
         guard let sets = assignmentProblemSets.array as? [AssignmentProblemSet] else { return false }
         for set in sets {
@@ -85,6 +99,7 @@ extension Assignment {
     {
         let assignment: Assignment  = moc.insertObject()
         
+        assignment.name             = "New Assignment"
         assignment.assignedOn       = NSDate(timeIntervalSince1970: 0)
         assignment.dueDate          = NSDate(timeIntervalSince1970: 1)
         assignment.note             = ""
@@ -96,6 +111,7 @@ extension Assignment {
     public static func insertIntoContext(
         
         moc:        NSManagedObjectContext,
+        name:       String,
         assignedOn: NSDate,
         dueDate:    NSDate)
         
@@ -103,6 +119,7 @@ extension Assignment {
     {
         let assignment: Assignment  = moc.insertObject()
         
+        assignment.name             = name
         assignment.assignedOn       = assignedOn
         assignment.dueDate          = dueDate
         assignment.note             = ""
@@ -114,7 +131,7 @@ extension Assignment {
 private let assignmentDateFormatter: NSDateFormatter = {
     
     let dateFormatter = NSDateFormatter()
-    dateFormatter.dateStyle = .ShortStyle
+    dateFormatter.dateStyle = .MediumStyle
     dateFormatter.timeStyle = .NoStyle
     
     return dateFormatter

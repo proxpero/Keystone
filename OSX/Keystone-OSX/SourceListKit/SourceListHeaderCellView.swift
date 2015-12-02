@@ -11,7 +11,7 @@ import UtilityKit_OSX
 
 public class SourceListHeaderCellView: TableCellView {
     
-    public var buttonActionCallback: (NSButton) -> ()   = { button in }
+    public var buttonActionCallback: ButtonConfigurationHandler?
     
     @IBOutlet var button: NSButton!
     @IBOutlet var horizontalLine: NSBox!
@@ -25,7 +25,9 @@ public class SourceListHeaderCellView: TableCellView {
     
     @IBAction func buttonAction(sender: AnyObject) {
         addHighlight()
-        buttonActionCallback(button)
+        if let action = buttonActionCallback {
+            action(button)
+        }
     }
     
     private func addHighlight() {

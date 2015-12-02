@@ -25,9 +25,7 @@ extension ProblemSetTemplate {
 extension ProblemSetTemplate {
     
     public func newProblemSet() -> ProblemSet {
-        
         return ProblemSet.insertIntoContext(managedObjectContext!, withTemplate: self)
-        
     }
     
 }
@@ -43,12 +41,10 @@ extension ProblemSetTemplate: ManagedObjectType {
 
 extension ProblemSetTemplate {
 
-    public static func insertIntoContext(moc: NSManagedObjectContext) -> ProblemSetTemplate {
+    public static func insertIntoContext(moc: NSManagedObjectContext, name: String) -> ProblemSetTemplate {
         
         let problemSetTemplate: ProblemSetTemplate = moc.insertObject()
-        problemSetTemplate.name         = "New Template"
-        problemSetTemplate.header       = nil
-        problemSetTemplate.footer       = nil
+        problemSetTemplate.name         = name
         problemSetTemplate.problemSets  = []
         
         return problemSetTemplate

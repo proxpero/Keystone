@@ -19,12 +19,30 @@ extension Student {
     @NSManaged public var image: NSData?
     @NSManaged public private(set) var assignments: Set<Assignment>
     @NSManaged public private(set) var notes: Set<Note>
-    
+ 
+    public func filter(assignmentType: AssignmentType) -> [Assignment] {
+        switch assignmentType {
+        case .Overdue:
+            return assignments.filter { $0.overdue }.sort { $0.dueDate.compare($1.dueDate) == .OrderedAscending }
+        case .Active:
+            return assignments.filter { $0.active }.sort { $0.dueDate.compare($1.dueDate) == .OrderedAscending }
+        case .Completed:
+            return assignments.filter { $0.completed }.sort { $0.dueDate.compare($1.dueDate) == .OrderedDescending }
+        }
+    }
 }
 
 extension Student {
     public var fullName: String {
         return "\(firstName) \(lastName)".stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+    }
+    
+    public func newAssignment() -> Assignment {
+        
+        let assignment = Assignment.insertIntoContext(managedObjectContext!)
+        assignments.insert(assignment)
+        return assignment
+        
     }
     
     public func addAssignment(assignment: Assignment) {

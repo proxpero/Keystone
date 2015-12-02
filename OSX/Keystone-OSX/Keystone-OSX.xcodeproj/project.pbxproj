@@ -41,6 +41,17 @@
 		521F9E921C03889800129859 /* Student+SourceListKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E911C03889800129859 /* Student+SourceListKit.swift */; settings = {ASSET_TAGS = (); }; };
 		521F9E941C039E9700129859 /* StudentContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E931C039E9700129859 /* StudentContentViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		521F9E9A1C03C1A000129859 /* Foundation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F9E991C03C1A000129859 /* Foundation+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
+		5221DEE61C0DF629001BE00C /* ListTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221DEE51C0DF629001BE00C /* ListTemplate.swift */; settings = {ASSET_TAGS = (); }; };
+		5221DEE81C0DFB8F001BE00C /* ListTemplate+SourceListKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221DEE71C0DFB8F001BE00C /* ListTemplate+SourceListKit.swift */; settings = {ASSET_TAGS = (); }; };
+		5221DEEA1C0DFECB001BE00C /* ListTemplateContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221DEE91C0DFECB001BE00C /* ListTemplateContentViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		5221DEEC1C0E9766001BE00C /* List+SourceListKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221DEEB1C0E9766001BE00C /* List+SourceListKit.swift */; settings = {ASSET_TAGS = (); }; };
+		5221DEEE1C0F2709001BE00C /* ListTemplate+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221DEED1C0F2709001BE00C /* ListTemplate+Random.swift */; settings = {ASSET_TAGS = (); }; };
+		5221DEF01C0F309A001BE00C /* ProblemSetTemplate+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221DEEF1C0F309A001BE00C /* ProblemSetTemplate+Random.swift */; settings = {ASSET_TAGS = (); }; };
+		5221DEF21C0F3C75001BE00C /* List+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221DEF11C0F3C75001BE00C /* List+Random.swift */; settings = {ASSET_TAGS = (); }; };
+		5221DEF61C0F4D66001BE00C /* StudentContentView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5221DEF51C0F4D66001BE00C /* StudentContentView.storyboard */; settings = {ASSET_TAGS = (); }; };
+		5221DEF81C0F4D92001BE00C /* ListTemplateContentView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5221DEF71C0F4D92001BE00C /* ListTemplateContentView.storyboard */; settings = {ASSET_TAGS = (); }; };
+		5221DEFA1C0F6543001BE00C /* ListContentView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5221DEF91C0F6543001BE00C /* ListContentView.storyboard */; settings = {ASSET_TAGS = (); }; };
+		5221DEFC1C0F6550001BE00C /* ListContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221DEFB1C0F6550001BE00C /* ListContentViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		52C6C8981C09546B00476490 /* Keystone-Model-OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 52C6C8971C09546B00476490 /* Keystone-Model-OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52C6C89C1C09546B00476490 /* Keystone_Model_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C6C8951C09546B00476490 /* Keystone_Model_OSX.framework */; };
 		52C6C89D1C09546B00476490 /* Keystone_Model_OSX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52C6C8951C09546B00476490 /* Keystone_Model_OSX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -76,7 +87,6 @@
 		52D9E5941C0A2BFC00F0086B /* UtilityKit_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521F9E561C03768C00129859 /* UtilityKit_OSX.framework */; };
 		52D9E5971C0A323400F0086B /* Student+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9E5961C0A323400F0086B /* Student+Random.swift */; settings = {ASSET_TAGS = (); }; };
 		52D9E5991C0A354D00F0086B /* ManagedObjectContextSettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9E5981C0A354D00F0086B /* ManagedObjectContextSettable.swift */; settings = {ASSET_TAGS = (); }; };
-		52D9E59B1C0A3C8300F0086B /* StudentContentView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D9E59A1C0A3C8300F0086B /* StudentContentView.storyboard */; settings = {ASSET_TAGS = (); }; };
 		52D9E59D1C0A4DEB00F0086B /* Assignment+SourceListKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9E59C1C0A4DEB00F0086B /* Assignment+SourceListKit.swift */; settings = {ASSET_TAGS = (); }; };
 		52D9E59F1C0A511D00F0086B /* AssignmentContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9E59E1C0A511D00F0086B /* AssignmentContentViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -173,6 +183,17 @@
 		521F9E911C03889800129859 /* Student+SourceListKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Student+SourceListKit.swift"; sourceTree = "<group>"; };
 		521F9E931C039E9700129859 /* StudentContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentContentViewController.swift; sourceTree = "<group>"; };
 		521F9E991C03C1A000129859 /* Foundation+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Foundation+Extensions.swift"; path = "../../../Shared/Utilities/Shared/Foundation+Extensions.swift"; sourceTree = "<group>"; };
+		5221DEE51C0DF629001BE00C /* ListTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListTemplate.swift; path = ../../../Model/KeystoneModel/ListTemplate.swift; sourceTree = "<group>"; };
+		5221DEE71C0DFB8F001BE00C /* ListTemplate+SourceListKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ListTemplate+SourceListKit.swift"; sourceTree = "<group>"; };
+		5221DEE91C0DFECB001BE00C /* ListTemplateContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTemplateContentViewController.swift; sourceTree = "<group>"; };
+		5221DEEB1C0E9766001BE00C /* List+SourceListKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "List+SourceListKit.swift"; sourceTree = "<group>"; };
+		5221DEED1C0F2709001BE00C /* ListTemplate+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ListTemplate+Random.swift"; path = "../../../Model/KeystoneModel/ListTemplate+Random.swift"; sourceTree = "<group>"; };
+		5221DEEF1C0F309A001BE00C /* ProblemSetTemplate+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ProblemSetTemplate+Random.swift"; path = "../../../Model/KeystoneModel/ProblemSetTemplate+Random.swift"; sourceTree = "<group>"; };
+		5221DEF11C0F3C75001BE00C /* List+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "List+Random.swift"; path = "../../../Model/KeystoneModel/List+Random.swift"; sourceTree = "<group>"; };
+		5221DEF51C0F4D66001BE00C /* StudentContentView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StudentContentView.storyboard; sourceTree = "<group>"; };
+		5221DEF71C0F4D92001BE00C /* ListTemplateContentView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListTemplateContentView.storyboard; sourceTree = "<group>"; };
+		5221DEF91C0F6543001BE00C /* ListContentView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListContentView.storyboard; sourceTree = "<group>"; };
+		5221DEFB1C0F6550001BE00C /* ListContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListContentViewController.swift; sourceTree = "<group>"; };
 		52C6C8951C09546B00476490 /* Keystone_Model_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Keystone_Model_OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C6C8971C09546B00476490 /* Keystone-Model-OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Keystone-Model-OSX.h"; sourceTree = "<group>"; };
 		52C6C8991C09546B00476490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -207,7 +228,6 @@
 		52C6C8ED1C09557900476490 /* Keystone_v1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Keystone_v1.xcdatamodel; sourceTree = "<group>"; };
 		52D9E5961C0A323400F0086B /* Student+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Student+Random.swift"; path = "../../../Model/KeystoneModel/Student+Random.swift"; sourceTree = "<group>"; };
 		52D9E5981C0A354D00F0086B /* ManagedObjectContextSettable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManagedObjectContextSettable.swift; path = "../../../../../../Downloads/core-data-master/Moody/Moody/ManagedObjectContextSettable.swift"; sourceTree = "<group>"; };
-		52D9E59A1C0A3C8300F0086B /* StudentContentView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StudentContentView.storyboard; path = ../../../../../../Desktop/GenericTableViewKit/Example/Example/StudentContentView.storyboard; sourceTree = "<group>"; };
 		52D9E59C1C0A4DEB00F0086B /* Assignment+SourceListKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assignment+SourceListKit.swift"; sourceTree = "<group>"; };
 		52D9E59E1C0A511D00F0086B /* AssignmentContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -346,9 +366,15 @@
 			children = (
 				521F9E911C03889800129859 /* Student+SourceListKit.swift */,
 				52D9E59C1C0A4DEB00F0086B /* Assignment+SourceListKit.swift */,
+				5221DEE71C0DFB8F001BE00C /* ListTemplate+SourceListKit.swift */,
+				5221DEEB1C0E9766001BE00C /* List+SourceListKit.swift */,
 				521F9E931C039E9700129859 /* StudentContentViewController.swift */,
-				52D9E59A1C0A3C8300F0086B /* StudentContentView.storyboard */,
+				5221DEF51C0F4D66001BE00C /* StudentContentView.storyboard */,
 				52D9E59E1C0A511D00F0086B /* AssignmentContentViewController.swift */,
+				5221DEE91C0DFECB001BE00C /* ListTemplateContentViewController.swift */,
+				5221DEF71C0F4D92001BE00C /* ListTemplateContentView.storyboard */,
+				5221DEFB1C0F6550001BE00C /* ListContentViewController.swift */,
+				5221DEF91C0F6543001BE00C /* ListContentView.storyboard */,
 			);
 			name = "Model+SourceListKit";
 			sourceTree = "<group>";
@@ -372,13 +398,14 @@
 				52C6C8D61C09553F00476490 /* Student.swift */,
 				52C6C8D71C09553F00476490 /* Assignment.swift */,
 				52C6C8D81C09553F00476490 /* AssignmentProblem.swift */,
+				52C6C8DF1C09553F00476490 /* List.swift */,
+				5221DEE51C0DF629001BE00C /* ListTemplate.swift */,
 				52C6C8D91C09553F00476490 /* ProblemSet.swift */,
 				52C6C8DA1C09553F00476490 /* ProblemSetTemplate.swift */,
 				52C6C8DB1C09553F00476490 /* ProblemItem.swift */,
 				52C6C8DC1C09553F00476490 /* Constituent.swift */,
 				52C6C8DD1C09553F00476490 /* ConstituentStyle.swift */,
 				52C6C8DE1C09553F00476490 /* Tag.swift */,
-				52C6C8DF1C09553F00476490 /* List.swift */,
 				52C6C8EC1C09557900476490 /* Keystone_v1.xcdatamodeld */,
 			);
 			name = Model;
@@ -421,6 +448,9 @@
 			isa = PBXGroup;
 			children = (
 				52D9E5961C0A323400F0086B /* Student+Random.swift */,
+				5221DEED1C0F2709001BE00C /* ListTemplate+Random.swift */,
+				5221DEF11C0F3C75001BE00C /* List+Random.swift */,
+				5221DEEF1C0F309A001BE00C /* ProblemSetTemplate+Random.swift */,
 			);
 			name = Random;
 			sourceTree = "<group>";
@@ -619,8 +649,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5221DEFA1C0F6543001BE00C /* ListContentView.storyboard in Resources */,
 				52092B091BF259E500B2A1EE /* Assets.xcassets in Resources */,
-				52D9E59B1C0A3C8300F0086B /* StudentContentView.storyboard in Resources */,
+				5221DEF81C0F4D92001BE00C /* ListTemplateContentView.storyboard in Resources */,
+				5221DEF61C0F4D66001BE00C /* StudentContentView.storyboard in Resources */,
 				521F9E501C03671000129859 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -666,9 +698,13 @@
 				52D9E59D1C0A4DEB00F0086B /* Assignment+SourceListKit.swift in Sources */,
 				521F9E4C1C0366ED00129859 /* SourceListTabViewController.swift in Sources */,
 				521F9E4B1C0366ED00129859 /* MainSplitViewController.swift in Sources */,
+				5221DEEC1C0E9766001BE00C /* List+SourceListKit.swift in Sources */,
+				5221DEEA1C0DFECB001BE00C /* ListTemplateContentViewController.swift in Sources */,
+				5221DEE81C0DFB8F001BE00C /* ListTemplate+SourceListKit.swift in Sources */,
 				521F9E4A1C0366ED00129859 /* WindowController.swift in Sources */,
 				52D9E59F1C0A511D00F0086B /* AssignmentContentViewController.swift in Sources */,
 				521F9E4E1C0366ED00129859 /* SourceListViewController.swift in Sources */,
+				5221DEFC1C0F6550001BE00C /* ListContentViewController.swift in Sources */,
 				521F9E921C03889800129859 /* Student+SourceListKit.swift in Sources */,
 				521F9E941C039E9700129859 /* StudentContentViewController.swift in Sources */,
 				52092B051BF259E500B2A1EE /* AppDelegate.swift in Sources */,
@@ -719,6 +755,7 @@
 				52D9E5971C0A323400F0086B /* Student+Random.swift in Sources */,
 				52C6C8C61C09550800476490 /* ModelVersionType.swift in Sources */,
 				52C6C8C91C09550800476490 /* CoreDataErrors.swift in Sources */,
+				5221DEE61C0DF629001BE00C /* ListTemplate.swift in Sources */,
 				52C6C8E61C09553F00476490 /* ProblemItem.swift in Sources */,
 				52C6C8D21C09552B00476490 /* KeystoneStack-OSX.swift in Sources */,
 				52C6C8C51C09550800476490 /* Utilities.swift in Sources */,
@@ -726,12 +763,15 @@
 				52C6C8E51C09553F00476490 /* ProblemSetTemplate.swift in Sources */,
 				52C6C8EA1C09553F00476490 /* List.swift in Sources */,
 				52C6C8C81C09550800476490 /* NSManagedObjectContext+Extensions.swift in Sources */,
+				5221DEF21C0F3C75001BE00C /* List+Random.swift in Sources */,
+				5221DEF01C0F309A001BE00C /* ProblemSetTemplate+Random.swift in Sources */,
 				52C6C8E41C09553F00476490 /* ProblemSet.swift in Sources */,
 				52C6C8E21C09553F00476490 /* Assignment.swift in Sources */,
 				52C6C8C71C09550800476490 /* ManagedObjectObserver.swift in Sources */,
 				52C6C8D51C09552B00476490 /* UpdateTimestampable.swift in Sources */,
 				52C6C8E81C09553F00476490 /* ConstituentStyle.swift in Sources */,
 				52C6C8C01C09550800476490 /* NSFetchRequest+Extensions.swift in Sources */,
+				5221DEEE1C0F2709001BE00C /* ListTemplate+Random.swift in Sources */,
 				52C6C8CB1C09550800476490 /* NSPersistentStoreCoordinator+Extensions.swift in Sources */,
 				52C6C8C31C09550800476490 /* ModelBuilder.swift in Sources */,
 				52C6C8C41C09550800476490 /* Collection+CoreDataExtensions.swift in Sources */,

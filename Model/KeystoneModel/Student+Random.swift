@@ -1,6 +1,6 @@
 //
 //  Student+Random.swift
-//  KeystoneModel
+//  Keystone
 //
 //  Created by Todd Olsen on 11/24/15.
 //  Copyright © 2015 Todd Olsen. All rights reserved.
@@ -18,6 +18,9 @@ extension Student {
         let lastName        = Person.randomLastName()
         let graduationDate  = NSDate.randomDate(weeksAgo: -4, offset: 10)
         
+        let problemSets = ProblemSet.fetchInContext(moc)
+        let c = UInt32(problemSets.count)
+        
         let student = Student.insertIntoContext(moc,
             firstName:      firstName,
             lastName:       lastName,
@@ -28,18 +31,13 @@ extension Student {
             let assignedOn  = graduationDate.randomDate(weeks: -w, rangeInDays: 4)
             let dueDate     = assignedOn.randomDate(weeks: 2, rangeInDays: 2)
             let assignment  = Assignment.insertIntoContext(moc,
+                name:       NSUUID().UUIDString.componentsSeparatedByString("-").first!,
                 assignedOn: assignedOn,
                 dueDate:    dueDate)
             
-            let template = ProblemSetTemplate.insertIntoContext(moc)
-            
-            for _ in (0...Int(arc4random_uniform(30) + 7)) {
+            for _ in (0...Int(arc4random_uniform(7) + 7)) {
                 
-                let problemSet = ProblemSet.insertIntoContext(moc, withTemplate: template)
-                
-                for _ in (0...4) {
-                    problemSet.addNewProblemItem()
-                }
+                let problemSet = problemSets[Int(arc4random_uniform(c))]
                 
                 let assignmentProblemSet = AssignmentProblemSet.insertIntoContext(moc,
                     assignment: assignment,
