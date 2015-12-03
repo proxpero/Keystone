@@ -28,8 +28,8 @@
     </entity>
     <entity name="List" representedClassName=".List" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="children" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="List" inverseName="parent" inverseEntity="List" syncable="YES"/>
-        <relationship name="parent" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="List" inverseName="children" inverseEntity="List" syncable="YES"/>
+        <relationship name="children" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="List" inverseName="parent" inverseEntity="List" syncable="YES"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" ordered="YES" destinationEntity="List" inverseName="children" inverseEntity="List" syncable="YES"/>
         <relationship name="problemSets" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ProblemSet" inverseName="lists" inverseEntity="ProblemSet" syncable="YES"/>
         <relationship name="template" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ListTemplate" inverseName="lists" inverseEntity="ListTemplate" syncable="YES"/>
     </entity>
@@ -90,12 +90,12 @@
         <element name="AssignmentProblemSet" positionX="-945" positionY="-898" width="155" height="88"/>
         <element name="ConstituentStyle" positionX="-524" positionY="-801" width="128" height="133"/>
         <element name="List" positionX="-738" positionY="-1090" width="128" height="118"/>
+        <element name="ListTemplate" positionX="-542" positionY="-1170" width="128" height="148"/>
         <element name="Note" positionX="-1116" positionY="-837" width="128" height="88"/>
         <element name="ProblemItem" positionX="-720" positionY="-748" width="153" height="133"/>
         <element name="ProblemSet" positionX="-729" positionY="-909" width="128" height="118"/>
         <element name="ProblemSetTemplate" positionX="-551" positionY="-963" width="128" height="118"/>
         <element name="Student" positionX="-1118" positionY="-1012" width="128" height="133"/>
         <element name="Tag" positionX="-927" positionY="-655" width="128" height="118"/>
-        <element name="ListTemplate" positionX="-542" positionY="-1170" width="128" height="148"/>
     </elements>
 </model>

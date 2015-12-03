@@ -84,6 +84,8 @@
 		52C6C8E91C09553F00476490 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6C8DE1C09553F00476490 /* Tag.swift */; settings = {ASSET_TAGS = (); }; };
 		52C6C8EA1C09553F00476490 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6C8DF1C09553F00476490 /* List.swift */; settings = {ASSET_TAGS = (); }; };
 		52C6C8EE1C09557900476490 /* Keystone_v1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52C6C8EC1C09557900476490 /* Keystone_v1.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		52D051351C1078E100050D35 /* ProblemSet+SourceListKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D051341C1078E100050D35 /* ProblemSet+SourceListKit.swift */; settings = {ASSET_TAGS = (); }; };
+		52D051371C10847B00050D35 /* ProblemSetContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D051361C10847B00050D35 /* ProblemSetContentViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		52D9E5941C0A2BFC00F0086B /* UtilityKit_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521F9E561C03768C00129859 /* UtilityKit_OSX.framework */; };
 		52D9E5971C0A323400F0086B /* Student+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9E5961C0A323400F0086B /* Student+Random.swift */; settings = {ASSET_TAGS = (); }; };
 		52D9E5991C0A354D00F0086B /* ManagedObjectContextSettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9E5981C0A354D00F0086B /* ManagedObjectContextSettable.swift */; settings = {ASSET_TAGS = (); }; };
@@ -226,6 +228,8 @@
 		52C6C8DE1C09553F00476490 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tag.swift; path = ../../../Model/KeystoneModel/Tag.swift; sourceTree = "<group>"; };
 		52C6C8DF1C09553F00476490 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = List.swift; path = ../../../Model/KeystoneModel/List.swift; sourceTree = "<group>"; };
 		52C6C8ED1C09557900476490 /* Keystone_v1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Keystone_v1.xcdatamodel; sourceTree = "<group>"; };
+		52D051341C1078E100050D35 /* ProblemSet+SourceListKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProblemSet+SourceListKit.swift"; sourceTree = "<group>"; };
+		52D051361C10847B00050D35 /* ProblemSetContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemSetContentViewController.swift; sourceTree = "<group>"; };
 		52D9E5961C0A323400F0086B /* Student+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Student+Random.swift"; path = "../../../Model/KeystoneModel/Student+Random.swift"; sourceTree = "<group>"; };
 		52D9E5981C0A354D00F0086B /* ManagedObjectContextSettable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManagedObjectContextSettable.swift; path = "../../../../../../Downloads/core-data-master/Moody/Moody/ManagedObjectContextSettable.swift"; sourceTree = "<group>"; };
 		52D9E59C1C0A4DEB00F0086B /* Assignment+SourceListKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assignment+SourceListKit.swift"; sourceTree = "<group>"; };
@@ -368,6 +372,7 @@
 				52D9E59C1C0A4DEB00F0086B /* Assignment+SourceListKit.swift */,
 				5221DEE71C0DFB8F001BE00C /* ListTemplate+SourceListKit.swift */,
 				5221DEEB1C0E9766001BE00C /* List+SourceListKit.swift */,
+				52D051341C1078E100050D35 /* ProblemSet+SourceListKit.swift */,
 				521F9E931C039E9700129859 /* StudentContentViewController.swift */,
 				5221DEF51C0F4D66001BE00C /* StudentContentView.storyboard */,
 				52D9E59E1C0A511D00F0086B /* AssignmentContentViewController.swift */,
@@ -375,6 +380,7 @@
 				5221DEF71C0F4D92001BE00C /* ListTemplateContentView.storyboard */,
 				5221DEFB1C0F6550001BE00C /* ListContentViewController.swift */,
 				5221DEF91C0F6543001BE00C /* ListContentView.storyboard */,
+				52D051361C10847B00050D35 /* ProblemSetContentViewController.swift */,
 			);
 			name = "Model+SourceListKit";
 			sourceTree = "<group>";
@@ -701,6 +707,8 @@
 				5221DEEC1C0E9766001BE00C /* List+SourceListKit.swift in Sources */,
 				5221DEEA1C0DFECB001BE00C /* ListTemplateContentViewController.swift in Sources */,
 				5221DEE81C0DFB8F001BE00C /* ListTemplate+SourceListKit.swift in Sources */,
+				52D051371C10847B00050D35 /* ProblemSetContentViewController.swift in Sources */,
+				52D051351C1078E100050D35 /* ProblemSet+SourceListKit.swift in Sources */,
 				521F9E4A1C0366ED00129859 /* WindowController.swift in Sources */,
 				52D9E59F1C0A511D00F0086B /* AssignmentContentViewController.swift in Sources */,
 				521F9E4E1C0366ED00129859 /* SourceListViewController.swift in Sources */,

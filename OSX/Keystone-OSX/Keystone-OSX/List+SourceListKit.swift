@@ -42,13 +42,12 @@ extension List: DynamicChildProvider {
             items.appendContentsOf(childLists.map { $0.dynamicSourceListItem() })
         }
         
-        
         // Problems
         
         if let problems = problemSets?.array as? [ProblemSet] where problemSets?.count > 0 {
             
             items.append(defaultHeaderItemWithTitle("Problem Sets"))
-//            items.appendContentsOf(problems.map { $0.dynamicSourceListItem() })
+            items.appendContentsOf(problems.map { $0.staticChildViewControllerSourceListItem() })
             
         }
         

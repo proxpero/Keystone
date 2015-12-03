@@ -21,6 +21,10 @@ extension List {
         if let childrenTemplates = template.children?.array as? [ListTemplate] {
             
             for childTemplate in childrenTemplates {
+                
+                for _ in (1...5) {
+                    _ = list.addNewChildListWithName(NSUUID().UUIDString.componentsSeparatedByString("-").first!, childTemplate: childTemplate)
+                }
 
                 if let grandchildrenTemplates = childTemplate.children?.array as? [ListTemplate] {
                     
