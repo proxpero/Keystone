@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
-        <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--List Content View Controller-->
@@ -13,7 +12,7 @@
                     <tabViewItems>
                         <tabViewItem identifier="Settings" id="3r7-Fz-oja"/>
                         <tabViewItem identifier="History" id="ihE-yn-rYS"/>
-                        <tabViewItem identifier="Problems" id="hOj-nZ-a20"/>
+                        <tabViewItem identifier="Problems" id="FZW-Dv-zQi"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="Lge-Kf-Omy">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
@@ -28,7 +27,7 @@
                     <connections>
                         <segue destination="CJP-Om-qIL" kind="relationship" relationship="tabItems" id="Kak-vb-4yD"/>
                         <segue destination="OtM-n7-gfY" kind="relationship" relationship="tabItems" id="T3k-gy-tu2"/>
-                        <segue destination="CPz-tv-ZPS" kind="relationship" relationship="tabItems" id="39L-aS-1G3"/>
+                        <segue destination="5uT-8v-Xqw" kind="relationship" relationship="tabItems" id="JbU-GW-ybW"/>
                     </connections>
                 </tabViewController>
                 <customObject id="yMZ-4s-WLY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -68,56 +67,111 @@
             <point key="canvasLocation" x="274" y="988"/>
         </scene>
         <!--Problem Set Content View Controller-->
-        <scene sceneID="V1W-x5-AHB">
+        <scene sceneID="SSN-Lp-hMz">
             <objects>
-                <tabViewController storyboardIdentifier="ProblemSetContentViewController" tabStyle="unspecified" id="CPz-tv-ZPS" customClass="ProblemSetContentViewController" customModule="Keystone_OSX" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabView key="tabView" type="noTabsNoBorder" id="XyT-MO-fud">
-                        <rect key="frame" x="0.0" y="0.0" width="468" height="271"/>
+                <splitViewController storyboardIdentifier="ProblemSetContentViewController" id="5uT-8v-Xqw" customClass="ProblemSetContentViewController" customModule="Keystone_OSX" customModuleProvider="target" sceneMemberID="viewController">
+                    <splitViewItems>
+                        <splitViewItem id="z0o-Ob-Hu1"/>
+                        <splitViewItem id="ace-Y9-6KF"/>
+                    </splitViewItems>
+                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="srr-JF-ZJU" customClass="TKOSplitView" customModule="Keystone_OSX" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="customDividerColor">
+                                <color key="value" red="0.64313725489999995" green="0.64313725489999995" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </splitView>
+                    <connections>
+                        <segue destination="2NZ-Ab-nr6" kind="relationship" relationship="splitItems" id="pXk-3j-MUD"/>
+                        <segue destination="BiE-BZ-Ksu" kind="relationship" relationship="splitItems" id="Gdc-UG-gpi"/>
+                    </connections>
+                </splitViewController>
+                <customObject id="Qvs-T7-Wgw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="994"/>
+        </scene>
+        <!--Problem Set View Controller-->
+        <scene sceneID="sra-va-M8l">
+            <objects>
+                <tabViewController tabStyle="unspecified" id="2NZ-Ab-nr6" customClass="ProblemSetViewController" customModule="Keystone_OSX" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabView key="tabView" type="noTabsNoBorder" id="ILG-Gg-Xpt">
+                        <rect key="frame" x="0.0" y="0.0" width="536" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
                         <font key="font" metaFont="message"/>
                         <tabViewItems/>
-                        <connections>
-                            <outlet property="delegate" destination="CPz-tv-ZPS" id="NOy-q2-8sJ"/>
-                        </connections>
                     </tabView>
                 </tabViewController>
-                <customObject id="ePf-9d-xTe" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="gci-eI-sAU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="983"/>
+            <point key="canvasLocation" x="1403" y="801"/>
         </scene>
-        <!--Problem Set View Controller-->
-        <scene sceneID="eRd-4Q-OEq">
+        <!--Problem Set Editor View Controller-->
+        <scene sceneID="Fab-MJ-UKz">
             <objects>
-                <viewController storyboardIdentifier="ProblemSetViewController" id="Elz-jd-9h0" customClass="ProblemSetViewController" customModule="Keystone_OSX" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="ACs-xT-oGK">
+                <viewController storyboardIdentifier="ProblemSetEditorViewController" id="McK-PQ-hOY" customClass="ProblemSetEditorViewController" customModule="Keystone_OSX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="isk-Vl-ob8">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <box title="Box" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="hN6-tS-ZXh">
-                                <rect key="frame" x="17" y="16" width="416" height="264"/>
-                                <view key="contentView" id="ny2-s7-mNa">
-                                    <rect key="frame" x="1" y="1" width="414" height="248"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <animations/>
-                                </view>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="H7Q-pV-Xci">
+                                <rect key="frame" x="207" y="142" width="37" height="17"/>
                                 <animations/>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </box>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="eJ9-Yw-nx3">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="McK-PQ-hOY" name="value" keyPath="title" id="6ic-jb-dg6"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="hN6-tS-ZXh" firstAttribute="top" secondItem="ACs-xT-oGK" secondAttribute="top" constant="20" symbolic="YES" id="EUe-Tc-H4L"/>
-                            <constraint firstItem="hN6-tS-ZXh" firstAttribute="leading" secondItem="ACs-xT-oGK" secondAttribute="leading" constant="20" symbolic="YES" id="Y4m-et-0Wt"/>
-                            <constraint firstAttribute="trailing" secondItem="hN6-tS-ZXh" secondAttribute="trailing" constant="20" symbolic="YES" id="aod-zn-ixU"/>
-                            <constraint firstAttribute="bottom" secondItem="hN6-tS-ZXh" secondAttribute="bottom" constant="20" symbolic="YES" id="lkC-qw-631"/>
+                            <constraint firstItem="H7Q-pV-Xci" firstAttribute="centerY" secondItem="isk-Vl-ob8" secondAttribute="centerY" id="SAQ-bB-Sos"/>
+                            <constraint firstItem="H7Q-pV-Xci" firstAttribute="centerX" secondItem="isk-Vl-ob8" secondAttribute="centerX" id="iEi-XQ-c7Q"/>
                         </constraints>
                         <animations/>
                     </view>
                 </viewController>
-                <customObject id="HMo-xD-XQa" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Ehx-r6-G5S" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="1362"/>
+            <point key="canvasLocation" x="1896" y="801"/>
+        </scene>
+        <!--Problem Set Inspector View Controller-->
+        <scene sceneID="9NJ-gR-QPy">
+            <objects>
+                <viewController id="BiE-BZ-Ksu" customClass="ProblemSetInspectorViewController" customModule="Keystone_OSX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="V40-q3-F7U">
+                        <rect key="frame" x="0.0" y="0.0" width="190" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4f1-VD-b3j">
+                                <rect key="frame" x="77" y="263" width="37" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="f8W-0l-k4H">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="BiE-BZ-Ksu" name="value" keyPath="title" id="7dD-bR-QMN"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="4f1-VD-b3j" firstAttribute="top" secondItem="V40-q3-F7U" secondAttribute="top" constant="20" symbolic="YES" id="P64-IE-yEV"/>
+                            <constraint firstItem="4f1-VD-b3j" firstAttribute="centerX" secondItem="V40-q3-F7U" secondAttribute="centerX" id="qdA-fm-Ewh"/>
+                        </constraints>
+                        <animations/>
+                    </view>
+                </viewController>
+                <customObject id="ter-md-4ek" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1273" y="1174"/>
         </scene>
         <!--List Summary View Controller-->
         <scene sceneID="gex-J0-SSU">

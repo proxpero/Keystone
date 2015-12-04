@@ -26,7 +26,7 @@ extension ProblemSet: StaticChildViewControllerProvider {
     }
     
     func contentViewControllerConfigurator() -> NSViewController {
-        guard let vc = NSStoryboard(name: "ListContentView", bundle: NSBundle(forClass: ProblemSetViewController.self)).instantiateControllerWithIdentifier("ProblemSetViewController") as? ProblemSetViewController else { fatalError() }
+        guard let vc = NSStoryboard(name: "ListContentView", bundle: NSBundle(forClass: ProblemSetEditorViewController.self)).instantiateControllerWithIdentifier("ProblemSetEditorViewController") as? ProblemSetEditorViewController else { fatalError() }
         vc.problemSet = self
         return vc
     }

@@ -20,4 +20,7 @@ public final class AssignmentViewController: NSViewController {
     
     public var assignment: Assignment!
     
+    deinit {
+        print("deinit assingmnet vc")
+    }
 }

@@ -12,18 +12,30 @@ import Cocoa
 //    func selectTabItemWithIdentifier(identifier: String) -> NSTabViewItem?
 //}
 //
-public class ContentTabViewController: NSTabViewController {
+
+public protocol StaticChildViewControllerType {
+    
+    func newContentViewController(viewController: NSViewController) -> ()
+    func selectTabItemWithIdentifier(identifier: String) -> NSTabViewItem?
+    
+}
+
+public class ContentTabViewController: NSTabViewController, StaticChildViewControllerType {
     public var managedObjectContext: NSManagedObjectContext!
     
-    func newContentViewController(viewController: NSViewController) {
+    public func newContentViewController(viewController: NSViewController) {
         
         let tabViewItem = NSTabViewItem(viewController: viewController)
         insertTabViewItem(tabViewItem, atIndex: 0)
         selectedTabViewItemIndex = 0
-
+        
+        if tabViewItems.count > 1 {
+            removeTabViewItem(tabViewItems[1])
+        }
+    
     }
     
-    func selectTabItemWithIdentifier(identifier: String) -> NSTabViewItem? {
+    public func selectTabItemWithIdentifier(identifier: String) -> NSTabViewItem? {
         if let
             tvi = (tabViewItems.filter { $0.identifier as? String == identifier }).first,
             index = tabViewItems.indexOf(tvi)

@@ -11,6 +11,7 @@ import SourceListKit
 import Keystone_Model_OSX
 
 extension List: DynamicChildProvider {
+    
     public func dynamicSourceListItem() -> SourceListItem {
         return SourceListItem(
             itemType: dynamicChildItemType(),

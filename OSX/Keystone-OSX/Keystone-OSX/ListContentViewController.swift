@@ -28,6 +28,10 @@ public class ListContentViewController: ContentTabViewController {
         guard var vc = tabViewItem?.viewController as? ListSettable else { return }
         vc.list = list
     }
+    
+    deinit {
+        print("deinit list")
+    }
 
 }
 
@@ -39,7 +43,7 @@ public class ListSummaryViewController: NSViewController, ListSettable {
         }
     }
     @IBOutlet weak var label: NSTextField!
-    
+
 }
 
 public class ListHistoryViewController: NSViewController, ListSettable {

@@ -18,5 +18,7 @@ public enum ListTemplateControllerItem: String {
 public class ListTemplateContentViewController: ContentTabViewController {
     
     var listTemplate: ListTemplate!
-    
+    deinit {
+        print("deinit list template")
+    }
 }

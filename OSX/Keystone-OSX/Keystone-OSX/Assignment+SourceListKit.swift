@@ -120,35 +120,35 @@ extension Assignment {
     }
 }
 
-extension Assignment {
-    
-    static func cellViewConfigurator(assignment: Assignment)(tableView: NSTableView) -> NSTableCellView {
-        guard let view = tableView.makeViewWithIdentifier("SourceListAssignmentCellView", owner: tableView) as? SourceListAssignmentCellView else { fatalError() }
-        view.textField?.stringValue = "\(assignment.name)"
-        view.accessoryTextLabel.stringValue = "\(assignment.dueDateString().uppercaseString)"
-        return view
-    }
-    
-    static func contentViewControllerConfigurator(assignment: Assignment)() -> NSViewController {
-        guard let vc = NSStoryboard(name: "AssignmentContentView", bundle: NSBundle(forClass: AssignmentContentViewController.self)).instantiateInitialController() as? AssignmentContentViewController else { fatalError() }
-        vc.assignment = assignment
-        return vc
-    }
-    
-    static func sourceListConfigurator(assignment: Assignment)() -> [SourceListItem] {
-        return []
-    }
-    
-    static func toolbarConfigurator(assignment: Assignment)(toolbar: NSToolbar) {
-        if let label = (toolbar.items.filter { $0.itemIdentifier == "ToolbarLabelItem" }).first?.view as? NSTextField {
-            label.stringValue = String(assignment.dueDate)
-        }
-    }
-    
-    static func cellSelectionCallback(assignment: Assignment)() {
-        print("Oh dear, an Assignment due on \(assignment.dueDateString()))")
-    }
-}
+//extension Assignment {
+//    
+//    static func cellViewConfigurator(assignment: Assignment)(tableView: NSTableView) -> NSTableCellView {
+//        guard let view = tableView.makeViewWithIdentifier("SourceListAssignmentCellView", owner: tableView) as? SourceListAssignmentCellView else { fatalError() }
+//        view.textField?.stringValue = "\(assignment.name)"
+//        view.accessoryTextLabel.stringValue = "\(assignment.dueDateString().uppercaseString)"
+//        return view
+//    }
+//    
+////    static func contentViewControllerConfigurator(assignment: Assignment)() -> NSViewController {
+////        guard let vc = NSStoryboard(name: "AssignmentContentView", bundle: NSBundle(forClass: AssignmentContentViewController.self)).instantiateInitialController() as? AssignmentContentViewController else { fatalError() }
+////        vc.assignment = assignment
+////        return vc
+////    }
+//    
+//    static func sourceListConfigurator(assignment: Assignment)() -> [SourceListItem] {
+//        return []
+//    }
+//    
+//    static func toolbarConfigurator(assignment: Assignment)(toolbar: NSToolbar) {
+//        if let label = (toolbar.items.filter { $0.itemIdentifier == "ToolbarLabelItem" }).first?.view as? NSTextField {
+//            label.stringValue = String(assignment.dueDate)
+//        }
+//    }
+//    
+//    static func cellSelectionCallback(assignment: Assignment)() {
+//        print("Oh dear, an Assignment due on \(assignment.dueDateString()))")
+//    }
+//}
 
 
 public final class SourceListAssignmentCellView: SourceListDetailCellView {

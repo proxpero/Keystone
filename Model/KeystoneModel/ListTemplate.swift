@@ -26,6 +26,7 @@ extension ListTemplate {
         
         let child = ListTemplate.insertIntoContext(managedObjectContext!, name: name)
         child.parent = self
+     
         return child
     }
     
@@ -35,6 +36,7 @@ extension ListTemplate {
         let child = ListTemplate.insertIntoContext(managedObjectContext!, name: name)
         let mutableChildren = mutableOrderedSetValueForKey("children")
         mutableChildren.insertObject(child, atIndex: index)
+        
         return child
         
     }
@@ -43,6 +45,7 @@ extension ListTemplate {
         
         let list = List.insertIntoContext(managedObjectContext!, name: name, template: self)
         lists.insert(list)
+
         return list
         
     }

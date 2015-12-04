@@ -135,7 +135,7 @@ public class SourceListTabViewController: NSTabViewController {
 
         case .StaticChild(let identifier):
             
-            guard let vc = currentMainContentTabViewController as? ContentTabViewController else { break }
+            guard let vc = currentMainContentTabViewController as? StaticChildViewControllerType else { break }
             vc.selectTabItemWithIdentifier(identifier)
             
             
@@ -143,9 +143,9 @@ public class SourceListTabViewController: NSTabViewController {
             let identifier,
             let contentViewConfigurator):
             
-            guard let vc = currentMainContentTabViewController as? ContentTabViewController else { break }
+            guard let vc = currentMainContentTabViewController as? StaticChildViewControllerType else { break }
             let tvi = vc.selectTabItemWithIdentifier(identifier)
-            if let tabVC = tvi?.viewController as? ContentTabViewController {
+            if let tabVC = tvi?.viewController as? StaticChildViewControllerType {
                 tabVC.newContentViewController(contentViewConfigurator())
             }
             

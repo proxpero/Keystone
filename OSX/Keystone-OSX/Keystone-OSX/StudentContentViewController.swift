@@ -33,6 +33,10 @@ public class StudentContentViewController: ContentTabViewController {
         guard var vc = tabViewItem?.viewController as? StudentSettable else { return }
         vc.student = student
     }
+    
+    deinit {
+        print("deinit student")
+    }
 }
 
 public class StudentPersonalProfileViewController: NSViewController, StudentSettable {
