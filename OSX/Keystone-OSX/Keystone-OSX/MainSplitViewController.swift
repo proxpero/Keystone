@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import SourceListKit
 import Keystone_Model_OSX
 
 public class MainSplitViewController: NSSplitViewController {
@@ -31,10 +32,10 @@ public class MainSplitViewController: NSSplitViewController {
         
         managedObjectContext = context
         
-        mainSidebarViewController.managedObjectContext = managedObjectContext
-        mainContentViewController.managedObjectContext = managedObjectContext
+//        mainSidebarViewController.managedObjectContext = managedObjectContext
+//        mainContentViewController.managedObjectContext = managedObjectContext
         
-        mainSidebarViewController.pushContentViewControllerHandler = { viewController in
+        mainSidebarViewController.contentViewConfigurator = { viewController in
             mainContentViewController.newContentViewController(viewController)
         }
         
@@ -42,8 +43,6 @@ public class MainSplitViewController: NSSplitViewController {
         
         let populate = true
         if populate {
-            
-            
             
             for _ in (1...20) {
                 ProblemSetTemplate.randomInContext(managedObjectContext)
@@ -60,8 +59,38 @@ public class MainSplitViewController: NSSplitViewController {
                 Student.randomInContext(managedObjectContext)
             }
         }
-        mainSidebarViewController.instantiateRoot()
+        
+        mainSidebarViewController.selectItemType(root())
     }
+    
+    private func root() -> SourceListItemType {
+            
+        func rootSourceListConfigurator() -> [SourceListItem] {
+            
+            var items: [SourceListItem] = []
+            
+            items.appendContentsOf(Student.sourceListItemsInContext(managedObjectContext))
+            items.appendContentsOf(ListTemplate.sourceListItemsInContext(managedObjectContext))
+            
+            return items
+        }
+        
+        func rootContentViewConfigurator() -> NSViewController {
+            guard let vc = storyboard?.instantiateControllerWithIdentifier("DefaultTabViewController") as? NSTabViewController else { fatalError() }
+            return vc
+        }
+        
+        func rootToolbarConfigurator(toolbar: NSToolbar) {
+            toolbar.setItems([.FlexibleSpace, .Settings])
+        }
+        
+        return SourceListItemType.DynamicChild(
+            sourceListConfigurator:     rootSourceListConfigurator,
+            contentViewConfigurator:    rootContentViewConfigurator,
+            toolbarConfigurator:        rootToolbarConfigurator)
+        
+    }
+
     
     private func configureSplitView() {
         guard splitViewItems.count == 2 else { fatalError() }

@@ -23,6 +23,8 @@ public final class ProblemSetContentViewController: NSSplitViewController, Stati
         tabViewController = tvc
         inspectorViewController = ivc
         
+        configureSplitView()
+        
     }
     
     public func newContentViewController(viewController: NSViewController) {
@@ -38,6 +40,18 @@ public final class ProblemSetContentViewController: NSSplitViewController, Stati
         
         return tvc.selectTabItemWithIdentifier(identifier)
     }
+    
+    private func configureSplitView() {
+        guard splitViewItems.count == 2 else { fatalError() }
+        guard let sourceListSplitViewItem = splitViewItems.last else { fatalError() }
+        sourceListSplitViewItem.preferredThicknessFraction  = 0.18
+        sourceListSplitViewItem.canCollapse                 = false
+        sourceListSplitViewItem.maximumThickness            = 340
+        sourceListSplitViewItem.minimumThickness            = 240
+        sourceListSplitViewItem.holdingPriority             = NSLayoutPriorityDefaultLow + 10.0
+        sourceListSplitViewItem.springLoaded                = true
+    }
+
 }
 
 public final class ProblemSetViewController: ContentTabViewController { }

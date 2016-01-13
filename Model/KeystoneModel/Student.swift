@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-public final class Student: ManagedObject { }
 
 extension Student {
     
@@ -17,6 +16,7 @@ extension Student {
     @NSManaged public var lastName: String
     @NSManaged public var graduationDate: NSDate
     @NSManaged public var image: NSData?
+    
     @NSManaged public private(set) var assignments: Set<Assignment>
     @NSManaged public private(set) var notes: Set<Note>
  
@@ -33,6 +33,7 @@ extension Student {
 }
 
 extension Student {
+    
     public var fullName: String {
         return "\(firstName) \(lastName)".stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
     }
@@ -63,20 +64,26 @@ extension Student {
     public func removeNote(note: Note) {
         notes.remove(note)
     }
+
+    public func graduationDateString() -> String {
+        
+        let formatter = graduationDateFormatter
+        formatter.dateStyle = .MediumStyle
+        formatter.timeStyle = .NoStyle
+        
+        return formatter.stringFromDate(graduationDate)        
+    }
 }
 
-extension Student: ManagedObjectType {
+private let graduationDateFormatter: NSDateFormatter = {
     
-    public static var entityName: String { return "Student" }
-    public static var defaultSortDescriptors: [NSSortDescriptor] {
-        return [
-            NSSortDescriptor(key: "graduationDate", ascending: true),
-            NSSortDescriptor(key: "firstName", ascending: true),
-            NSSortDescriptor(key: "lastName", ascending: true)
-        ]
-    }
-    public static var defaultPredicate: NSPredicate { return NSPredicate() }
-}
+    let dateFormatter = NSDateFormatter()
+    dateFormatter.dateStyle = .MediumStyle
+    dateFormatter.timeStyle = .NoStyle
+    
+    return dateFormatter
+}()
+
 
 extension Student {
     
@@ -97,19 +104,11 @@ extension Student {
     }
 }
 
-public final class Note: ManagedObject { }
+public final class Note: ManagedObject, ManagedObjectType { }
 
 extension Note {
     
     @NSManaged public var text: NSAttributedString?
     @NSManaged public var timestamp: NSDate
-    
-}
-
-extension Note: ManagedObjectType {
-    
-    public static var entityName: String { return "Note" }
-    public static var defaultSortDescriptors: [NSSortDescriptor] { return [NSSortDescriptor(key: "timestamp", ascending: true)] }
-    public static var defaultPredicate: NSPredicate { return NSPredicate() }
     
 }

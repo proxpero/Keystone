@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZJD-jU-LkP">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+    </dependencies>
+    <scenes>
+        <!--Constituent View Controller-->
+        <scene sceneID="igd-sD-q04">
+            <objects>
+                <viewController storyboardIdentifier="ConstituentView" id="ZJD-jU-LkP" customClass="ConstituentViewController" customModule="Keystone_OSX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="zHi-Zr-DVR">
+                        <rect key="frame" x="0.0" y="0.0" width="457" height="316"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="1000" verticalStackHuggingPriority="1000" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ga-5s-LPP">
+                                <rect key="frame" x="130" y="8" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" placeholder="YES" id="1r3-TS-COg"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="u0m-SS-K37"/>
+                                </constraints>
+                            </stackView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" preferredMaxLayoutWidth="102" translatesAutoresizingMaskIntoConstraints="NO" id="4ad-eu-gaK">
+                                <rect key="frame" x="18" y="8" width="106" height="295"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" placeholderString="Label" id="aJd-yM-73Z">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="801" translatesAutoresizingMaskIntoConstraints="NO" id="NDv-fN-4VZ">
+                                <rect key="frame" x="433" y="283" width="21" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="arL-vW-aes"/>
+                                    <constraint firstAttribute="width" constant="21" id="iV4-si-Ak3"/>
+                                </constraints>
+                                <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="NSActionTemplate" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="42X-TS-g3l">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="0ga-5s-LPP" secondAttribute="bottom" constant="8" id="0Si-aW-PHF"/>
+                            <constraint firstItem="0ga-5s-LPP" firstAttribute="top" secondItem="zHi-Zr-DVR" secondAttribute="top" constant="8" id="DJO-Ze-2g1"/>
+                            <constraint firstItem="NDv-fN-4VZ" firstAttribute="leading" secondItem="0ga-5s-LPP" secondAttribute="trailing" constant="3" id="H1T-k8-4Ra"/>
+                            <constraint firstAttribute="trailing" secondItem="NDv-fN-4VZ" secondAttribute="trailing" constant="3" id="Izs-YT-MdE"/>
+                            <constraint firstItem="0ga-5s-LPP" firstAttribute="leading" secondItem="4ad-eu-gaK" secondAttribute="trailing" constant="8" symbolic="YES" id="Jpi-to-D4Y"/>
+                            <constraint firstItem="4ad-eu-gaK" firstAttribute="top" secondItem="NDv-fN-4VZ" secondAttribute="top" constant="1" id="MCG-Lf-g5Z"/>
+                            <constraint firstItem="0ga-5s-LPP" firstAttribute="leading" secondItem="zHi-Zr-DVR" secondAttribute="leading" constant="130" id="bEs-IU-0XA"/>
+                            <constraint firstItem="4ad-eu-gaK" firstAttribute="top" secondItem="0ga-5s-LPP" secondAttribute="top" constant="5" id="qSN-Na-qGt"/>
+                            <constraint firstItem="4ad-eu-gaK" firstAttribute="leading" secondItem="zHi-Zr-DVR" secondAttribute="leading" constant="20" symbolic="YES" id="wsY-E4-r1k"/>
+                            <constraint firstAttribute="bottom" secondItem="4ad-eu-gaK" secondAttribute="bottom" constant="8" id="zmo-47-EmK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="componentLabel" destination="4ad-eu-gaK" id="tGk-sG-sO6"/>
+                        <outlet property="configureButton" destination="NDv-fN-4VZ" id="YOL-lJ-OsL"/>
+                        <outlet property="stackView" destination="0ga-5s-LPP" id="PMi-6u-2Ra"/>
+                    </connections>
+                </viewController>
+                <customObject id="wT9-2Z-pig" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076.5" y="200"/>
+        </scene>
+        <!--Constituent Item View Controller-->
+        <scene sceneID="D4D-9A-S0d">
+            <objects>
+                <viewController storyboardIdentifier="ConstituentItemView" id="MGf-NC-0Xt" customClass="ConstituentItemViewController" customModule="Keystone_OSX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="r5G-I0-Whh">
+                        <rect key="frame" x="0.0" y="0.0" width="522" height="39"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="NmT-hv-yRK" customClass="ContentTextView" customModule="Keystone_OSX" customModuleProvider="target">
+                                <rect key="frame" x="50" y="0.0" width="472" height="39"/>
+                            </customView>
+                            <textField horizontalHuggingPriority="1" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Xi5-Ks-X9a">
+                                <rect key="frame" x="0.0" y="17" width="47" height="17"/>
+                                <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="right" placeholderString="Marker" id="w7I-4w-541">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="NmT-hv-yRK" secondAttribute="bottom" id="2pz-0D-wNV"/>
+                            <constraint firstItem="NmT-hv-yRK" firstAttribute="leading" secondItem="r5G-I0-Whh" secondAttribute="leading" constant="50" id="GAy-hd-GnA"/>
+                            <constraint firstItem="Xi5-Ks-X9a" firstAttribute="top" secondItem="r5G-I0-Whh" secondAttribute="top" constant="5" id="Q0f-Kx-mJz"/>
+                            <constraint firstItem="NmT-hv-yRK" firstAttribute="top" secondItem="r5G-I0-Whh" secondAttribute="top" id="ksS-AF-bTX"/>
+                            <constraint firstItem="NmT-hv-yRK" firstAttribute="leading" secondItem="Xi5-Ks-X9a" secondAttribute="trailing" constant="5" id="ois-Vd-eeh"/>
+                            <constraint firstAttribute="trailing" secondItem="NmT-hv-yRK" secondAttribute="trailing" id="x41-B0-Ktt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentTextView" destination="NmT-hv-yRK" id="oLa-J4-fkB"/>
+                        <outlet property="leadingInsetLength" destination="GAy-hd-GnA" id="QDG-Rq-a47"/>
+                        <outlet property="markerLabel" destination="Xi5-Ks-X9a" id="mpj-4V-cu5"/>
+                        <outlet property="markerTopInsetConstraint" destination="Q0f-Kx-mJz" id="qCo-uA-URw"/>
+                    </connections>
+                </viewController>
+                <customObject id="pGb-bW-4V4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="475.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NSActionTemplate" width="14" height="14"/>
+    </resources>
+</document>

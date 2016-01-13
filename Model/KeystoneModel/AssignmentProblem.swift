@@ -9,8 +9,6 @@
 import Foundation
 import CoreData
 
-public final class AssignmentProblemSet: ManagedObject { }
-public final class AssignmentProblemItem: ManagedObject { }
 
 extension AssignmentProblemSet {
     
@@ -27,13 +25,6 @@ extension AssignmentProblemSet {
     }
 }
 
-extension AssignmentProblemSet: ManagedObjectType {
-
-    public static var entityName: String { return "AssignmentProblemSet" }
-    public static var defualtSortDescriptors: [NSSortDescriptor] { return [] }
-    public static var defaultPredicate: NSPredicate { return NSPredicate() }
-
-}
 
 extension AssignmentProblemSet {
     
@@ -81,10 +72,3 @@ extension AssignmentProblemItem {
     }
 }
 
-extension AssignmentProblemItem: ManagedObjectType {
-    
-    public static var entityName: String { return "AssignmentProblemItem" }
-    public static var defaultSortDescriptors: [NSSortDescriptor] { return [] }
-    public static var defaultPredicate: NSPredicate { return NSPredicate() }
-    
-}

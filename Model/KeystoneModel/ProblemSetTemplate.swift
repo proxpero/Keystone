@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-public final class ProblemSetTemplate: ManagedObject { }
 
 extension ProblemSetTemplate {
     
@@ -30,14 +29,6 @@ extension ProblemSetTemplate {
     
 }
 
-
-extension ProblemSetTemplate: ManagedObjectType {
-    
-    public static var entityName: String { return "ProblemSetTemplate" }
-    public static var defaultSortDescriptors: [NSSortDescriptor] { return [] }
-    public static var defaultPredicate: NSPredicate { return NSPredicate() }
-    
-}
 
 extension ProblemSetTemplate {
 

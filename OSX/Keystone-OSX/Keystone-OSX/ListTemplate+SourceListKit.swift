@@ -28,34 +28,29 @@ extension ListTemplate: SourceListItemsProvider {
     }
 }
 
-extension ListTemplate: DynamicChildProvider {
+extension ListTemplate: DynamicChildProvider { }
+
+extension ListTemplate: DynamicSourceListItemProvider, StaticDetailItemTitleProvider {
     
-    public func dynamicSourceListItem() -> SourceListItem {
-        return SourceListItem(
-            itemType:               dynamicChildItemType(),
-            cellViewConfigurator:   dynamicCellViewConfigurator,
-            cellSelectionCallback:  dynamicCellSelectionCallback)
+    public var staticDetailItemTitle: String { return title }
+  
+    public func dynamicCellSelectionHandler() {
+        print("list template \(title)")
     }
+    
 }
 
-extension ListTemplate {
-    
-    func dynamicChildItemType() -> SourceListItemType {
-        return .DynamicChild(
-            sourceListConfigurator:     sourceListConfigurator,
-            contentViewConfigurator:    contentViewConfigurator,
-            toolbarConfigurator:        toolbarConfigurator)
-    }
-    
-    func sourceListConfigurator() -> [SourceListItem] {
+extension ListTemplate: DynamicChildItemTypeProvider {
+
+    public func sourceListConfigurator() -> [SourceListItem] {
         
         var items: [SourceListItem] = []
         
         // Summary Header
 
         items.append(defaultHeaderItemWithTitle("Summary"))
-        items.append(defaultStaticDetailWithIdentifier(ListTemplateControllerItem.Settings.rawValue))
-        items.append(defaultStaticDetailWithIdentifier(ListTemplateControllerItem.History.rawValue))
+        items.append(defaultStaticDetailWithTabIdentifier(ListTemplateControllerItem.Settings.rawValue))
+        items.append(defaultStaticDetailWithTabIdentifier(ListTemplateControllerItem.History.rawValue))
 
         // Lists
         
@@ -82,7 +77,8 @@ extension ListTemplate {
         return items
     }
     
-    func contentViewConfigurator() -> NSViewController {
+    
+    public func contentViewConfigurator() -> NSViewController {
         guard let vc = NSStoryboard(
             name: "ListTemplateContentView",
             bundle: NSBundle(forClass: ListTemplateContentViewController.self)
@@ -91,60 +87,11 @@ extension ListTemplate {
         return vc
     }
     
-    func toolbarConfigurator(toolbar: NSToolbar) {
-        if let label = (toolbar.items.filter { $0.itemIdentifier == "ToolbarLabelItem" }).first?.view as? NSTextField {
-            label.stringValue = name
-        }
-    }
     
-    func dynamicCellViewConfigurator(tableView: NSTableView) -> NSTableCellView {
-        guard let view = tableView.makeViewWithIdentifier(SourceListKitConstants.CellIdentifier.Detail, owner: tableView) as? SourceListDetailCellView else { fatalError() }
-        view.textField?.stringValue = name
-        return view
-    }
+//    public func toolbarConfigurator(toolbar: NSToolbar) {
+//        if let label = (toolbar.items.filter { $0.itemIdentifier == "ToolbarLabelItem" }).first?.view as? NSTextField {
+//            label.stringValue = title
+//        }
+//    }
     
-    func dynamicCellSelectionCallback() {
-        print("list template \(name)")
-    }
-}
-
-extension ListTemplate {
-    
-    static func cellViewConfigurator(listTemplate: ListTemplate)(tableView: NSTableView) -> NSTableCellView {
-        guard let view = tableView.makeViewWithIdentifier(SourceListKitConstants.CellIdentifier.Detail, owner: tableView) as? SourceListDetailCellView else { fatalError() }
-        view.textField?.stringValue = listTemplate.name
-        return view
-    }
-    
-    static func contentViewControllerConfigurator(listTemplate: ListTemplate)() -> NSViewController {
-        guard let vc = NSStoryboard(name: "ListTemplateContentView", bundle: NSBundle(forClass: ListTemplateContentViewController.self)).instantiateInitialController() as? ListTemplateContentViewController else { fatalError() }
-        vc.listTemplate = listTemplate
-        return vc
-    }
-
-    static func sourceListConfigurator(listTemplate: ListTemplate) -> [SourceListItem] {
-        
-        var items: [SourceListItem] = []
-
-        // Profile Header
-        //      Static Item: Constituents
-        //      Static Item: Statistics
-        
-        func configureProfileHeaderCell(tableView: NSTableView) -> NSTableCellView {
-            guard let headerCell = tableView.makeViewWithIdentifier(SourceListKitConstants.CellIdentifier.Header, owner: tableView) as? SourceListHeaderCellView else { fatalError() }
-            headerCell.textField?.stringValue = "List Template"
-            headerCell.showHiddenViews = false
-            return headerCell
-        }
-        
-        // Template Instances Header
-        //      Children: Lists of current template
-        
-        
-        // (if children.count > 0) Template Children Header
-        //      Children: child template of current template
-        
-        return items
-        
-    }
 }

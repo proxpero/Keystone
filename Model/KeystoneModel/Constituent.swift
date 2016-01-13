@@ -7,34 +7,49 @@
 //
 
 import Foundation
+import CoreData
 
 public typealias ConstituentItem = NSAttributedString
 
+private enum CodingKeyIdentifier: String {
+    case Style = "StyleIdentifier"
+    case Items = "ConstituentItems"
+}
+
 public final class Constituent: NSObject, NSSecureCoding {
     
-    let styleIdentifier: String
+    public var style: ConstituentStyle
     public private(set) var constituentItems: [ConstituentItem]
     
     init(
         styleIdentifier:    String,
-        constituentItems:     [NSAttributedString]     = [])
+        constituentItems:   [NSAttributedString]     = [])
     {
-        self.styleIdentifier    = styleIdentifier
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        if let style = userDefaults.objectForKey(styleIdentifier) as? ConstituentStyle {
+            self.style = style
+        } else {
+            self.style = ConstituentStyle.defaultConstituentStyle()
+        }
+        
         self.constituentItems     = constituentItems
     }
     
     public func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(styleIdentifier, forKey: "styleIdentifier")
-        aCoder.encodeObject(constituentItems, forKey: "constituentItems")
+        aCoder.encodeObject(style.identifier, forKey: CodingKeyIdentifier.Style.rawValue)
+        aCoder.encodeObject(constituentItems, forKey: CodingKeyIdentifier.Items.rawValue)
     }
     
     public required convenience init?(coder aDecoder: NSCoder) {
         guard let
-            styleIdentifier   = aDecoder.decodeObjectForKey("styleIdentifier") as? String,
-            attributedStrings = aDecoder.decodeObjectForKey("constituentItems") as? [NSAttributedString]
-            else { return nil }
+            styleIdentifier   = aDecoder.decodeObjectForKey(CodingKeyIdentifier.Style.rawValue) as? String,
+            attributedStrings = aDecoder.decodeObjectForKey(CodingKeyIdentifier.Items.rawValue) as? [NSAttributedString]
+        else { return nil }
         
-        self.init(styleIdentifier: styleIdentifier, constituentItems: attributedStrings)
+        self.init(
+            styleIdentifier:    styleIdentifier,
+            constituentItems:   attributedStrings
+        )
     }
     
     public static func supportsSecureCoding() -> Bool { return true }
@@ -62,66 +77,6 @@ extension Constituent {
 }
 
 
-extension Constituent {
-//    public func toDict() -> NSDictionary {
-//        
-//        let dict = NSMutableDictionary()
-//        
-//        dict["inset"]   = NSNumber(float: Float(inset))
-//        dict["name"]    = name
-//        dict["marker"]  = NSNumber(integer: marker.rawValue)
-//        dict["items"]   = Array<NSData>(constituentItems.map { NSKeyedArchiver.archivedDataWithRootObject($0.text) })
-//        
-//        return dict
-//    }
-//    
-//    public convenience init?(dict: NSDictionary) {
-//
-//        guard let name      = dict["name"]      as? String          else { return nil }
-//        guard let insetObj  = dict["inset"]     as? NSNumber        else { return nil }
-//        guard let markerObj = dict["marker"]    as? NSNumber        else { return nil }
-//        guard let itemsObj  = dict["items"]     as? Array<NSData>   else { return nil }
-//
-//        let inset = CGFloat(insetObj)
-//        let marker = Marker(rawValue: Int(markerObj))!
-//        let items = itemsObj.map { ConstituentItem(text: NSKeyedUnarchiver.unarchiveObjectWithData($0) as! NSAttributedString) }
-//        
-//        self.init(name: name, inset: inset, marker: marker, constituentItems: items)
-//    }
-}
-
-//public struct ConstituentItem {
-//    var text: NSAttributedString
-//}
-//
-//extension ConstituentItem: Equatable { }
-//public func ==(lhs: ConstituentItem, rhs: ConstituentItem) -> Bool {
-//    return lhs.text.isEqualToAttributedString(rhs.text)
-//}
-
-private var registrationToken: dispatch_once_t = 0
-private let ConstituentsTransformerName = "UIConstituentTransformer"
-
-extension Constituent {
-//    static func registerValueTransformers() {
-//        dispatch_once(&registrationToken) {
-//            ValueTransformer.registerTransformerWithName(ConstituentsTransformerName, transform:
-//                { constituents in
-//                    guard let constituents = constituents as? [Constituent] else { return nil }
-//                    return NSKeyedArchiver.archivedDataWithRootObject(NSArray(array: constituents.map { $0.toDict() }))
-//                }, reverseTransform: { (data: NSData?) -> NSArray? in
-//                    if let
-//                        data = data,
-//                        dicts = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? [NSDictionary]
-//                    {
-//                        let constituents = dicts.flatMap { Constituent(dict: $0) }
-//                        return constituents
-//                    }
-//                    return nil
-//            })
-//        }
-//    }
-}
 
 enum Marker: Int {
     case None

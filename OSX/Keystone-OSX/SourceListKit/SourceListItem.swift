@@ -14,40 +14,13 @@ public typealias SourceListConfigurationHandler             = () -> [SourceListI
 public typealias ToolbarConfigurationHandler                = (NSToolbar) -> ()
 public typealias CellSelectionHandler                       = () -> ()
 public typealias ButtonConfigurationHandler                 = (NSButton) -> ()
-
-public enum SourceListItemType {
-    case Header
-    case DynamicChild(sourceListConfigurator: SourceListConfigurationHandler, contentViewConfigurator: ContentViewControllerConfigurationHandler, toolbarConfigurator: ToolbarConfigurationHandler)
-    case StaticChild(identifier: String)
-    case StaticChildViewController(identifier: String, viewControllerConfigurator: ContentViewControllerConfigurationHandler)
-    
-    var shouldSelect: Bool {
-        switch self {
-        case .Header:   return false
-        default:        return true
-        }
-    }
-    
-    var rowHeight: CGFloat {
-        switch self {
-        case .Header:   return 40.0
-        default:        return 22.0
-        }
-    }
-    
-    var rowView: NSTableRowView {
-        switch self {
-        case .Header:   return TableHeaderRowView()
-        default:        return TableDataRowView()
-        }
-    }
-}
+public typealias HeaderPullDownMenuConfigurationHandler     = (NSMenu) -> ()
 
 public struct SourceListItem {
     
-    public let itemType:                            SourceListItemType
-    public let cellViewConfigurator:                CellViewConfigurationHandler
-    public let cellSelectionCallback:               CellSelectionHandler?
+    public let itemType:                        SourceListItemType
+    public let cellViewConfigurator:            CellViewConfigurationHandler
+    public let cellSelectionCallback:           CellSelectionHandler?
     
     
     public init(
@@ -65,17 +38,6 @@ public struct SourceListItem {
     }
 }
 
-public protocol DynamicChildProvider {
-    
-    func dynamicSourceListItem()        -> SourceListItem
-//    func dynamicChildItemType()         -> SourceListItemType
-//    func sourceListConfigurator()       -> SourceListConfigurationHandler
-//    func contentViewConfigurator()      -> ContentViewControllerConfigurationHandler
-//    func toolbarConfigurator()          -> ToolbarConfigurationHandler
-//    func dynamicCellViewConfigurator()  -> CellViewConfigurationHandler
-//    func dynamicCellSelectionCallback() -> CellSelectionHandler
-
-}
 
 public protocol StaticChildViewControllerProvider {
     func staticChildViewControllerSourceListItem()    -> SourceListItem
@@ -87,7 +49,6 @@ public func defaultHeaderConfiguratorWithTitle(title: String, buttonAction: Butt
         
         guard let headerCell = tableView.makeViewWithIdentifier(SourceListKitConstants.CellIdentifier.Header, owner: tableView) as? SourceListHeaderCellView else { fatalError() }
         headerCell.textField?.stringValue = title
-        headerCell.showHiddenViews = true
         headerCell.buttonActionCallback = buttonAction
         
         return headerCell
@@ -115,7 +76,7 @@ public func defaultStaticDetailConfiguratorWithTitle(title: String) -> CellViewC
     return configureStaticDetailCell
 }
 
-public func defaultStaticDetailWithIdentifier(identifier: String, title: String? = nil, selectionHandler: CellSelectionHandler? = nil) -> SourceListItem {
+public func defaultStaticDetailWithTabIdentifier(identifier: String, title: String? = nil, selectionHandler: CellSelectionHandler? = nil) -> SourceListItem {
     
     return SourceListItem(
         itemType: .StaticChild(identifier: identifier),

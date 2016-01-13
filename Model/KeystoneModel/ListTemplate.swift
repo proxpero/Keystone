@@ -9,31 +9,29 @@
 import Foundation
 import CoreData
 
-public final class ListTemplate: ManagedObject { }
+public final class ListTemplate: ManagedObject, ManagedObjectType { }
 
 extension ListTemplate {
     
-    @NSManaged public private(set) var name:        String
-    @NSManaged public private(set) var defaults:    [Constituent]?
-    @NSManaged public private(set) var header:      [Constituent]?
-    @NSManaged public private(set) var footer:      [Constituent]?
-    @NSManaged public private(set) var lists:       Set<List>
- 
-    @NSManaged public private(set) var parent: ListTemplate?
-    @NSManaged public private(set) var children: NSOrderedSet?
+    @NSManaged public               var title:      String
+    @NSManaged public               var header:     NSAttributedString?
+    @NSManaged public               var footer:     NSAttributedString?
+    @NSManaged public private(set)  var lists:      Set<List>
+    @NSManaged public private(set)  var parent:     ListTemplate?
+    @NSManaged public private(set)  var children:   NSOrderedSet?
 
-    public func addNewChildWithName(name: String) -> ListTemplate {
+    public func addNewChildWithTitle(title: String) -> ListTemplate {
         
-        let child = ListTemplate.insertIntoContext(managedObjectContext!, name: name)
+        let child = ListTemplate.insertIntoContext(managedObjectContext!, title: title)
         child.parent = self
      
         return child
     }
     
-    public func insertNewChildWithName(name: String, atIndex index: Int) -> ListTemplate {
+    public func insertNewChildWithName(title: String, atIndex index: Int) -> ListTemplate {
         guard index >= 0 && index < children?.count else { fatalError() }
 
-        let child = ListTemplate.insertIntoContext(managedObjectContext!, name: name)
+        let child = ListTemplate.insertIntoContext(managedObjectContext!, title: title)
         let mutableChildren = mutableOrderedSetValueForKey("children")
         mutableChildren.insertObject(child, atIndex: index)
         
@@ -51,20 +49,13 @@ extension ListTemplate {
     }
 }
 
-extension ListTemplate: ManagedObjectType {
-    
-    public static var entityName: String { return "ListTemplate" }
-    public static var defaultSortDescriptors: [NSSortDescriptor] { return [] }
-    public static var defaultPredicate: NSPredicate { return NSPredicate() }
-    
-}
 
 extension ListTemplate {
     
-    public static func insertIntoContext(moc: NSManagedObjectContext, name: String) -> ListTemplate {
+    public static func insertIntoContext(moc: NSManagedObjectContext, title: String) -> ListTemplate {
         
         let listTemplate: ListTemplate = moc.insertObject()
-        listTemplate.name = name
+        listTemplate.title = title
         return listTemplate
         
     }

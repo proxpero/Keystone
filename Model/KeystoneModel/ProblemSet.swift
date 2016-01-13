@@ -9,9 +9,6 @@
 import Foundation
 import CoreData
 
-public final class ProblemSet: ManagedObject { }
-
-
 
 extension ProblemSet {
     
@@ -69,16 +66,6 @@ extension ProblemSet {
         return constituent
         
     }
-    
-}
-
-
-
-extension ProblemSet: ManagedObjectType {
-    
-    public static var entityName: String { return "ProblemSet" }
-    public static var defaultSortDescriptors: [NSSortDescriptor] { return [] }
-    public static var defaultPredicate: NSPredicate { return NSPredicate() }
     
 }
 

@@ -10,30 +10,21 @@ import Foundation
 import SourceListKit
 import Keystone_Model_OSX
 
+extension List: StaticDetailItemTitleProvider {
+    public var staticDetailItemTitle: String { return name }
+}
+
 extension List: DynamicChildProvider {
     
-    public func dynamicSourceListItem() -> SourceListItem {
-        return SourceListItem(
-            itemType: dynamicChildItemType(),
-            cellViewConfigurator: defaultStaticDetailConfiguratorWithTitle(name))
-    }
-    
-    func dynamicChildItemType() -> SourceListItemType {
-        return .DynamicChild(
-            sourceListConfigurator: sourceListConfigurator,
-            contentViewConfigurator: contentViewConfigurator,
-            toolbarConfigurator: toolbarConfigurator)
-    }
-
-    func sourceListConfigurator() -> [SourceListItem] {
+    public func sourceListConfigurator() -> [SourceListItem] {
         
         var items: [SourceListItem] = []
   
         // Summary Header
         
         items.append(defaultHeaderItemWithTitle("Summary"))
-        items.append(defaultStaticDetailWithIdentifier(ListControllerItem.Settings.rawValue))
-        items.append(defaultStaticDetailWithIdentifier(ListControllerItem.History.rawValue))
+        items.append(defaultStaticDetailWithTabIdentifier(ListControllerItem.Settings.rawValue))
+        items.append(defaultStaticDetailWithTabIdentifier(ListControllerItem.History.rawValue))
         
         // Children
         
@@ -55,13 +46,13 @@ extension List: DynamicChildProvider {
         return items
     }
 
-    func contentViewConfigurator() -> NSViewController {
+    public func contentViewConfigurator() -> NSViewController {
         guard let vc = NSStoryboard(name: "ListContentView", bundle: NSBundle(forClass: ListContentViewController.self)).instantiateInitialController() as? ListContentViewController else { fatalError() }
         vc.list = self
         return vc
     }
     
-    func toolbarConfigurator(toolbar: NSToolbar) {
+    public func toolbarConfigurator(toolbar: NSToolbar) {
         if let label = (toolbar.items.filter { $0.itemIdentifier == "ToolbarLabelItem" }).first?.view as? NSTextField {
             label.stringValue = name
         }

@@ -8,11 +8,6 @@
 
 import Cocoa
 
-//public protocol TabItemIdentifying  {
-//    func selectTabItemWithIdentifier(identifier: String) -> NSTabViewItem?
-//}
-//
-
 public protocol StaticChildViewControllerType {
     
     func newContentViewController(viewController: NSViewController) -> ()
@@ -21,7 +16,7 @@ public protocol StaticChildViewControllerType {
 }
 
 public class ContentTabViewController: NSTabViewController, StaticChildViewControllerType {
-    public var managedObjectContext: NSManagedObjectContext!
+//    public var managedObjectContext: NSManagedObjectContext!
     
     public func newContentViewController(viewController: NSViewController) {
         

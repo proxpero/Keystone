@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="boe-VU-aeA">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="boe-VU-aeA">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
     </dependencies>
     <scenes>
         <!--List Content View Controller-->
@@ -17,7 +17,6 @@
                     <tabView key="tabView" type="noTabsNoBorder" id="Lge-Kf-Omy">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                         <font key="font" metaFont="message"/>
                         <tabViewItems/>
                         <connections>
@@ -44,7 +43,6 @@
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bfz-CB-eA9">
                                 <rect key="frame" x="206" y="142" width="37" height="17"/>
-                                <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="3Nz-uI-eck">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -59,7 +57,6 @@
                             <constraint firstItem="Bfz-CB-eA9" firstAttribute="centerY" secondItem="cDe-1O-BeU" secondAttribute="centerY" id="IPh-am-Dht"/>
                             <constraint firstItem="Bfz-CB-eA9" firstAttribute="centerX" secondItem="cDe-1O-BeU" secondAttribute="centerX" id="tB0-l6-41h"/>
                         </constraints>
-                        <animations/>
                     </view>
                 </viewController>
                 <customObject id="UE5-sG-QVx" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -77,7 +74,6 @@
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" id="srr-JF-ZJU" customClass="TKOSplitView" customModule="Keystone_OSX" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="customDividerColor">
                                 <color key="value" red="0.64313725489999995" green="0.64313725489999995" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -100,7 +96,6 @@
                     <tabView key="tabView" type="noTabsNoBorder" id="ILG-Gg-Xpt">
                         <rect key="frame" x="0.0" y="0.0" width="536" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                         <font key="font" metaFont="message"/>
                         <tabViewItems/>
                     </tabView>
@@ -118,8 +113,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="H7Q-pV-Xci">
-                                <rect key="frame" x="207" y="142" width="37" height="17"/>
-                                <animations/>
+                                <rect key="frame" x="18" y="263" width="37" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="eJ9-Yw-nx3">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -131,10 +125,9 @@
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="H7Q-pV-Xci" firstAttribute="centerY" secondItem="isk-Vl-ob8" secondAttribute="centerY" id="SAQ-bB-Sos"/>
-                            <constraint firstItem="H7Q-pV-Xci" firstAttribute="centerX" secondItem="isk-Vl-ob8" secondAttribute="centerX" id="iEi-XQ-c7Q"/>
+                            <constraint firstItem="H7Q-pV-Xci" firstAttribute="top" secondItem="isk-Vl-ob8" secondAttribute="top" constant="20" symbolic="YES" id="04H-4l-XfZ"/>
+                            <constraint firstItem="H7Q-pV-Xci" firstAttribute="leading" secondItem="isk-Vl-ob8" secondAttribute="leading" constant="20" symbolic="YES" id="2vO-hY-p5Q"/>
                         </constraints>
-                        <animations/>
                     </view>
                 </viewController>
                 <customObject id="Ehx-r6-G5S" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -146,12 +139,11 @@
             <objects>
                 <viewController id="BiE-BZ-Ksu" customClass="ProblemSetInspectorViewController" customModule="Keystone_OSX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="V40-q3-F7U">
-                        <rect key="frame" x="0.0" y="0.0" width="190" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="190" height="472"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4f1-VD-b3j">
-                                <rect key="frame" x="77" y="263" width="37" height="17"/>
-                                <animations/>
+                                <rect key="frame" x="77" y="435" width="37" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="f8W-0l-k4H">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -166,12 +158,11 @@
                             <constraint firstItem="4f1-VD-b3j" firstAttribute="top" secondItem="V40-q3-F7U" secondAttribute="top" constant="20" symbolic="YES" id="P64-IE-yEV"/>
                             <constraint firstItem="4f1-VD-b3j" firstAttribute="centerX" secondItem="V40-q3-F7U" secondAttribute="centerX" id="qdA-fm-Ewh"/>
                         </constraints>
-                        <animations/>
                     </view>
                 </viewController>
                 <customObject id="ter-md-4ek" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1273" y="1174"/>
+            <point key="canvasLocation" x="1273" y="1260"/>
         </scene>
         <!--List Summary View Controller-->
         <scene sceneID="gex-J0-SSU">
@@ -182,15 +173,14 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EYj-o5-cj0">
-                                <rect key="frame" x="18" y="263" width="37" height="17"/>
-                                <animations/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="CfH-lF-uED">
+                                <rect key="frame" x="18" y="263" width="49" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" placeholderString="Header" id="CfH-lF-uED">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <binding destination="CJP-Om-qIL" name="value" keyPath="title" id="ZKd-gb-fF4"/>
+                                    <binding destination="CJP-Om-qIL" name="value" keyPath="title" id="KPN-Tn-UUW"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -198,10 +188,9 @@
                             <constraint firstItem="EYj-o5-cj0" firstAttribute="leading" secondItem="2RC-k2-0s5" secondAttribute="leading" constant="20" symbolic="YES" id="FoD-Kp-Ix1"/>
                             <constraint firstItem="EYj-o5-cj0" firstAttribute="top" secondItem="2RC-k2-0s5" secondAttribute="top" constant="20" symbolic="YES" id="wg1-eX-nch"/>
                         </constraints>
-                        <animations/>
                     </view>
                     <connections>
-                        <outlet property="label" destination="EYj-o5-cj0" id="czQ-D8-54S"/>
+                        <outlet property="templateLabel" destination="EYj-o5-cj0" id="Nl0-NA-gf7"/>
                     </connections>
                 </viewController>
                 <customObject id="OXn-1s-br9" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

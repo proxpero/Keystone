@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="MiM-xa-uRW">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="MiM-xa-uRW">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
     </dependencies>
     <scenes>
         <!--List Template Content View Controller-->
@@ -16,7 +16,6 @@
                     <tabView key="tabView" type="noTabsNoBorder" id="v2J-7T-3Pf">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                         <font key="font" metaFont="message"/>
                         <tabViewItems/>
                         <connections>
@@ -32,34 +31,131 @@
             </objects>
             <point key="canvasLocation" x="34" y="353"/>
         </scene>
-        <!--View Controller-->
+        <!--List Template Settings View Controller-->
         <scene sceneID="hmS-jQ-21t">
             <objects>
-                <viewController id="I9e-hG-JwZ" sceneMemberID="viewController">
+                <viewController id="I9e-hG-JwZ" customClass="ListTemplateSettingsViewController" customModule="Keystone_OSX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="sTF-zP-jZJ">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8Jv-2B-x4G">
-                                <rect key="frame" x="198" y="142" width="55" height="17"/>
-                                <animations/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Settings" id="GEM-Ta-fSh">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFV-fF-eFh">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <clipView key="contentView" id="l0b-vE-ofR" customClass="FlippedClipView" customModule="UtilityKit_OSX">
+                                    <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="odV-zV-eSk">
+                                            <rect key="frame" x="0.0" y="206" width="181" height="94"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.52941176469999995" green="0.52941176469999995" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="ae7-6b-sun">
+                                    <rect key="frame" x="-100" y="-100" width="435" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="uC4-zE-Rvb">
+                                    <rect key="frame" x="-100" y="-100" width="15" height="300"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="8Jv-2B-x4G" firstAttribute="centerY" secondItem="sTF-zP-jZJ" secondAttribute="centerY" id="GdN-Ng-TF1"/>
-                            <constraint firstItem="8Jv-2B-x4G" firstAttribute="centerX" secondItem="sTF-zP-jZJ" secondAttribute="centerX" id="asd-hy-siB"/>
+                            <constraint firstItem="UFV-fF-eFh" firstAttribute="leading" secondItem="sTF-zP-jZJ" secondAttribute="leading" id="0a5-JA-Zv2"/>
+                            <constraint firstItem="UFV-fF-eFh" firstAttribute="top" secondItem="sTF-zP-jZJ" secondAttribute="top" id="BjJ-lO-gZn"/>
+                            <constraint firstAttribute="trailing" secondItem="UFV-fF-eFh" secondAttribute="trailing" id="OH1-Vu-kar"/>
+                            <constraint firstAttribute="bottom" secondItem="UFV-fF-eFh" secondAttribute="bottom" id="pYZ-8y-ad5"/>
                         </constraints>
-                        <animations/>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="UFV-fF-eFh" id="nHC-YL-xpW"/>
+                    </connections>
                 </viewController>
                 <customObject id="HVW-Bh-v3e" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="557" y="353"/>
+        </scene>
+        <!--List Template Settings Subview Controller-->
+        <scene sceneID="L8d-sC-9ER">
+            <objects>
+                <viewController storyboardIdentifier="ListTemplateSettingsSubviewController" id="1tZ-mL-7rd" customClass="ListTemplateSettingsSubviewController" customModule="Keystone_OSX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="7eB-0k-ncM">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="344"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="H2q-cX-ppL">
+                                <rect key="frame" x="39" y="305" width="44" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Name:" id="tPX-m5-S3d">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cja-7U-jDz">
+                                <rect key="frame" x="31" y="265" width="52" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Header:" id="tCV-AE-sDa">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J4R-9p-6Ci">
+                                <rect key="frame" x="89" y="302" width="341" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="dPG-i9-BXP">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="W2c-3a-0ET" customClass="ContentTextView" customModule="UtilityKit_OSX">
+                                <rect key="frame" x="89" y="161" width="341" height="121"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="121" placeholder="YES" id="sVf-hu-ZnA"/>
+                                </constraints>
+                            </customView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7SZ-14-agy">
+                                <rect key="frame" x="35" y="124" width="48" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Footer:" id="9wj-QI-Fbt">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="3Ia-rI-Y0b" customClass="ContentTextView" customModule="UtilityKit_OSX">
+                                <rect key="frame" x="89" y="20" width="341" height="121"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="121" placeholder="YES" id="3JM-cd-IEC"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="J4R-9p-6Ci" secondAttribute="trailing" constant="20" symbolic="YES" id="8e7-MY-yZJ"/>
+                            <constraint firstItem="W2c-3a-0ET" firstAttribute="leading" secondItem="J4R-9p-6Ci" secondAttribute="leading" id="CpL-KT-OFe"/>
+                            <constraint firstAttribute="bottom" secondItem="3Ia-rI-Y0b" secondAttribute="bottom" constant="20" id="Cyl-5V-e9P"/>
+                            <constraint firstItem="J4R-9p-6Ci" firstAttribute="top" secondItem="7eB-0k-ncM" secondAttribute="top" constant="20" symbolic="YES" id="H7j-UK-CW1"/>
+                            <constraint firstItem="H2q-cX-ppL" firstAttribute="leading" secondItem="7eB-0k-ncM" secondAttribute="leading" constant="41" id="VgV-lA-ELS"/>
+                            <constraint firstItem="3Ia-rI-Y0b" firstAttribute="trailing" secondItem="W2c-3a-0ET" secondAttribute="trailing" id="Vrm-Il-gYZ"/>
+                            <constraint firstItem="J4R-9p-6Ci" firstAttribute="baseline" secondItem="H2q-cX-ppL" secondAttribute="baseline" id="VxE-Uj-1pL"/>
+                            <constraint firstItem="3Ia-rI-Y0b" firstAttribute="top" secondItem="W2c-3a-0ET" secondAttribute="bottom" constant="20" id="XnA-uS-VeM"/>
+                            <constraint firstItem="J4R-9p-6Ci" firstAttribute="leading" secondItem="H2q-cX-ppL" secondAttribute="trailing" constant="8" symbolic="YES" id="aqh-hg-5SY"/>
+                            <constraint firstItem="cja-7U-jDz" firstAttribute="trailing" secondItem="H2q-cX-ppL" secondAttribute="trailing" id="d21-go-rze"/>
+                            <constraint firstItem="W2c-3a-0ET" firstAttribute="trailing" secondItem="J4R-9p-6Ci" secondAttribute="trailing" id="d2C-M0-mpj"/>
+                            <constraint firstItem="3Ia-rI-Y0b" firstAttribute="leading" secondItem="7SZ-14-agy" secondAttribute="trailing" constant="8" id="dXU-mI-a0z"/>
+                            <constraint firstItem="7SZ-14-agy" firstAttribute="trailing" secondItem="cja-7U-jDz" secondAttribute="trailing" id="duE-0q-tSE"/>
+                            <constraint firstItem="3Ia-rI-Y0b" firstAttribute="top" secondItem="7SZ-14-agy" secondAttribute="top" id="mtC-SP-pBr"/>
+                            <constraint firstItem="W2c-3a-0ET" firstAttribute="top" secondItem="cja-7U-jDz" secondAttribute="top" id="ntZ-30-eP8"/>
+                            <constraint firstItem="W2c-3a-0ET" firstAttribute="top" secondItem="J4R-9p-6Ci" secondAttribute="bottom" constant="20" id="sGz-QJ-uIv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="footer" destination="3Ia-rI-Y0b" id="pG8-DC-N8f"/>
+                        <outlet property="header" destination="W2c-3a-0ET" id="5H2-nf-3Bb"/>
+                    </connections>
+                </viewController>
+                <customObject id="j5t-cj-ngP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078" y="367.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="8yj-Ui-2fh">
@@ -71,7 +167,6 @@
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JDW-8i-8H2">
                                 <rect key="frame" x="75" y="214" width="48" height="17"/>
-                                <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="History" id="02V-KC-G1V">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -83,7 +178,6 @@
                             <constraint firstItem="JDW-8i-8H2" firstAttribute="top" secondItem="Tvp-am-zQf" secondAttribute="top" constant="69" id="Nan-3a-Qp5"/>
                             <constraint firstItem="JDW-8i-8H2" firstAttribute="leading" secondItem="Tvp-am-zQf" secondAttribute="leading" constant="77" id="aWm-a1-Llf"/>
                         </constraints>
-                        <animations/>
                     </view>
                 </viewController>
                 <customObject id="nH0-tp-4cY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

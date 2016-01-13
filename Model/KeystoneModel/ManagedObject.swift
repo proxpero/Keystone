@@ -30,11 +30,6 @@ extension DefaultManagedObjectType {
 
 extension ManagedObjectType {
 
-    public static var defaultSortDescriptors: [NSSortDescriptor] {
-        return []
-    }
-
-
     public static var sortedFetchRequest: NSFetchRequest {
         let request = NSFetchRequest(entityName: entityName)
         request.sortDescriptors = defaultSortDescriptors
@@ -115,6 +110,19 @@ extension ManagedObjectType where Self: ManagedObject {
         return result
     }
     
+    
+    public static func sortedFetchInContext(context: NSManagedObjectContext, @noescape configurationBlock: NSFetchRequest -> () = { _ in }) -> [Self] {
+        
+        let request = sortedFetchRequest
+        configurationBlock(request)
+        guard let result = try! context.executeFetchRequest(request)
+            as? [Self]
+            else { fatalError("Fetched objects have wrong type") }
+        return result
+        
+    }
+    
+    
     public static func countInContext(context: NSManagedObjectContext, @noescape configurationBlock: NSFetchRequest -> () = { _ in }) -> Int {
         let request = NSFetchRequest(entityName: entityName)
         configurationBlock(request)
@@ -141,6 +149,7 @@ extension ManagedObjectType where Self: ManagedObject {
 
 
 extension ManagedObjectType where Self: ManagedObject {
+    
     public static func fetchSingleObjectInContext(
         moc: NSManagedObjectContext, cacheKey: String,
         configure: NSFetchRequest -> ()) -> Self?
@@ -154,6 +163,7 @@ extension ManagedObjectType where Self: ManagedObject {
         }
         return cached
     }
+    
     
     private static func fetchSingleObjectInContext(
         moc: NSManagedObjectContext, configure: NSFetchRequest -> ())
@@ -169,5 +179,6 @@ extension ManagedObjectType where Self: ManagedObject {
         default: fatalError("Returned multiple objects, expected max 1")
         }
     }
+    
 }
 

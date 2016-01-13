@@ -40,9 +40,19 @@ public class ListSummaryViewController: NSViewController, ListSettable {
     public var list: List! {
         didSet {
             title = list.name
+            guard let tf = templateLabel else { return }
+            tf.stringValue = "Template: \(list.template.title), List: \(list.name)"
         }
     }
-    @IBOutlet weak var label: NSTextField!
+    
+    @IBOutlet weak var templateLabel: NSTextField!
+    
+    public override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        
+        print("vdl")
+    }
 
 }
 

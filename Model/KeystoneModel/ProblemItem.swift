@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-public final class ProblemItem: ManagedObject { }
 
 extension ProblemItem {
     
@@ -57,15 +56,6 @@ extension ProblemItem {
     
 }
 
-extension ProblemItem: ManagedObjectType {
-    
-    public static var entityName: String { return "ProblemItem" }
-    public static var defaultSortDescriptors: [NSSortDescriptor] {
-        return []
-    }
-    public static var defaultPredicate: NSPredicate { return NSPredicate() }
-    
-}
 
 extension ProblemItem {
     

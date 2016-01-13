@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-public final class Tag: ManagedObject { }
+public final class Tag: ManagedObject, ManagedObjectType { }
 
 extension Tag {
     

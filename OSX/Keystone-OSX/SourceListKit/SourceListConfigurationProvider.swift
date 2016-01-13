@@ -10,21 +10,28 @@ import Foundation
 
 public final class SourceListConfigurationProvider {
 
-    public var items: [SourceListItem]
-    public var dataSource: NSTableViewDataSource { return bridgedDataSource }
-    public var delegate: NSTableViewDelegate { return bridgedDelegate }
-    
-    public init(items: [SourceListItem], sourceList: NSTableView? = nil) {
+    public init(
+        items: [SourceListItem],
+        sourceList: NSTableView? = nil)
+    {
         self.items = items
         sourceList?.setDelegate(delegate)
         sourceList?.setDataSource(dataSource)
     }
     
-    public var selectedItemTypeHandler: (SourceListItemType) -> () = { _ in }
+    public var selectionDidChangeHandler: (SourceListItemType) -> () = { _ in }
+
+    
+    // Private:
+    
+    
+    private var items: [SourceListItem]
+    private var dataSource: NSTableViewDataSource { return bridgedDataSource }
+    private var delegate: NSTableViewDelegate { return bridgedDelegate }
     
     private func tableViewSelectionDidChange(tableView: NSTableView) {
         guard tableView.selectedRow != -1 else { return }
-        selectedItemTypeHandler(items[tableView.selectedRow].itemType)
+        selectionDidChangeHandler(items[tableView.selectedRow].itemType)
         if let callback = items[tableView.selectedRow].cellSelectionCallback { callback() }
     }
     

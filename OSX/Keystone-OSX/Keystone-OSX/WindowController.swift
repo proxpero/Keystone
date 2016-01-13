@@ -8,12 +8,22 @@
 
 import Cocoa
 
-class WindowController: NSWindowController {
+class WindowController: NSWindowController, NSWindowDelegate {
     
     override func windowDidLoad() {
         super.windowDidLoad()
+        
         window?.contentView?.wantsLayer = true
         window?.titleVisibility = .Hidden
+        
+        window?.collectionBehavior = [(window?.collectionBehavior)!, .FullScreenAllowsTiling]
+    }
+    
+    func window(window: NSWindow,
+        willUseFullScreenPresentationOptions proposedOptions: NSApplicationPresentationOptions)
+                -> NSApplicationPresentationOptions
+    {
+        return [proposedOptions, .AutoHideToolbar]
     }
 }
 

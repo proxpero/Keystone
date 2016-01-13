@@ -15,14 +15,14 @@ extension ListTemplate {
     public static func randomInContext(moc: NSManagedObjectContext) -> ListTemplate {
 
         let name = NSUUID().UUIDString.componentsSeparatedByString("-").first!
-        let listTemplate = ListTemplate.insertIntoContext(moc, name: name)
+        let listTemplate = ListTemplate.insertIntoContext(moc, title: name)
 
         for _ in (1...3) {
 
-            let childTemplate = listTemplate.addNewChildWithName(NSUUID().UUIDString.componentsSeparatedByString("-").first!)
+            let childTemplate = listTemplate.addNewChildWithTitle(NSUUID().UUIDString.componentsSeparatedByString("-").first!)
             
             for _ in (1...3) {
-                _ = childTemplate.addNewChildWithName(NSUUID().UUIDString.componentsSeparatedByString("-").first!)
+                _ = childTemplate.addNewChildWithTitle(NSUUID().UUIDString.componentsSeparatedByString("-").first!)
             }
         }
         

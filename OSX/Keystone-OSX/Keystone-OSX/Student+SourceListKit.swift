@@ -9,51 +9,35 @@
 import Foundation
 import SourceListKit
 import Keystone_Model_OSX
+import UtilityKit_OSX
 
+extension Student: DynamicChildProvider { }
 extension Student: SourceListItemsProvider {
-    
-    public static func sourceListItemsInContext(context: NSManagedObjectContext) -> [SourceListItem] {
-        
-        var items: [SourceListItem] = []
-        
-        items.append(defaultHeaderItemWithTitle("Student") { button in
-            print("Student Head button clicked")
-        })
-        
-        items.appendContentsOf(Student.fetchInContext(context).map { $0.dynamicSourceListItem() })
-        
-        return items
+
+    public func dynamicCellViewConfigurator(tableView: NSTableView) -> NSTableCellView {
+        guard let view = tableView.makeViewWithIdentifier(SourceListKitConstants.CellIdentifier.Detail, owner: tableView) as? SourceListDetailCellView else { fatalError() }
+        view.textField?.stringValue = fullName
+        view.imageView?.image = NSImage(named: "TKOSingleStudent")
+        return view
     }
+    
+    public func dynamicCellSelectionHandler() {
+        print("Hi, I'm \(fullName)")
+    }
+
 }
 
-extension Student: DynamicChildProvider {
+extension Student: DynamicChildItemTypeProvider{
 
-    public func dynamicSourceListItem() -> SourceListItem {
-        return SourceListItem(
-            itemType:               dynamicChildItemType(),
-            cellViewConfigurator:   dynamicCellViewConfigurator,
-            cellSelectionCallback:  dynamicCellSelectionCallback)
-    }
-}
-
-extension Student {
-    
-    func dynamicChildItemType() -> SourceListItemType {
-        return .DynamicChild(
-            sourceListConfigurator:  sourceListConfigurator,
-            contentViewConfigurator: contentViewConfigurator,
-            toolbarConfigurator:     toolbarConfigurator)
-    }
-
-    func sourceListConfigurator() -> [SourceListItem] {
+    public func sourceListConfigurator() -> [SourceListItem] {
         
         var items: [SourceListItem] = []
         
         // Profile Header
 
         items.append(defaultHeaderItemWithTitle("Summary"))
-        items.append(defaultStaticDetailWithIdentifier(StudentViewControllerItem.Profile.rawValue))
-        items.append(defaultStaticDetailWithIdentifier(StudentViewControllerItem.History.rawValue))
+        items.append(defaultStaticDetailWithTabIdentifier(StudentViewControllerItem.Profile.rawValue))
+        items.append(defaultStaticDetailWithTabIdentifier(StudentViewControllerItem.History.rawValue))
         
         // Overdue Assignments
         
@@ -64,8 +48,7 @@ extension Student {
                 itemType: .Header,
                 cellViewConfigurator: AssignmentType.Overdue.headerCellWithAssignmentsCount(overdue.count)(identifier: SourceListKitConstants.CellIdentifier.Header)))
 
-            items.appendContentsOf(overdue.map { $0.staticChildViewControllerSourceListItem() })
-        
+            items.appendContentsOf(overdue.map { $0.dynamicSourceListItem() })
         }
 
         // Active Assignments
@@ -79,8 +62,7 @@ extension Student {
                     print("Hey! I'm an active assignment")
                 })
             
-            items.appendContentsOf(active.map { $0.staticChildViewControllerSourceListItem() })
-            
+            items.appendContentsOf(active.map { $0.dynamicSourceListItem() })
         }
         
         // Completed Assignments
@@ -94,32 +76,40 @@ extension Student {
                     print("a completed assignemnt was selected!")
                 })
             
-            items.appendContentsOf(completed.map { $0.staticChildViewControllerSourceListItem() })
+            items.appendContentsOf(completed.map { $0.dynamicSourceListItem() })
         }
 
         return items
     }
     
-    func contentViewConfigurator() -> NSViewController {
+    
+    public func contentViewConfigurator() -> NSViewController {
         guard let vc = NSStoryboard(name: "StudentContentView", bundle: NSBundle(forClass: StudentContentViewController.self)).instantiateInitialController() as? StudentContentViewController else { fatalError() }
         vc.student = self
         return vc
     }
     
-    func toolbarConfigurator(toolbar: NSToolbar) {
-        if let label = (toolbar.items.filter { $0.itemIdentifier == "ToolbarLabelItem" }).first?.view as? NSTextField {
+    
+    public func toolbarConfigurator(toolbar: NSToolbar) {
+        
+        let items: [ToolbarItem] = [.Back, .FlexibleSpace, .Label, .FlexibleSpace, .Add, .Settings]
+        toolbar.setItems(items)
+        
+        if let label = toolbar.viewForItemIdentifier(ToolbarItem.Label.identifier) as? NSTextField {
             label.stringValue = fullName
+            label.invalidateIntrinsicContentSize()
         }
+        
+//        if let label = (toolbar.items.filter { $0.itemIdentifier == "ToolbarLabelItem" }).first?.view as? NSTextField {
+//            label.stringValue = fullName
+//        }
+//        
+//        if let button = (toolbar.items.filter { $0.itemIdentifier == "ToolbarButtonItem" }).first?.view as? NSButton {
+//            button.image = NSImage(named: NSImageNameAddTemplate)
+//            button.hidden = false
+//        }
+        
     }
     
-    func dynamicCellViewConfigurator(tableView: NSTableView) -> NSTableCellView {
-        guard let view = tableView.makeViewWithIdentifier(SourceListKitConstants.CellIdentifier.Detail, owner: tableView) as? SourceListDetailCellView else { fatalError() }
-        view.textField?.stringValue = fullName
-        return view
-    }
-    
-    func dynamicCellSelectionCallback() {
-        print("Hi, I'm \(fullName)")
-    }
 }
 

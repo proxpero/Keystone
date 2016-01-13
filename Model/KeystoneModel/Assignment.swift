@@ -13,13 +13,12 @@ public enum AssignmentType {
     case Overdue, Active, Completed
 }
 
-public final class Assignment: ManagedObject { }
 
 extension Assignment {
     
     @NSManaged public private(set) var name: String
-    @NSManaged public private(set) var assignedOn: NSDate
-    @NSManaged public private(set) var dueDate: NSDate
+    @NSManaged public var assignedOn: NSDate
+    @NSManaged public var dueDate: NSDate
     @NSManaged public private(set) var note: String
     @NSManaged public private(set) var assignmentProblemSets: NSOrderedSet
     @NSManaged public private(set) var students: Set<Student>
@@ -74,19 +73,6 @@ extension Assignment {
     private func mutableAssignmentProblemSets() -> NSMutableOrderedSet {
         return mutableOrderedSetValueForKey("assignmentProblemSets")
     }
-}
-
-extension Assignment: ManagedObjectType {
-    
-    public static var entityName: String { return "Assignment" }
-    public static var defaultSortDescriptors: [NSSortDescriptor] {
-        return [
-            NSSortDescriptor(key: "dueDate", ascending: true),
-            NSSortDescriptor(key: "assignedOn", ascending: true),
-            NSSortDescriptor(key: "note", ascending: true)
-        ]
-    }
-    public static var defaultPredicate: NSPredicate { return NSPredicate() }
 }
 
 extension Assignment {
